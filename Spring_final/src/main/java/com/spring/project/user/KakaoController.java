@@ -3,6 +3,8 @@ package com.spring.project.user;
 
 import java.util.UUID;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -11,9 +13,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -27,11 +32,13 @@ import com.spring.model.member.MemberDTO;
 public class KakaoController {
 	
 	@Autowired
-	private MemberDAO mDAO;
+	private MemberDAO mDAO;	
 	
+	@Autowired
+	private HttpSession session;
 	
 	@GetMapping("main.do")
-	public @ResponseBody String kakaoCallback(String code) { //Data를 리턴해주는 컨트롤러 메서드
+	public ModelAndView kakaoCallback(String code) { //Data를 리턴해주는 컨트롤러 메서드
 		//POST방식으로 key=value 데이터를 요청 (카카오쪽으로)
 		RestTemplate rt = new RestTemplate();
 		
@@ -52,7 +59,7 @@ public class KakaoController {
 		
 		//Http 요청하기 -Post방식으로- 또한 response 변수의 응답을 받음
  		ResponseEntity<String> response = rt.exchange(
-				"https://kauth.kakao.com//oauth/token", 
+				"https://kauth.kakao.com/oauth/token", 
 				HttpMethod.POST, 
 				kakaoTokenRequest, 
 				String.class		
@@ -122,9 +129,9 @@ public class KakaoController {
  		String kakao_U_email = kakaoProfile.getKakao_account().getEmail();
  		String kakao_U_name = kakaoProfile.getProperties().getNickname() + "_" +"카카오";
  		String kakao_U_image = kakaoProfile.getProperties().getThumbnail_image();
- 		String temp_pwd = tempPwd.toString();
+ 		String temp_pwd = tempPwd.toString(); 		
  		
- 		MemberDTO dto = new MemberDTO(); 		
+ 		MemberDTO dto = new MemberDTO();
  		dto.setU_id(kakao_U_id);
  		dto.setU_email(kakao_U_email);
  		dto.setU_pwd(temp_pwd);
@@ -132,18 +139,34 @@ public class KakaoController {
  		dto.setU_img(kakao_U_image);
  		dto.setU_phone("추후 입력");
  		dto.setU_oauth("kakao");
+ 		
+ 		ModelAndView mav = new ModelAndView();
+ 		mav.setViewName("home");
+ 		mav.addObject("kdto", dto); 		
+ 		String rest_api_key = "b11fa6774e0285e50b5a9dfa4047b19f";
+ 		mav.addObject("api_key", rest_api_key);
+ 		
+ 		session.setAttribute("kakao_id", kakao_U_email);
  		 		
  		// 가입자 여부 확인
  		if(mDAO.checkMember(kakao_U_id) == 1) { //이미 존재하는 ID
  			//회원가입하지 않고 로그인 실행
- 			return "기존 가입 회원 자동 로그인";
+ 			System.out.println("기존 회원 자동 로그인"); 			
+ 			return mav;
  			
  		}else { //없으면 회원가입 실행
  			mDAO.insertMember(dto);
- 			return "회원가입 완료";
+ 			System.out.println("신규 카카오 회원 가입 완료");
+ 			return mav;
  		}	
- 			
-		
+ 		
+	}
+	
+	@RequestMapping("logout.do")
+	public ModelAndView kakaoLogout(ModelAndView mav) {
+		session.invalidate();
+		mav.setViewName("home");		
+		return mav;
 		
 	}
 	
