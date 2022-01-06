@@ -4,7 +4,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.spring.model.member.MemberDAO">
+<mapper namespace="MemberDAO">
 	
 	<insert id="join" parameterType="com.spring.model.member.MemberDTO">
 		insert into Trv_User values (#{U_id}, #{U_pwd}, #{U_name}, #{U_email}, #{U_phone}, #{U_img}, #{U_oauth})	
@@ -13,5 +13,22 @@
 	<select id="check" parameterType="string" resultType="com.spring.model.member.MemberDTO">
 		select * from Trv_User where U_id = #{U_id}
 	</select>
-
+	
+	<!-- 이메일 중복 체크 -->
+	<select id="email_check" parameterType="String" resultType="int">
+		select count(U_email) from Trv_user where U_email = #{email}
+	</select>
+	
+	<insert id="emailJoin" parameterType="com.spring.model.member.MemberDTO">
+		insert into Trv_User(U_id, U_pwd, U_name, U_email) 
+		values (#{U_email}, #{U_pwd}, #{U_name}, #{U_email})
+	</insert>
+	
+	<select id="login_check" parameterType="String" resultType="String">
+		select U_pwd from Trv_User where U_id = #{email_id}
+	</select>
+	
+	<update id="tempPwd" parameterType="com.spring.model.member.MemberDTO">
+		update Trv_User set U_pwd = #{U_pwd} where U_id = #{U_email}
+	</update>
 </mapper>

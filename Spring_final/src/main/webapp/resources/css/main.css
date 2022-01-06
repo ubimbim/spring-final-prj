@@ -1,0 +1,239 @@
+
+/* 메인페이지 body css */
+
+body {
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#back_color {
+	background-color: #fff;
+	padding-bottom: 50px;
+}
+
+#itemSlide {
+	display: flex;
+	width: 960px;
+	overflow: hidden;
+	padding: 10px;
+}
+
+.item {
+	width: 250px;
+	padding: 10;
+	margin: 10px;
+	border: solid 1px LIGHTGRAY;
+	border-radius: 10px;
+	text-align: left;
+}
+
+.item img {
+	width: 200px;
+}
+
+.item span {
+	margin-left: 10px;
+}
+
+#acc_nextBtn {
+	  position: absolute;
+	  top: 565px;
+	  right: 350px;
+	  width: 40px;
+	  height: 40px;
+	  font-weight: bold;
+	  font-size: 15px;
+	  background-color: #fff;
+	  border: solid 1px gray;
+	  border-radius: 40px;  
+}
+
+#act_nextBtn {
+	  position: absolute;
+	  top: 1140px;
+	  right: 350px;
+	  width: 40px;
+	  height: 40px;
+	  font-weight: bold;
+	  font-size: 15px;
+	  background-color: #fff;
+	  border: solid 1px gray;
+	  border-radius: 40px;  
+}
+
+
+#res_nextBtn {
+	  position: absolute;
+	  top: 1709px;
+	  right: 350px;
+	  width: 40px;
+	  height: 40px;
+	  font-weight: bold;
+	  font-size: 15px;
+	  background-color: #fff;
+	  border: solid 1px gray;
+	  border-radius: 40px;  
+}
+
+#plan_nextBtn {
+	  position: absolute;
+	  top: 2291px;
+	  right: 350px;
+	  width: 40px;
+	  height: 40px;
+	  font-weight: bold;
+	  font-size: 15px;
+	  background-color: #fff;
+	  border: solid 1px gray;
+	  border-radius: 40px;  
+}
+
+#acc_nextBtn:hover, #act_nextBtn:hover, #res_nextBtn:hover, #plan_nextBtn:hover 
+{ box-shadow: 0 0 0 3px rgb(0 0 0 / 5%), 0 2px 6px 0 rgb(0 0 0 / 5%), 0 4px 12px 0 rgb(0 0 0 / 5%); }
+
+
+.slide {
+	margin-left: -960px;
+}
+
+#recomm_acc {
+	margin-top: 100px;
+	margin-left: 450px;
+	padding-top: 20px;
+}
+#recomm_act, #recomm_resto, #recomm_plan {
+	margin-top: 50px;
+	margin-left: 450px;
+	padding-top: 20px;
+}
+
+#back_color h2 {
+	text-align: left;
+}
+
+#back_color img {
+	margin: 10px;
+}
+
+#back_color a:hover > img {
+	transform: scale(1.05); 
+	transition: all 0.2s ease-in-out;
+}
+
+#back_color a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* 마이페이지 body css */
+
+#mypage {
+	background-color: #fff;
+	margin-top: 100px;
+	padding-top: 20px;
+	padding-bottom: 100px;
+}
+
+#mypage h2{
+	text-align: left;
+	margin-left: 500px;
+}
+
+#box {
+	padding: 30px;
+	border: solid 1px lightgray;
+	border-radius: 5px;
+	width: 800px;
+	margin-left: 500px;
+}
+
+#edit {
+	display: block;
+	font-weight: 500;
+    position: relative;
+    left: 720px;
+    bottom: 150px;
+	width: 80px;
+	text-decoration: none;
+	background-color: #fff;
+    border-radius: 5px;
+    color: gray;
+    z-index: 50;
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+
+#quit {
+	display: block;
+	font-weight: 500;
+    position: relative;
+    left: 720px;
+    top: 0px;
+	width: 80px;
+	text-decoration: none;
+	background-color: tomato;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 50;
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+
+#edit:hover, #quit:hover {
+	cursor: pointer;
+}
+ 
+#box table {
+	text-align: left;
+	margin-left: 20px;
+}
+
+#box table td {
+	padding: 20px 50px;
+}
+
+#modal1 {
+	 width: 400px;
+	 height: 200px;
+     position: absolute;
+     left: 750px;
+     top: 500px;
+     padding-top: 50px;
+     line-height: 50px;
+     background-color: #fff;
+     box-shadow: 5px 5px 5px 5px rgb(30 30 30 / 0.1);
+     border-radius: 10px;
+}
+
+#modal2 {
+	 width: 500px;
+	 height: 400px;
+     position: absolute;
+     left: 700px;
+     top: 500px;
+     padding-top: 30px;
+     background-color: #fff;
+     box-shadow: 10px 10px 10px 10px rgb(30 30 30 / 0.1);
+     border-radius: 10px;
+}
+
+#modal2 table {
+	text-align: left;
+	margin-left: 60px;
+	margin-bottom: 20px;
+}
+
+#modal2 table td {
+	padding: 10px 30px;
+}
+
+#modal1 input, #modal2 input {
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.none {
+	display: none;
+}
+
+.blur {
+	background-color: gray;
+}

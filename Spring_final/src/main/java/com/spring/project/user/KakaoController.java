@@ -15,8 +15,6 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.SessionAttributes;
-import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,7 +35,7 @@ public class KakaoController {
 	@Autowired
 	private HttpSession session;
 	
-	@GetMapping("main.do")
+	@GetMapping("kakao_login_ok.do")
 	public ModelAndView kakaoCallback(String code) { //Data를 리턴해주는 컨트롤러 메서드
 		//POST방식으로 key=value 데이터를 요청 (카카오쪽으로)
 		RestTemplate rt = new RestTemplate();
@@ -50,7 +48,7 @@ public class KakaoController {
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
 		params.add("grant_type", "authorization_code");
 		params.add("client_id", "b11fa6774e0285e50b5a9dfa4047b19f");
-		params.add("redirect_uri", "http://localhost:8080/project/main.do");
+		params.add("redirect_uri", "http://localhost:8080/project/kakao_login_ok.do");
 		params.add("code", code);
 		
 		//HttpHeader와 HttpBody를 하나의 오브젝트에 담기
@@ -141,12 +139,13 @@ public class KakaoController {
  		dto.setU_oauth("kakao");
  		
  		ModelAndView mav = new ModelAndView();
- 		mav.setViewName("home");
+ 		mav.setViewName("main");
  		mav.addObject("kdto", dto); 		
  		String rest_api_key = "b11fa6774e0285e50b5a9dfa4047b19f";
  		mav.addObject("api_key", rest_api_key);
  		
  		session.setAttribute("kakao_id", kakao_U_email);
+ 		session.setAttribute("api_key", rest_api_key);
  		 		
  		// 가입자 여부 확인
  		if(mDAO.checkMember(kakao_U_id) == 1) { //이미 존재하는 ID
@@ -165,12 +164,8 @@ public class KakaoController {
 	@RequestMapping("logout.do")
 	public ModelAndView kakaoLogout(ModelAndView mav) {
 		session.invalidate();
-		mav.setViewName("home");		
+		mav.setViewName("main");		
 		return mav;
 		
 	}
-	
-	
-	
-		
 }
