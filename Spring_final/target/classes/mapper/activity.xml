@@ -12,7 +12,7 @@
 	
 	
 	<select id="count" resultType="int">
-		select count(*) from activity
+		select count(*) from Trv_Activity
 	</select>
 	
 	<select id="all" parameterType="com.spring.model.Activity.PageDTO"
@@ -20,25 +20,25 @@
 		<![CDATA[
 			select * from
 				(select b.*, row_number() 
-			   		over(order by a_no desc) rnum from activity b)	
+			   		over(order by a_no desc) rnum from Trv_Activity b)	
 			   		where rnum >= #{startNo} and rnum <= #{endNo}
 		]]>
 	</select>
 	
 	
 	<select id="content" parameterType="int" resultType="com.spring.model.Activity.ActivityDTO">
-		select * from activity where a_no = #{no}
+		select * from Trv_Activity where a_no = #{no}
 	</select>
 	
 	<select id="category" parameterType="String" resultType="int">
-		select count(*) from activity where a_category=#{result}
+		select count(*) from Trv_Activity where a_category=#{result}
 	</select>
 	
 	<select id="outdoor" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
 		<![CDATA[
 			select * from
 				(select b.*, row_number() 
-			   		over(order by a_no desc) rnum from activity b
+			   		over(order by a_no desc) rnum from Trv_Activity b
 			   		where a_category like '%' || #{category}  || '%' )	
 			   		where rnum >= #{startNo} and rnum <= #{endNo}
 		]]>
@@ -48,7 +48,7 @@
 		<![CDATA[
 			select * from
 				(select b.*, row_number() 
-			   		over(order by a_no desc) rnum from activity b
+			   		over(order by a_no desc) rnum from Trv_Activity b
 			   		where a_category like '%' || #{category}  || '%' )	
 			   		where rnum >= #{startNo} and rnum <= #{endNo}
 		]]>
@@ -59,7 +59,7 @@
 		<![CDATA[
 			select * from
 				(select b.*, row_number() 
-			   		over(order by a_no desc) rnum from activity b
+			   		over(order by a_no desc) rnum from Trv_Activity b
 			   		where a_category like '%' || #{category}  || '%' )	
 			   		where rnum >= #{startNo} and rnum <= #{endNo}
 		]]>
@@ -68,14 +68,14 @@
 	<!-- 유빈님 파트 -->
 	<select id="act_recommend" resultType="com.spring.model.Activity.ActivityDTO">
 		<![CDATA[
-			select * from (select * from spot order by s_no) where rownum >= 1 and rownum < 5
+			select * from (select * from Trv_Spot order by s_no) where rownum >= 1 and rownum < 5
 		]]>
 	</select>
 	
 	<select id="spot_recommend" resultType="com.spring.model.Activity.SpotDTO">
 		<![CDATA[
 			select *
-			from (select * from spot order by s_no)
+			from (select * from Trv_Spot order by s_no)
 			where rownum >= 1 and rownum < 7
 			]]>
 	</select>

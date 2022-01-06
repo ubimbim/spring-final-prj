@@ -144,7 +144,7 @@ public class KakaoController {
  		String rest_api_key = "b11fa6774e0285e50b5a9dfa4047b19f";
  		mav.addObject("api_key", rest_api_key);
  		
- 		session.setAttribute("kakao_id", kakao_U_email);
+ 		session.setAttribute("kdto", dto);
  		session.setAttribute("api_key", rest_api_key);
  		 		
  		// 가입자 여부 확인

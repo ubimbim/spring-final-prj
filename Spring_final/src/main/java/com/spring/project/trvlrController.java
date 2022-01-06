@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -23,7 +24,7 @@ import com.spring.model.Place.PlaceDTO;
 public class trvlrController {
 
 	@Autowired	
-	private MemberDAO Udao; 
+	private MemberDAO mdao; 
 	@Autowired	
 	private ActivityDAO Adao; 
 	@Autowired	
@@ -44,13 +45,13 @@ public class trvlrController {
 		return "main";
 	}
 	
-	@RequestMapping("mypage.do") 
-	public String Mypage(Model model) {
-		MemberDTO dto = this.Udao.getCont(null);
+	@GetMapping("mypage.do") 
+	public String Mypage(Model model, @RequestParam("id") String id) {
+		MemberDTO dto = this.mdao.getCont(id);
 		
 		model.addAttribute("cont", dto);
 		
-		return "mypage";
+		return "user/mypage";
 	}
 	
 	 @RequestMapping("user_edit.do") 
@@ -58,7 +59,7 @@ public class trvlrController {
 			 @RequestParam("id") String id, @RequestParam("phone") String phone, @RequestParam("pwd") String pwd,
 			 @RequestParam("email") String email, MemberDTO dto, HttpServletResponse response) throws IOException {
 		 
-		 int res = this.Udao.editUser(dto, id, pwd, email, phone);
+		 int res = this.mdao.editUser(dto, id, pwd, email, phone);
 		 
 		 response.setContentType("text/html; charset=utf-8");
 			
@@ -80,7 +81,7 @@ public class trvlrController {
 	@RequestMapping("user_delete.do") 
 	public void delete(@RequestParam("id") String id, HttpServletResponse response) throws IOException {
 		
-		int res = this.Udao.deleteUser(id);
+		int res = this.mdao.deleteUser(id);
 		
 		response.setContentType("text/html; charset=utf-8");
 		

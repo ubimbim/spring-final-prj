@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.spring.model.Member.MemberDAO;
 import com.spring.model.Member.MemberDTO;
 import com.spring.model.Member.MemberService;
 
@@ -21,6 +22,9 @@ public class ProjectController {
 	
 	@Autowired
 	private MemberService msvc;	
+	
+	@Autowired
+	private MemberDAO mdao;
 	
 	@Autowired
 	private HttpSession session;
@@ -84,12 +88,14 @@ public class ProjectController {
 		
 		int check = msvc.emailLoginCheck(email_id, pwd);
 		
+		MemberDTO dto = mdao.getCont(email_id);
+		
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();		
 		
 		if(check == 1) {
-			session.setAttribute("email_id", email_id);
-			System.out.println("세션 생성 성공! 세션ID >>> " + "${email_id}" );
+			session.setAttribute("edto", dto);
+			System.out.println("세션 생성 성공! 세션ID >>> " + dto.getU_id() );
 			out.println("<script>");
 			out.println("alert('로그인 성공!! 환영합니다!!')");
 			out.println("location.href='main.do'");

@@ -17,31 +17,45 @@
 	
 	<input type="text" placeholder="검색어를 입력하세요." id="searchInput"> 
 
-	<c:if test="${!empty kakao_id || !empty email_id }">
+	<c:if test="${!empty kdto || !empty edto }">
 		<div id="mem">
 			<ul>
 				<li><a href="">위시리스트</a>&nbsp;|&nbsp;<a
 					href="<%=request.getContextPath()%>/myplan.do">내 플랜</a></li>
-				<li><a href="<%=request.getContextPath()%>/mypage.do"><img
-						src="<%=request.getContextPath()%>/resources/images/horse.svg"
+				<c:if test="${!empty kdto }">
+				<li><a href="mypage.do?id=${kdto.u_email}"><img
+						src="${kdto.u_img }"
 						width="80px" /></a>
+				</c:if>
+				<c:if test="${!empty edto }">				
+				<li><a href="mypage.do?id=${edto.u_email}"><img
+						src="./resources/images/horse.svg"
+						width="80px" /></a>
+				</c:if>
 					<ul>
-						<li><h4>${kakao_id}</h4></li>
-						<li><a href="<%=request.getContextPath()%>/mypage.do"
+						<c:if test="${!empty edto }">
+						<li><h4>${edto.u_name} 님</h4></li>
+						<li><a href="mypage.do?id=${edto.u_email}"
 							style="color: #5779F4">마이페이지</a><br>
 						<hr></li>
-						<c:if test="${!empty email_id }">
+						<c:if test="${!empty edto }">
 							<li><a href="email_logout.do">로그아웃</a></li>
 						</c:if>
-						<c:if test="${!empty kakao_id }">
-							<li><a href="https://kauth.kakao.com/oauth/logout?client_id=${api_key }&logout_redirect_uri=http://localhost:8080/project/logout.do">로그아웃</a></li>
+						</c:if>
+						<c:if test="${!empty kdto }">
+						<li><h4>${kdto.u_name} 님</h4></li>						
+						<li><a href="mypage.do?id=${kdto.u_email}"
+							style="color: #5779F4">마이페이지</a><br>
+						<hr>
+						</li>
+						<li><a href="https://kauth.kakao.com/oauth/logout?client_id=${api_key }&logout_redirect_uri=http://localhost:8080/project/logout.do">로그아웃</a></li>
 						</c:if>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</c:if>
-	<c:if test="${empty kakao_id && empty email_id }">
+	<c:if test="${empty kdto && empty edto }">
 		<div id="noMem">
 			<a href="kakao_login.do">로그인</a> <a href="kakao_signUp.do"><img src="<%=request.getContextPath() %>/resources/images/join.svg" width="100px"/></a>
 		</div>
