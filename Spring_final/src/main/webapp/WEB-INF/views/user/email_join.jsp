@@ -12,8 +12,8 @@
 	outline: none;
 }
 
-body {
-	width: 1200px;
+main {	
+	width: 100%;
 	font-family: "맑은 고딕";
 	line-height: 1.5;
 	overflow-anchor: none;
@@ -234,6 +234,7 @@ img {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
+	
 	//이메일 형식 검사
 	function validateEmail(email) {
 		let filter = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
@@ -375,7 +376,11 @@ img {
 
 <body>
 	<!-- header -->
-	<main>
+	<header>
+		<jsp:include page="../header.jsp" />
+	</header>
+	
+	<main class="SignIn_container">
 		<div class="EmailSignUp_container">
 			<form action="sign_up_ok.do" method="post">
 				<div class="SignUpInfo_container">
@@ -493,7 +498,11 @@ img {
 			</form>
 		</div>
 	</main>
+	
 	<!-- footer -->
+	<footer>
+		<jsp:include page="../footer.jsp" />
+	</footer>
 </body>
 
 </html>

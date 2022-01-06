@@ -12,8 +12,9 @@
 	outline: none;
 }
 
-body {
-	width: 1200px;
+main {
+	width: 80vw;
+	margin: 0 10vw;	
 	font-family: "맑은 고딕";
 	line-height: 1.5;
 	overflow-anchor: none;
@@ -52,16 +53,6 @@ body {
 }
 
 .welcome_hand {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-duration: .6s;
-    animation-duration: .6s;
-    -webkit-animation-iteration-count: 2;
-    animation-iteration-count: 2;
-    -webkit-animation-name: index-module__shake--PQXJ3;
-    animation-name: index-module__shake--PQXJ3;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
     height: 56px;
     margin-top: 48px;
     -o-object-fit: contain;
@@ -230,8 +221,9 @@ a, a:active, a:hover, a:link, a:visited {
 <body>
 	
 	<!-- 헤더 영역 -->
-	<header></header>
-
+	<header>
+		<jsp:include page="../header.jsp" />
+	</header>
 	<!-- 메인 영역 -->
 	<main class="SignIn_container">
 		<div class="Grid_container">
@@ -265,7 +257,7 @@ a, a:active, a:hover, a:link, a:visited {
 						</div>
 					</div>
 					<div class="index_footerContainer">
-						<span>아직 회원이 아니신가요?</span> <a href="/user/sign_up">회원가입</a>
+						<span>아직 회원이 아니신가요?</span> <a href="kakao_signUp.do">회원가입</a>
 					</div>
 				</div>
 			</div>
@@ -273,7 +265,8 @@ a, a:active, a:hover, a:link, a:visited {
 	</main>
 
 	<!-- footer 영역 -->
-	<footer></footer>
-
+	<footer>
+		<jsp:include page="../footer.jsp" />
+	</footer>
 </body>
 </html>

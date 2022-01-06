@@ -13,8 +13,8 @@
 	outline: none;
 }
 
-body {
-	width: 1200px;
+main {
+	width: 100%;	
 	font-family: "맑은 고딕";
 	line-height: 1.5;
 	overflow-anchor: none;
@@ -186,8 +186,9 @@ input, button, select, textarea {
 <body>
 	
 	<!-- 헤더 영역 -->
-	<header></header>
-
+	<header>
+		<jsp:include page="../header.jsp" />
+	</header>
 	<!-- 메인 영역 -->
 	<form action="find_password_ok.do" method="post">
 	<main>
@@ -218,7 +219,8 @@ input, button, select, textarea {
 	</form>
 
 	<!-- footer 영역 -->
-	<footer></footer>
-
+	<footer>
+		<jsp:include page="../footer.jsp" />
+	</footer>
 </body>
 </html>

@@ -12,8 +12,9 @@
 	outline: none;
 }
 
-body {
-	width: 1200px;
+main {
+	width: 80vw;
+	margin: 0 10vw;	
 	font-family: "맑은 고딕";
 	line-height: 1.5;
 	overflow-anchor: none;
@@ -22,6 +23,17 @@ body {
 	background: #fff;
 	color: #373a3c;
 	display: block;
+}
+
+.welcome_hand {
+    height: 56px;
+    margin-top: 48px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 56px;
+	border: 0;
+    border-width: 0;
+    vertical-align: middle;
 }
 
 .SignIn_container {
@@ -49,27 +61,6 @@ body {
 	padding: 0 48px;
 	text-align: center;
 	width: 430px;
-}
-
-.welcome_hand {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-duration: .6s;
-    animation-duration: .6s;
-    -webkit-animation-iteration-count: 2;
-    animation-iteration-count: 2;
-    -webkit-animation-name: index-module__shake--PQXJ3;
-    animation-name: index-module__shake--PQXJ3;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    height: 56px;
-    margin-top: 48px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 56px;
-	border: 0;
-    border-width: 0;
-    vertical-align: middle;
 }
 
 .index_title {
@@ -230,8 +221,9 @@ a, a:active, a:hover, a:link, a:visited {
 <body>
 	
 	<!-- 헤더 영역 -->
-	<header></header>
-
+	<header>
+		<jsp:include page="../header.jsp" />
+	</header>
 	<!-- 메인 영역 -->
 	<main class="SignIn_container">
 		<div class="Grid_container">
@@ -254,7 +246,7 @@ a, a:active, a:hover, a:link, a:visited {
 					<div class="index_oauthListContainer">
 						<div class="index_container_oauth">
 							<div class="index_iconLabelWrapper">								
-								<a href="email_login.do" class="emailLogin_link">	
+								<a href="sign_up.do" class="emailLogin_link">	
 								<img class="index_iconImg"
 										src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogc2tldGNodG9vbCA2My4xICgxMDEwMTApIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPjExMjRGQkEzLUNFOTctNEU3Mi05MzA4LUIwQUVDNTQxMkZGNjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggc2tldGNodG9vbC48L2Rlc2M+CiAgICA8ZyBpZD0i66Gc6re47J24JmFtcDvtmozsm5DqsIDsnoUiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSIzNzVf66Gc6re47J24JmFtcDvtmozsm5DqsIDsnoUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNjIuMDAwMDAwLCAtNDAzLjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjYyLjAwMDAwMCwgNDAzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IlNOUy9lbWFpbC9GaWxsZWQvWFMvZ3JheS01MDAiPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGZpbGw9IiNBREI1QkQiIGN4PSI4IiBjeT0iOCIgcj0iOCI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTgsOSBMNCw1LjQ0OTE2Mzk2IEM0LjA2ODEzNjg0LDUuMTgyMzQ1ODUgNC4yNzQxNjMzNyw1LjAwMDA0NDA0IDQuNTA3NjE4MDcsNSBMMTEuNDkyMzk4LDUgQzExLjcyNTgzMSw1LjAwMDA0Njg3IDExLjkzMTg0Myw1LjE4MjMxNTE4IDEyLDUuNDQ5MDk4NzkgTDgsOSBaIE0xMiw3IEw4LjIxMjAyMjIyLDEwLjQ3NjY3MzggQzguMDg2MTQyMzQsMTAuNTkyMjEyOSA3LjkxMzg1NzY2LDEwLjU5MjIxMjkgNy43ODc5Nzc3OCwxMC40NzY2NzM4IEw0LDcgTDQsMTAuMzQ4MDkyNCBDNCwxMC43MDgxMzA4IDQuMjM2MjQxMDQsMTEgNC41Mjc2NTg2NywxMSBMMTEuNDcyMzQxMywxMSBDMTEuNjEyMjg1MywxMSAxMS43NDY0OTc1LDEwLjkzMTMxNjQgMTEuODQ1NDUyNywxMC44MDkwNTk2IEMxMS45NDQ0MDc5LDEwLjY4NjgwMjggMTIsMTAuNTIwOTg3MSAxMiwxMC4zNDgwOTAyIEwxMiw3IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="
 										alt="email"> <img class="index_iconImg"
@@ -270,7 +262,9 @@ a, a:active, a:hover, a:link, a:visited {
 	</main>
 
 	<!-- footer 영역 -->
-	<footer></footer>
+	<footer>
+		<jsp:include page="../footer.jsp" />
+	</footer>
 
 </body>
 </html>
