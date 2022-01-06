@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header>
-		<jsp:include page="header.jsp" />
+		<jsp:include page="include/header.jsp" />
 	</header>
 	
 	<div id="back_color">
@@ -84,7 +84,7 @@
 		</div>
 	</div>
 	<footer>
-		<jsp:include page="footer.jsp" />
+		<jsp:include page="include/footer.jsp" />
 	</footer>
 <script>
 const acc_nextBtn = document.querySelector("#acc_nextBtn");

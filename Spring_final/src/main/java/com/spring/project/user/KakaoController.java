@@ -21,10 +21,10 @@ import org.springframework.web.servlet.ModelAndView;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.spring.model.Member.MemberDAO;
+import com.spring.model.Member.MemberDTO;
 import com.spring.model.OAuth.KakaoProfile;
 import com.spring.model.OAuth.OAuthToken;
-import com.spring.model.member.MemberDAO;
-import com.spring.model.member.MemberDTO;
 
 @RestController
 public class KakaoController {

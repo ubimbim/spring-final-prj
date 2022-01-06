@@ -377,7 +377,7 @@ img {
 <body>
 	<!-- header -->
 	<header>
-		<jsp:include page="../header.jsp" />
+		<jsp:include page="../include/header.jsp" />
 	</header>
 	
 	<main class="SignIn_container">
@@ -501,7 +501,7 @@ img {
 	
 	<!-- footer -->
 	<footer>
-		<jsp:include page="../footer.jsp" />
+		<jsp:include page="../include/footer.jsp" />
 	</footer>
 </body>
 

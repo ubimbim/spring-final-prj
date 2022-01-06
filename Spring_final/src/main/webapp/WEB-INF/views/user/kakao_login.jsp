@@ -222,7 +222,7 @@ a, a:active, a:hover, a:link, a:visited {
 	
 	<!-- 헤더 영역 -->
 	<header>
-		<jsp:include page="../header.jsp" />
+		<jsp:include page="../include/header.jsp" />
 	</header>
 	<!-- 메인 영역 -->
 	<main class="SignIn_container">
@@ -266,7 +266,7 @@ a, a:active, a:hover, a:link, a:visited {
 
 	<!-- footer 영역 -->
 	<footer>
-		<jsp:include page="../footer.jsp" />
+		<jsp:include page="../include/footer.jsp" />
 	</footer>
 </body>
 </html>

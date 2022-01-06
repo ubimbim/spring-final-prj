@@ -187,7 +187,7 @@ input, button, select, textarea {
 	
 	<!-- 헤더 영역 -->
 	<header>
-		<jsp:include page="../header.jsp" />
+		<jsp:include page="../include/header.jsp" />
 	</header>
 	<!-- 메인 영역 -->
 	<form action="find_password_ok.do" method="post">
@@ -220,7 +220,7 @@ input, button, select, textarea {
 
 	<!-- footer 영역 -->
 	<footer>
-		<jsp:include page="../footer.jsp" />
+		<jsp:include page="../include/footer.jsp" />
 	</footer>
 </body>
 </html>

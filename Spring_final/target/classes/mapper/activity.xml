@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD(Document Type Definition)
+     - 작성하는 문서가 어떤 문서인지에 대해서 정의하는 것.
+     - 하나의 시스템 내에서 사용할 xml 데이터의 구조를 정의하여 유효성을 점검할 때 사용. 
+ -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.model.Activity.ActivityDAO">
+	
+	
+	<select id="count" resultType="int">
+		select count(*) from activity
+	</select>
+	
+	<select id="all" parameterType="com.spring.model.Activity.PageDTO"
+			resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from activity b)	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	
+	<select id="content" parameterType="int" resultType="com.spring.model.Activity.ActivityDTO">
+		select * from activity where a_no = #{no}
+	</select>
+	
+	<select id="category" parameterType="String" resultType="int">
+		select count(*) from activity where a_category=#{result}
+	</select>
+	
+	<select id="outdoor" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	<select id="snow" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	
+	<select id="surfing" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	<!-- 유빈님 파트 -->
+	<select id="act_recommend" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from (select * from spot order by s_no) where rownum >= 1 and rownum < 5
+		]]>
+	</select>
+	
+	<select id="spot_recommend" resultType="com.spring.model.Activity.SpotDTO">
+		<![CDATA[
+			select *
+			from (select * from spot order by s_no)
+			where rownum >= 1 and rownum < 7
+			]]>
+	</select>
+	
+	<select id="spot_review" resultType="com.spring.model.Review.S_ReviewDTO">
+		<![CDATA[
+				select * 
+				from s_review 
+				where sr_grade >= 4
+			]]>
+	</select>
+	
+	<select id="user_name" resultType="com.spring.model.Member.MemberDTO">
+		select u_name from (select t.u_name from trv_user t, s_review sr where t.u_id = sr.u_id)
+	</select>
+	
+	
+</mapper>

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.spring.model.member.MemberDTO;
-import com.spring.model.member.MemberService;
+import com.spring.model.Member.MemberDTO;
+import com.spring.model.Member.MemberService;
 
 @Controller
 public class ProjectController {

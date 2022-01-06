@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.model.Review.P_ReviewDAO">
+	
+	<select id="pr_list" resultType="com.spring.model.Review.P_ReviewDTO">
+		select * from p_review order by pr_no desc
+	</select>
+	
+	<insert id="pr_add" parameterType="com.spring.model.Review.P_ReviewDTO">
+		insert into p_review values(pr_no.nextval, 5, #{U_id}, #{pr_cont} , sysdate , 
+		 #{pr_grade},#{pr_img},#{pr_upload})
+	</insert>
+	
+	<delete id="pr_del" parameterType="int">
+		delete from p_review where pr_no = #{pr_no}
+	</delete>
+	
+	<select id="alist" resultType="com.spring.model.Review.A_ReviewDTO">
+		select * from a_review order by ar_no desc
+	</select>
+	
+	<insert id="aadd" parameterType="com.spring.model.Review.A_ReviewDTO">
+		insert into a_review values(ar_no.nextval, 5, '무야호', #{ar_cont} , sysdate , 
+		 #{ar_grade},#{ar_img},#{ar_upload})
+	</insert>
+	
+	<delete id="adel" parameterType="int">
+		delete from a_review where ar_no = #{ar_no}
+	</delete>
+	
+	<select id="flist" resultType="com.spring.model.Review.F_ReviewDTO">
+		select * from f_review order by fr_no desc
+	</select>
+	
+	<insert id="fadd" parameterType="com.spring.model.Review.F_ReviewDTO">
+		insert into f_review values(fr_no.nextval, 3, '3조리도엽', #{fr_cont} , sysdate , 
+		 #{fr_grade},#{fr_img},#{fr_upload})
+	</insert>
+	
+	<delete id="fdel" parameterType="int">
+		delete from f_review where fr_no = #{fr_no}
+	</delete>
+	
+	<select id="nlist" resultType="com.spring.model.Review.N_ReviewDTO">
+		select * from n_review order by nr_no desc
+	</select>
+	
+	<insert id="nadd" parameterType="com.spring.model.Review.N_ReviewDTO">
+		insert into n_review values(nr_no.nextval, 3, '지방대이도엽', #{nr_cont} , sysdate , 
+		 #{nr_grade},#{nr_img},#{nr_upload})
+	</insert>
+	
+	<delete id="ndel" parameterType="int">
+		delete from n_review where nr_no = #{nr_no}
+	</delete>
+	
+	
+</mapper>
