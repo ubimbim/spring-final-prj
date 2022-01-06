@@ -72,35 +72,44 @@ $(function (){
 								<div class="map-toggle-wrap">
 									<div id="map-toggle" style="display:none">  <%-- 지역으로 지도 버튼 --%>
 									    <img class="map-css-thumbnail" alt="loading" src="<%=request.getContextPath()%>/resources/img/map_cloudfront.png">
-										<button class="map-1">
+										
+										<c:set var="str" value="성산/우도" />
+										<button class="map-1" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/sun.png">
 											성산/우도		
 										</button>
-										<button class="map-2">
+										<c:set var="str" value="제주시" />
+										<button class="map-2" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-2.png">
 											제주시
 										</button>
-										<button class="map-3">
+										<c:set var="str" value="표선" />
+										<button class="map-3" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-3.png">
 											표선
 										</button>
-										<button class="map-4">
+										<c:set var="str" value="중문" />
+										<button class="map-4" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-4.png">
 											중문
 										</button>
-										<button class="map-5">
+										<c:set var="str" value="함덕/구좌" />
+										<button class="map-5" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-5.png">
 											함덕/구좌
 										</button>
-										<button class="map-6">
+										<c:set var="str" value="서귀포" />
+										<button class="map-6" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-6.png">
 											서귀포
 										</button>
-										<button class="map-7">
+										<c:set var="str" value="애월" />
+										<button class="map-7" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-7.png">
 											애월
 										</button>
-										<button class="map-8">
+										<c:set var="str" value="한립/협재" />
+										<button class="map-8" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-8.png">
 											한립/협재
 										</button>
@@ -140,7 +149,8 @@ $(function (){
 								</li>
 
 								<li>
-									<button class="cat-all-common">
+								<c:set var="str" value="수상액티비티" />
+									<button class="cat-all-common" onclick="location.href='activity_category.do?result=${str }'">
 										<img class="cat-icon" alt="all icon"
 											src="./resources/img/sea_activity.png">
 										<div class="cat-label">수상액티비티</div>
@@ -148,7 +158,8 @@ $(function (){
 								</li>
 
 								<li>
-									<button class="cat-all-common">
+								<c:set var="str" value="크루즈/요트" />
+									<button class="cat-all-common" onclick="location.href='activity_category.do?result=${str }'">
 										<img class="cat-icon" alt="all icon"
 											src="./resources/img/ship.png">
 										<div class="cat-label">크루즈/요트</div>
@@ -156,7 +167,8 @@ $(function (){
 								</li>
 
 								<li>
-									<button class="cat-all-common">
+								<c:set var="str" value="골프" />
+									<button class="cat-all-common" onclick="location.href='activity_category.do?result=${str }'">
 										<img class="cat-icon" alt="all icon"
 											src="./resources/img/golf.png">
 										<div class="cat-label">골프</div>
@@ -164,7 +176,8 @@ $(function (){
 								</li>
 
 								<li>
-									<button class="cat-all-common">
+								<c:set var="str" value="실내액티비티" />
+									<button class="cat-all-common" onclick="location.href='activity_category.do?result=${str }'">
 										<img class="cat-icon" alt="all icon"
 											src="./resources/img/indoor.png">
 										<div class="cat-label">실내액티비티</div>
@@ -172,7 +185,8 @@ $(function (){
 								</li>
 
 								<li>
-									<button class="cat-all-common">
+								<c:set var="str" value="익스트림액티비티" />
+									<button class="cat-all-common" onclick="location.href='activity_category.do?result=${str }'">
 										<img class="cat-icon" alt="all icon"
 											src="./resources/img/sky.png">
 										<div class="cat-label">익스트림액티비티</div>
@@ -189,7 +203,8 @@ $(function (){
 								</li>
 
 								<li>
-									<button class="cat-all-common">
+								<c:set var="str" value="이색체험" />
+									<button class="cat-all-common" onclick="location.href='activity_category.do?result=${str }'">
 										<img class="cat-icon" alt="all icon"
 											src="./resources/img/farm2.png">
 										<div class="cat-label">이색체험</div>

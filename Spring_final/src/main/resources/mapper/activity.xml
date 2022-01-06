@@ -65,6 +65,92 @@
 		]]>
 	</select>
 	
+		
+	<select id="sea" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	
+	<select id="yacht" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	<select id="golf" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	<select id="indoor" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	<select id="extreme" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	<select id="uniq" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_category like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	
+	
+	<!-- 지도 클릭시 정렬 -->
+	<select id="jeju" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_location like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	<select id="seogwipo" parameterType="com.spring.model.Activity.PageDTO" resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b
+			   		where a_location like '%' || #{category}  || '%' )	
+			   		where rnum >= #{startNo} and rnum <= #{endNo}
+		]]>
+	</select>
+	
+	
 	<!-- 유빈님 파트 -->
 	<select id="act_recommend" resultType="com.spring.model.Activity.ActivityDTO">
 		<![CDATA[
@@ -83,7 +169,7 @@
 	<select id="spot_review" resultType="com.spring.model.Review.S_ReviewDTO">
 		<![CDATA[
 				select * 
-				from s_review 
+				from trv_s_review 
 				where sr_grade >= 4
 			]]>
 	</select>

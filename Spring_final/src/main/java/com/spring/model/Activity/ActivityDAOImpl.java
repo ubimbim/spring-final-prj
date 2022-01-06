@@ -103,6 +103,24 @@ public class ActivityDAOImpl implements ActivityDAO {
 			return this.sqlSession.selectList("snow", dto);
 		}else if(dto.getCategory().equals("서핑")) {
 			return this.sqlSession.selectList("surfing", dto);
+		}else if(dto.getCategory().equals("수상액티비티")) {
+			return this.sqlSession.selectList("sea", dto);
+		}else if(dto.getCategory().equals("크루즈/요트")) {
+			return this.sqlSession.selectList("yacht", dto);
+		}else if(dto.getCategory().equals("골프")) {
+			return this.sqlSession.selectList("golf", dto);
+		}else if(dto.getCategory().equals("실내")) {
+			return this.sqlSession.selectList("indoor", dto);
+		}else if(dto.getCategory().equals("익스트림액티비티")) {
+			return this.sqlSession.selectList("extreme", dto);
+		}else if(dto.getCategory().equals("이색체험")) {
+			return this.sqlSession.selectList("uniq", dto);
+			
+			
+		}else if(dto.getCategory().equals("제주시")) {
+			return this.sqlSession.selectList("jeju", dto);
+		}else if(dto.getCategory().equals("서귀포")) {
+			return this.sqlSession.selectList("seogwipo", dto);
 	    }else {
 			return this.sqlSession.selectList("writerList", dto);
 		}
