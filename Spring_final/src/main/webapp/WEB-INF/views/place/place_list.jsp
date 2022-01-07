@@ -223,7 +223,7 @@
 	    <div class = "card mb-3" style = "max-width:740px; max-height:180px;">            
           <div class = "row g-1">	            
 	        <div class = "col-md-3">             
-              <img src = "<%=request.getContextPath() %>/resources/image/${rows.getP_main() }" width = "210" height = "180" class = "rounded float-start">    
+              <img src = "<%=request.getContextPath() %>/resources/image/${rows.getP_img() }" width = "210" height = "180" class = "rounded float-start">    
 	        </div>	        
 	        
 	        <!-- 카드 본문 -->
@@ -249,7 +249,7 @@
 	                      <h5 align = "left"> Information </h5>			 
 				        </div>				        
 				        <div class = "modal-body">
-				          <img src = "<%=request.getContextPath() %>/resources/image/${rows.getP_info() }">       				            
+				          <img src = "<%=request.getContextPath() %>/resources/image/${rows.getP_img_cont() }">       				            
 				        </div>
 				        
 				        <div class = "modal-footer">
