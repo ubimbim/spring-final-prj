@@ -36,11 +36,8 @@ $(function (){
 	  $('.sort').submit();
   }
   
-  function transferRId(rid){
-
-	  $('#A_no').val(rid)
-
-	  } 
+  
+	
   
 </script>
 </head>
