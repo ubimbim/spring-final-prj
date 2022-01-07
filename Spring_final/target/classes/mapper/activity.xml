@@ -83,13 +83,13 @@
 	<select id="spot_review" resultType="com.spring.model.Review.S_ReviewDTO">
 		<![CDATA[
 				select * 
-				from Trv_s_review 
+				from trv_s_review 
 				where sr_grade >= 4
 			]]>
 	</select>
 	
 	<select id="user_name" resultType="com.spring.model.Member.MemberDTO">
-		select u_name from (select t.u_name from trv_user t, Trv_s_review sr where t.u_id = sr.u_id)
+		select u_name from (select t.u_name from trv_user t, trv_s_review sr where t.u_id = sr.u_id)
 	</select>
 	
 	
