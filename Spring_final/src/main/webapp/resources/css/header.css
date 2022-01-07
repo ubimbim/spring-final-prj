@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/* header css */
+
+#mainImage {
+	position: fixed;
+	top: 0;
+	right: 300px;
+	opacity: 0.7;
+	z-index: -3;
+}
+
+#header {
+	display: flex;
+	width: 1000px;
+	height: 90px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 420px;
+}
+
+#logo {
+	flex: 1;
+}
+
+#searchInput {
+	width: auto;
+	height: 30px;
+	margin-top: 25px;
+	margin-right: 400px;
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif; 
+	border: solid 1px #5779F4;
+	border-radius: 10px;
+	opacity: 0.7;
+	z-index: 1;
+}
+
+#mem {	
+	flex: 1;
+	margin-left: 40px;
+	margin-top: -20px;
+}
+
+#mem a {
+	text-decoration: none;
+	color: black;
+}
+
+#mem a:hover {
+	font-weight: bold;
+}
+
+#mem ul {
+	list-style: none;
+	width: 200px;
+}
+
+#mem ul li {
+	margin-bottom: 10px;
+}
+
+#mem ul ul {	
+	display: none; 
+	margin-left: 35px;
+   	width: 130px; 
+   	height: 150px;
+   	background-color: #fff;    	
+   	border: solid 1px lightgray;
+   	border-radius: 15px;
+   	padding: 10px 0 0 0px;
+   	z-index: 99;
+}
+
+#mem ul li:hover > ul {
+	display:block;
+}
+
+#mem ul ul li:hover > a {
+	font-weight: bold;
+}
+
+#noMem {
+    display: contents;    
+	width: 100px;
+	margin-left: 250px;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	line-height: 40px; ;
+}
+
+#noMem a {
+	flex: 1;
+	margin-top: 15px;
+	margin-left: 30px;
+	text-decoration: none;
+	color: black;
+}
+
+
+#navi {
+	clear: both; 
+	width: 1000px;
+	height: 30px;
+	margin-left: 440px;
+    background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 5px;
+}
+
+#navi ul {
+	list-style:none;
+}
+
+#navi ul li {
+	float:left;
+}
+	
+#navi ul li a {
+	text-decoration: none;
+	display:block;
+	width: 100px;
+	color: #000;
+	font-size: 17px;
+	padding-top: 3px;
+	margin-right: 20px;
+}
+
+#navi ul ul{
+   	display: none; 
+   	width: 100px;
+   	height: 70px;
+   	background-color: rgba(255, 255, 255, 0.8); 	
+   	border-radius: 15px;
+   	padding: 13px 0 0 0;
+   	z-index: 99;
+}
+
+#navi ul li:hover > ul {
+	display:block;
+}
+
+#navi ul li:hover > a {
+	font-weight: bold;
+}
+
+#navi img {
+	width: 20px;
+}
