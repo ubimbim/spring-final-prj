@@ -398,6 +398,14 @@
     width: 343px;
 }
 
+.map-toggle-wrap{
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 32px 38px 29px 29px;
+    background-color: white;
+}
+
 .map-content {
 	
     top: 0px;
@@ -423,13 +431,13 @@
     width: 100%;
     min-width: 288px;
     max-width: 382px;
-    position: absolute;
+    
 }
 
 
 /*지역으로 보기 */
 .map-1 {
-	position: relative;
+	position: absolute;
     top: 22.5%;
     left: 73.9%;
     display: flex;
@@ -447,7 +455,7 @@
 }
 
 .map-2 {
-	position: relative;
+	position: absolute;
 	top: 7.9%;
     left: 31.8%;
     display: flex;
@@ -465,7 +473,7 @@
 }
 
 .map-3 {
-	position: relative;
+	position: absolute;
     top: 53.3%;
     left: 76.1%;
     display: flex;
@@ -483,7 +491,7 @@
 }
 
 .map-4 {
-	position: relative;
+	position: absolute;
 	top: 67.9%;
     left: 31.6%;
     display: flex;
@@ -501,7 +509,7 @@
 }
 
 .map-5 {
-	position: relative;
+	position: absolute;
     top: 0.8%;
     left: 62.6%;
     display: flex;
@@ -519,7 +527,7 @@
 }
 
 .map-6 {
-	position: relative;
+	position: absolute;
 	top: 45%;
     left: 46.8%;
     display: flex;
@@ -573,7 +581,7 @@
 }
 
 .map-1:hover {
-	position: relative;
+	position: absolute;
     top: 22.5%;
     left: 73.9%;
     display: flex;
@@ -592,7 +600,7 @@
 }
 
 .map-2:hover {
-	position: relative;
+	position: absolute;
 	top: 7.9%;
     left: 31.8%;
     display: flex;
@@ -611,7 +619,7 @@
 }
 
 .map-3:hover {
-	position: relative;
+	position: absolute;
     top: 53.3%;
     left: 76.1%;
     display: flex;
@@ -630,7 +638,7 @@
 }
 
 .map-4:hover {
-	position: relative;
+	position: absolute;
 	top: 67.9%;
     left: 31.6%;
     display: flex;
@@ -649,7 +657,7 @@
 }
 
 .map-5:hover {
-	position: relative;
+	position: absolute;
     top: 0.8%;
     left: 62.6%;
     display: flex;
@@ -668,7 +676,7 @@
 }
 
 .map-6:hover {
-	position: relative;
+	position: absolute;
 	top: 45%;
     left: 46.8%;
     display: flex;

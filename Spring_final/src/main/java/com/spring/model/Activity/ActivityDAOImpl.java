@@ -109,7 +109,7 @@ public class ActivityDAOImpl implements ActivityDAO {
 			return this.sqlSession.selectList("yacht", dto);
 		}else if(dto.getCategory().equals("골프")) {
 			return this.sqlSession.selectList("golf", dto);
-		}else if(dto.getCategory().equals("실내")) {
+		}else if(dto.getCategory().equals("실내액티비티")) {
 			return this.sqlSession.selectList("indoor", dto);
 		}else if(dto.getCategory().equals("익스트림액티비티")) {
 			return this.sqlSession.selectList("extreme", dto);
