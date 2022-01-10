@@ -28,7 +28,12 @@ $(function (){
   	$("#map-toggle").toggle();
   });
 });
- 
+
+$(function (){
+	$("#btn-mapModal").click(function (){
+	$("map-toggle-wrap").toggle();
+	});
+});
  
   
   function sort(how) {

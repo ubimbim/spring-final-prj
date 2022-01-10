@@ -69,6 +69,7 @@
 
 /* 왼쪽 카테고리 st */
 .cat-title{
+	margin-top: 70px;
 	margin-bottom: 16px;
 	font-size: 18px;
 	font-weight: bold;
