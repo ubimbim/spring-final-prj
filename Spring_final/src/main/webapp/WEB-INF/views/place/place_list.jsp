@@ -223,8 +223,7 @@
 <body>
 	<header>
 		<jsp:include page="../include/header.jsp" />
-	</header>	
-
+	</header>
 
     <!-- 상단 이미지 -->
     <div class="header">
@@ -282,10 +281,10 @@
 			    <br>	    
 		        <h1 class = "info" align = "left"><fmt:formatNumber value = "${rows.getP_price() }" pattern = "###,###,###원"/>
 		          <button type = "button" class = "btn btn-light" data-toggle = "modal" data-target = "${rows.getP_no() }"> 상세 정보 </button>
-		          <button type = "button" class = " btn btn-outline-info btn-sm"> 담기 </button>
-		             
-		          <button type="button" data-toggle="modal" data-target="#mymodal">리뷰</button>
-
+		          <button type = "button" class = " btn btn-outline-info btn-sm"> 담기 </button>		 
+		       	
+		          <button type="button" data-toggle="modal" data-target="${rows.p_no }_rv">리뷰</button>
+				 
 		        </h1>
 	            
 				  <!-- 모달 -->
@@ -297,7 +296,7 @@
 				      <div class = "modal-content">
 				        
 				        <div class = "modal-header">				      
-	                      <h5 align = "left"> Information </h5>			 
+	                      <h5 align = "left"> Information ${fn:split(rows.getP_no(), '#')[0] } </h5>			 
 				        </div>				        
 				        <div class = "modal-body">
 				          <img src = "<%=request.getContextPath() %>/resources/image/${rows.getP_img_cont() }">       				            
@@ -356,9 +355,11 @@
 	<br><br><br><br><br><br><br><br>
 	
 	               
-                <!-- Modal -->
-	<c:forEach var = "i" items = "${pList }">
-  <div class="modal fade" role="dialog" id = "mymodal" data-seq="${i.getP_no() }">
+<!-- Modal -->
+<%-- <c:forEach var = "rows" items = "${List }">
+<div class = "modal" id = "${fn:split(rows.getP_no(), '#')[0] }" role = "dialog" data-seq="${rows.getP_no() }">	 --%>
+<c:forEach var = "i" items = "${pList }">
+  <div class="modal fade" role="dialog" id ="${fn:split(i.p_no, '#')[0] }_rv" data-seq="${i.p_no }">
 
     <div class="modal-dialog">
 
@@ -376,7 +377,7 @@
     		<table cellspacing="0" style="border-top: none";>
 
     		<tr align="left">
-    			<td> 아이디&nbsp;&nbsp;&nbsp;&nbsp;| asfdfsdafsda</td>
+    			<td> 아이디&nbsp;&nbsp;&nbsp;&nbsp;| ${edto.u_id }</td>
     			<td colspan="2" align="center">
 					<input type="submit" class="btn btn-outline-info btn-sm" value="등록">
 				</td>
@@ -415,62 +416,57 @@
         </div>
 
         <div class="modal-body">
-
-         <table cellspacing="0" style="border-top: none";>
-	
-	<c:forEach items="${pList }" var="i">
-	<input type="hidden" name="pr_no" value="${i.getPr_no() }">
-	
-	<tr align="left">
-		<td> ${i.getU_id()}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;${i.getPr_date().substring(0,10) }</td>
-		
-		<td colspan="2" align="right">
-			<input type="button" class="btn btn-outline-danger btn-sm " value="삭제"
-				onclick="if(confirm('삭제하시겠습니까?')) {
-					location.href='prlist_delete.do?no=${i.getPr_no()}'
-				}else { return; }">
-		</td>
-	</tr>
-	<tr align="left">
-		<c:if test="${ 5==i.getPr_grade() }">
-				<td class="stars"> ★★★★★ </td>
-			</c:if>
-			
-			<c:if test="${ 4==i.getPr_grade() }">
-				<td class="stars"> ★★★★☆</td>
-			</c:if>
-			
-			<c:if test="${ 3==i.getPr_grade() }">
-				<td class="stars"> ★★★☆☆</td>
-			</c:if>
-			
-			<c:if test="${ 2==i.getPr_grade() }">
-				<td class="stars"> ★★☆☆☆</td>
-			</c:if>
-			
-			<c:if test="${ 1==i.getPr_grade() }">
-				<td class="stars"> ★☆☆☆☆</td>
-			</c:if>
-	</tr>
-	
-	<tr align="left">
-		<td> <textarea readonly class="content" >${i.getPr_cont() }</textarea></td>
-		
-		<c:if test="${ !empty i.getPr_img() }">
-				<td colspan="4" align="right"> <img width="110" height="90" src="<%=request.getContextPath()%>/resources/review/${i.getPr_upload()}"> </td>
-		</c:if>
-		<c:if test="${ empty i.getPr_img() }">
-				<td> ${i.getPr_img() } </td>
-		
-		</c:if>
-	</tr>
-	
-	<tr>
-		<td style="width:400px" colspan="4">
-			<hr>
-		</td>
-	</tr>
-	</c:forEach>
+		<input type="hidden" name="pr_no" value="${i.getPr_no() }">
+        	<table cellspacing="0" style="border-top: none;">
+				<tr align="left">
+					<td> ${i.getU_id()}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;${i.getPr_date().substring(0,10) }</td>
+					
+					<td colspan="2" align="right">
+						<input type="button" class="btn btn-outline-danger btn-sm " value="삭제"
+							onclick="if(confirm('삭제하시겠습니까?')) {
+								location.href='prlist_delete.do?no=${i.getPr_no()}'
+							}else { return; }">
+					</td>
+				</tr>
+				<tr align="left">
+					<c:if test="${ 5==i.getPr_grade() }">
+							<td class="stars"> ★★★★★ </td>
+						</c:if>
+						
+						<c:if test="${ 4==i.getPr_grade() }">
+							<td class="stars"> ★★★★☆</td>
+						</c:if>
+						
+						<c:if test="${ 3==i.getPr_grade() }">
+							<td class="stars"> ★★★☆☆</td>
+						</c:if>
+						
+						<c:if test="${ 2==i.getPr_grade() }">
+							<td class="stars"> ★★☆☆☆</td>
+						</c:if>
+						
+						<c:if test="${ 1==i.getPr_grade() }">
+							<td class="stars"> ★☆☆☆☆</td>
+						</c:if>
+				</tr>
+				
+				<tr align="left">
+					<td> <textarea readonly class="content" >${i.getPr_cont() }</textarea></td>
+					
+					<c:if test="${ !empty i.getPr_img() }">
+							<td colspan="4" align="right"> <img width="110" height="90" src="<%=request.getContextPath()%>/resources/review/${i.getPr_upload()}"> </td>
+					</c:if>
+					<c:if test="${ empty i.getPr_img() }">
+							<td> ${i.getPr_img() } </td>
+					
+					</c:if>
+				</tr>
+				
+				<tr>
+					<td style="width:400px" colspan="4">
+						<hr>
+					</td>
+				</tr>	
 	</table>
 
 

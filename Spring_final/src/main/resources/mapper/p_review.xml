@@ -11,7 +11,7 @@
 	</select>
 	
 	<insert id="pr_add" parameterType="com.spring.model.Review.P_ReviewDTO">
-		insert into Trv_P_Review values('qddq', #{pr_cont}, sysdate, #{pr_grade},
+		insert into Trv_P_Review values('asdf', #{pr_cont}, sysdate, #{pr_grade},
 		 #{pr_img}, #{pr_upload}, '#PlaceModal1' , 'lyubin0716@gmail.com')
 	</insert>
 	
