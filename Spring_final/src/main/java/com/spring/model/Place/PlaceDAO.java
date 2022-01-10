@@ -2,6 +2,8 @@ package com.spring.model.Place;
 
 import java.util.List;
 
+
+
 public interface PlaceDAO {
 	
 	int getListCount();
@@ -12,4 +14,5 @@ public interface PlaceDAO {
 	
 	List<PlaceDTO> getCategoryList(PageDTO dto);
 	
+
 }
