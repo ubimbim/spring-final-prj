@@ -17,5 +17,10 @@ public class PlanController {
 
 	  
 	}
-  
+	
+	@RequestMapping("plan_detail.do")
+	public String plan_detail() {
+		
+		return "plan/plan_detail";
+	}
 }
