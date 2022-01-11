@@ -70,11 +70,6 @@
 		<jsp:include page="include/place_header.jsp" />
 	</header>	
 
-    <!-- 상단 이미지 -->
-    <div class="header">
-	  <div class="headerBackground"></div>
-	</div>
-
     
     <!-- 본문 시작 -->
    
