@@ -271,7 +271,7 @@ $(function (){
 																src="https://dffoxz5he03rp.cloudfront.net/icons/ic_rating_star_12x12_filled_blue_400.svg">
 														</div>
 													</div>
-													856
+											
 												</div>
 												<%-- 별점 end --%>
 												<div class="main-css-10v0401">
