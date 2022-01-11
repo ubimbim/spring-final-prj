@@ -297,7 +297,8 @@
 				        
 				        <div class = "modal-header">				      
 	                      <h5 align = "left"> Information ${fn:split(rows.getP_no(), '#')[0] } </h5>			 
-				        </div>				        
+				        </div>
+				        
 				        <div class = "modal-body">
 				          <img src = "<%=request.getContextPath() %>/resources/image/${rows.getP_img_cont() }">       				            
 				        </div>
@@ -311,8 +312,7 @@
 				  </div>
 				  </c:forEach>		
                   <!-- 모달 끝 -->
-                
-                 
+
               </div>
             </div>
 	      
