@@ -162,9 +162,29 @@
 										</div>
 										
 										<div class="btn_cart">
-											<button class="cart_button" onclick="location.href='prod_cart.do?id=${adto.getA_no() }">담기</button>
-										</div>
+											<c:if test="${!empty kdto }">
+												<button class="cart_button" onclick="location.href='prod_cart.do?userid=${kdto.getU_id() }&id=${fn:split(adto.getA_no(), '#')[0] }'">담기</button>
+											</c:if>
+											<c:if test="${!empty edto }">
+												<button class="cart_button" onclick="location.href='prod_cart.do?userid=${edto.getU_id() }&id=${fn:split(adto.getA_no(), '#')[0] }'">담기</button>
+											</c:if>
+											<c:if test="${empty kdto and empty edto }">
+												<button class="cart_button" onclick="">담기</button>
+											</c:if>
+										</div>								
 										
+										<!-- 
+										<div class="btn_cart">
+										<span> 
+											<a idx="1" href="javascript:" class="heart-click heart_icon${1 }">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+													<path d="M8 6.236l-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+												</svg>
+											</a>
+										</span>
+										</div>
+										-->
+	
 									</div>
 								</a> <!-- 추천 상품 첫 번째 end  -->
 								</c:forEach>
@@ -268,7 +288,7 @@
 									<div class="OfferVerticalCard-module__body--QqE0h CardShare-module__body--SgF6m">
 										<!-- 추천일정 작성자, 이름 -->
 										<div class="CardCategory-module__container--QvB9e">
-											<div class="CardCategory-module__label--cLofl" style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 1;">${srdto.getU_id() }님 일정 속 이곳은?</div>
+											<div class="CardCategory-module__label--cLofl" style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 1;">${Udto.getU_name() }님 일정 속 이곳은?</div>
 										</div>
 										<h3 class="CardTitle-module__container--l9OrK CardTitle-module__vertical--COffX">
 											<div class="CardTitle-module__title--WAHI8" style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">도두봉</div>
@@ -314,14 +334,13 @@
 	</c:forEach>
 	
 	<!-- 추천 일정 모달창 -->
-	<c:set var="udto" value="${Udto }" />
 	<div class="modal fade modal-dialog-centered modal-dialog-scrollable" id="${fn:split(srdto.getSr_no(), '#')[0] }" role="dialog">  <!-- 사용자 지정 부분① : id명 --> 
 		<div class="modal-dialog">
 		<!-- Modal content -->
 		<div class="modal-content">
 	       <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">×</button>
-				<h4 class="plan-modal-title">${udto.getU_name() }님의 일정 속 이곳은?</h4> <!-- 사용자 지정 부분② : 타이틀 --> 
+					<h4 class="plan-modal-title">${Udto.getU_name() }님의 일정 속 이곳은?</h4> <!-- 사용자 지정 부분② : 타이틀 --> 
 			</div>
 			
 			<div class="modal-body">
