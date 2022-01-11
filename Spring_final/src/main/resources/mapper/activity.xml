@@ -154,7 +154,7 @@
 	<!-- 유빈님 파트 -->
 	<select id="act_recommend" resultType="com.spring.model.Activity.ActivityDTO">
 		<![CDATA[
-			select * from (select * from Trv_Spot order by s_no) where rownum >= 1 and rownum < 5
+			select * from (select * from Trv_Activity where a_grade >= 4) where rownum < 5
 		]]>
 	</select>
 	
