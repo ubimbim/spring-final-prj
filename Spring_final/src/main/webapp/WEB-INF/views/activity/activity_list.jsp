@@ -97,7 +97,7 @@ $(function (){
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-4.png">
 											중문
 										</button>
-										<c:set var="str" value="함덕/구좌" />
+										<c:set var="str" value="함덕/구좌" />										
 										<button class="map-5" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-5.png">
 											함덕/구좌
@@ -112,7 +112,7 @@ $(function (){
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-7.png">
 											애월
 										</button>
-										<c:set var="str" value="한립/협재" />
+										<c:set var="str" value="한립/협재" />									
 										<button class="map-8" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-8.png">
 											한립/협재
