@@ -69,7 +69,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-                 "C:\\NCS\\workspace(spring)\\Spring_final\\src\\main\\webapp\\resources\\image\\";
+                 "C:\\prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);
@@ -127,12 +127,12 @@ public class ReviewController {
 		if(res > 0) {
 			out.println("<script>");
 			out.println("alert('리뷰가 작성되었습니다.')");
-			out.println("location.href='prlist.do'");
+			out.println("location.href='place_list.do'");
 			out.println("</script>");
 		}else {
 			out.println("<script>");
 			out.println("alert('리뷰가 작성되지않았습니다.')");
-			out.println("location.href='prlist.do'");
+			out.println("location.href='place_list.do'");
 			out.println("</script>");
 		}
         }

@@ -28,7 +28,12 @@ $(function (){
   	$("#map-toggle").toggle();
   });
 });
- 
+
+$(function (){
+	$("#btn-mapModal").click(function (){
+	$("map-toggle-wrap").toggle();
+	});
+});
  
   
   function sort(how) {
@@ -38,6 +43,8 @@ $(function (){
   
   
 	
+  
+  
   
 </script>
 </head>
@@ -54,7 +61,7 @@ $(function (){
 				</div>
 				<div class="Act-contentsWrapper">
 					<aside class="Act-filterBar">
-						<div class="Act-map-container">
+						
 							<%-- 지역으로 보기 버튼 --%>
 							<button class="Act-map-contentWrapper" type="button" id="btn-mapModal" class="main-css-imgWrapper" data-toggle="modal"
 								data-target="#Map" data-seq="${i.getA_no() }">
@@ -112,8 +119,8 @@ $(function (){
 										</button>
 										
 									</div> <%-- 지역으로 지도 버튼 end --%>
-								</div>	<%--map-wrap --%>
-							</div>
+								</div>
+						 	 </div>
 							</div>
 							<%--전체 카테고리st --%>
 							<h3 class="cat-title">카테고리</h3>
@@ -211,7 +218,7 @@ $(function (){
 
 							</ul>
 							<%--전체 카테고리end --%>
-						</div>
+						
 					</aside>
 					<%--왼쪽 카테고리end --%>
 					<%--가운데 main st --%>
