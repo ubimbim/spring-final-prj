@@ -170,14 +170,60 @@
   	height:30px; 	
   	
   }
+  
+  
+  
+  .content1::-webkit-scrollbar{
+       	display:none; 
+       }
+    .content::-webkit-scrollbar{
+       	display:none; 
+       }
+	textarea:focus{
+		outline:none;
+	}
+  .content1{
+		margin-top:15px;
+      	width:400px;
+      	height:50px;
+      	resize:none;
+		border: 0.5px solid skyblue;
+		background-color: aliceblue;
+		border-radius: 7px;
+		padding-left: 7px;
+		padding-top: 3px;
+		font-size: 13px;
+	}
+	
+	.content{
+    	margin-right: 20px;
+    	margin-top:15px;
+      	width:350px;
+      	height:50px;
+      	resize:none;
+		border: 0.5px solid skyblue;
+		background-color: aliceblue;
+		border-radius: 7px;
+		padding-left: 7px;
+		padding-top: 3px;
+		font-size: 13px;
+		
+	}
+	
+	.stars{
+		color:gold;
+		
+	}
+	#formFileSm{
+  		width:300px;
+  	}
     
 </style>
 </head>
 <body>
 	<header>
 		<jsp:include page="../include/header.jsp" />
-	</header>	
-
+	</header>
 
     <!-- 상단 이미지 -->
     <div class="header">
@@ -219,7 +265,8 @@
         <div class = "container6">           
           
 	    <!-- 카드 이미지 -->
-	    <c:forEach var = "rows" items = "${List }">	
+	    
+	    <c:forEach var = "rows" items = "${List }">
 	    <div class = "card mb-3" style = "max-width:740px; max-height:180px;">            
           <div class = "row g-1">	            
 	        <div class = "col-md-3">             
@@ -234,7 +281,10 @@
 			    <br>	    
 		        <h1 class = "info" align = "left"><fmt:formatNumber value = "${rows.getP_price() }" pattern = "###,###,###원"/>
 		          <button type = "button" class = "btn btn-light" data-toggle = "modal" data-target = "${rows.getP_no() }"> 상세 정보 </button>
-		          <button type = "button" class = " btn btn-outline-info btn-sm"> 담기 </button>
+		          <button type = "button" class = " btn btn-outline-info btn-sm"> 담기 </button>		 
+		       	
+		          <button type="button" data-toggle="modal" data-target="${rows.p_no }_rv">리뷰</button>
+				 
 		        </h1>
 	            
 				  <!-- 모달 -->
@@ -246,8 +296,9 @@
 				      <div class = "modal-content">
 				        
 				        <div class = "modal-header">				      
-	                      <h5 align = "left"> Information </h5>			 
-				        </div>				        
+	                      <h5 align = "left"> Information ${fn:split(rows.getP_no(), '#')[0] } </h5>			 
+				        </div>
+				        
 				        <div class = "modal-body">
 				          <img src = "<%=request.getContextPath() %>/resources/image/${rows.getP_img_cont() }">       				            
 				        </div>
@@ -261,8 +312,7 @@
 				  </div>
 				  </c:forEach>		
                   <!-- 모달 끝 -->
-                  
-                  
+
               </div>
             </div>
 	      
@@ -303,6 +353,138 @@
 	</section>
 	    	     	
 	<br><br><br><br><br><br><br><br>
+	
+	               
+<!-- Modal -->
+<%-- <c:forEach var = "rows" items = "${List }">
+<div class = "modal" id = "${fn:split(rows.getP_no(), '#')[0] }" role = "dialog" data-seq="${rows.getP_no() }">	 --%>
+<c:forEach var = "i" items = "${pList }">
+  <div class="modal fade" role="dialog" id ="${fn:split(i.p_no, '#')[0] }_rv" data-seq="${i.p_no }">
+
+    <div class="modal-dialog">
+
+    
+
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+		<div class="preview">
+          <h3 style="color: skyblue" align="center">Travelanner</h3>
+    	<br>
+    	<form method="post" enctype="multipart/form-data"
+    		action="<%=request.getContextPath() %>/prlist_write.do">
+    		<table cellspacing="0" style="border-top: none";>
+
+    		<tr align="left">
+    			<td> 아이디&nbsp;&nbsp;&nbsp;&nbsp;| ${edto.u_id }</td>
+    			<td colspan="2" align="center">
+					<input type="submit" class="btn btn-outline-info btn-sm" value="등록">
+				</td>
+			
+			<tr align="left">
+			<td>평점
+				<select name="pr_grade" class="stars">
+					<option class="stars" value="5">★★★★★</option>
+					<option class="stars" value="4">★★★★☆</option>
+					<option class="stars" value="3">★★★☆☆</option>
+					<option class="stars" value="2">★★☆☆☆</option>
+					<option class="stars" value="1">★☆☆☆☆</option>
+					
+				</select>
+			</td>
+			</tr>
+			
+			<tr align="left">
+					<td> <textarea name="pr_cont" class="content1" placeholder="리뷰를 남겨주세요!" ></textarea></td>
+			</tr>
+			
+			<tr align="left">
+	      <td> <input class="form-control form-control-sm" id="formFileSm" type="file" name="file1"> <br> </td>
+			</tr>
+			<tr>
+				<td style="width:400px" colspan="4">
+					<hr>
+				</td>
+			</tr>
+			
+			
+			
+    		</table>
+    	</form>
+		</div>
+        </div>
+
+        <div class="modal-body">
+		<input type="hidden" name="pr_no" value="${i.getPr_no() }">
+        	<table cellspacing="0" style="border-top: none;">
+				<tr align="left">
+					<td> ${i.getU_id()}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;${i.getPr_date().substring(0,10) }</td>
+					
+					<td colspan="2" align="right">
+						<input type="button" class="btn btn-outline-danger btn-sm " value="삭제"
+							onclick="if(confirm('삭제하시겠습니까?')) {
+								location.href='prlist_delete.do?no=${i.getPr_no()}'
+							}else { return; }">
+					</td>
+				</tr>
+				<tr align="left">
+					<c:if test="${ 5==i.getPr_grade() }">
+							<td class="stars"> ★★★★★ </td>
+						</c:if>
+						
+						<c:if test="${ 4==i.getPr_grade() }">
+							<td class="stars"> ★★★★☆</td>
+						</c:if>
+						
+						<c:if test="${ 3==i.getPr_grade() }">
+							<td class="stars"> ★★★☆☆</td>
+						</c:if>
+						
+						<c:if test="${ 2==i.getPr_grade() }">
+							<td class="stars"> ★★☆☆☆</td>
+						</c:if>
+						
+						<c:if test="${ 1==i.getPr_grade() }">
+							<td class="stars"> ★☆☆☆☆</td>
+						</c:if>
+				</tr>
+				
+				<tr align="left">
+					<td> <textarea readonly class="content" >${i.getPr_cont() }</textarea></td>
+					
+					<c:if test="${ !empty i.getPr_img() }">
+							<td colspan="4" align="right"> <img width="110" height="90" src="<%=request.getContextPath()%>/resources/review/${i.getPr_upload()}"> </td>
+					</c:if>
+					<c:if test="${ empty i.getPr_img() }">
+							<td> ${i.getPr_img() } </td>
+					
+					</c:if>
+				</tr>
+				
+				<tr>
+					<td style="width:400px" colspan="4">
+						<hr>
+					</td>
+				</tr>	
+	</table>
+
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</c:forEach>
+<!-- ddd --> 
 	
 	<footer>
 		<jsp:include page="../include/footer.jsp" />

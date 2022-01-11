@@ -43,4 +43,7 @@
       <![CDATA[ select * from (select b.*, row_number() over(order by p_no desc) rnum from Trv_Place b where p_category like '%' || #{category} || '%' ) where rnum >= #{startNo} and rnum <= #{endNo} ]]>
     </select>    
     
+    
+    
+    
 </mapper>	
