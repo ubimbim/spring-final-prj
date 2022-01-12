@@ -18,5 +18,5 @@ public class WholePlanDTO {
 	private Date Last_date;
 	
 	private String Description;
-	private String Writer;
+	private String U_id;
 }
