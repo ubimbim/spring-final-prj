@@ -5,29 +5,35 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<%-- import food.css --%>
+<link href="${path}/resources/css/food.css" rel="stylesheet"/> 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="./resources/css/main.css?after" type="text/css" />
-<style>
-	
-	#food_body {
+<style type="text/css">
+
+
+#food_body {
 		margin-top: 100px;
 		padding: 50px 0px;
 		background-color: #fff;
 	}
 	
-	.display_none {
+.display_none {
 		display: none;
 	}
 	
-	.map_all {
+.map_all {
 		margin-left: 450px;
 		width: 200px;
 	}
 	
-    .map_grade {
+.map_grade {
 		margin-left: 450px;
 		width: 200px;
 	}
+
 
 </style>
 </head>
@@ -49,6 +55,37 @@
 		
 		<br>
 		<input type="button" value="평점 4.5 이상" class="gradeBtn">
+		
+		
+		
+		
+		<%--재연 --%>
+		
+		<div class="food_content">
+			<div class="food_row">
+				<div class="food_common">
+					<div class="food_bsSzp">
+						<div class="food_swiper">
+							<div class="food_wrapper">
+								<a class="food-cont-a" href="https://www.myrealtrip.com/offers/112179">
+									<div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		
+		
+		
 		
 	</div>
 	
