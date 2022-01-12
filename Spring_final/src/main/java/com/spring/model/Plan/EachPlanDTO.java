@@ -13,4 +13,5 @@ public class EachPlanDTO {
 	private String Category_no;
 	private Float X;
 	private Float Y;
+	private String name;
 }
