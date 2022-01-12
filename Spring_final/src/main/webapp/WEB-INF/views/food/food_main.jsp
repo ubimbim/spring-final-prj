@@ -44,7 +44,7 @@
 		</div>
 		
  		<div class="map_grade display_none">
-			<%@ include file="/WEB-INF/views/food/map_grade4.5.html" %>
+			<%@ include file="/WEB-INF/views/food/map_grade.html" %>
 		</div>
 		
 		<br>
