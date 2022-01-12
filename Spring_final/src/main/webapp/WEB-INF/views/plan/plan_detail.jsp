@@ -95,11 +95,12 @@ main {
 			let options = {
 					center: new kakao.maps.LatLng(33.362596126296225, 126.52854588407249), //지도의 중심 좌표.		
 					level: 10	//지도의 확대 축소 정도
-			};
+			};			
 			
 			let map = new kakao.maps.Map(container, options);
-			
-			//마커를 표시하기
+
+			//마커를 표시하기 
+			//positions 객체 리터럴 생성
 			let positions = [ {
 				title : '<span class="info-title">한라산</span>',
 				latlng : new kakao.maps.LatLng(33.362596126296225, 126.52854588407249)
@@ -120,13 +121,13 @@ main {
 			for (let i = 0; i < positions.length; i++) {
 				let marker = new kakao.maps.Marker({
 					map : map,
-					position : positions[i].latlng,										
+					position : positions[i].latlng
 				});
 				
 				let infowindow = new kakao.maps.InfoWindow({
 					map: map,
 					position : positions[i].latlng,
-					content : positions[i].title,					
+					content : positions[i].title					
 				});
 			}
 			
