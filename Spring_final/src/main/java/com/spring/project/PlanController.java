@@ -2,6 +2,7 @@ package com.spring.project;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -41,9 +42,9 @@ public class PlanController {
 	public String plan_detail(Model model, @RequestParam("Planner_no") int no) {
 		
 		WholePlanDTO wpdto = pdao.getWholePlanCont(no);
-		List<EachPlanDTO> epdto = pdao.getEachPlanList(no);
-		int EPlistSize = epdto.size();
-		
+		List<EachPlanDTO> epdto = new ArrayList<EachPlanDTO>();
+		epdto = pdao.getEachPlanList(no);
+		int EPlistSize = epdto.size();		
 		
 		model.addAttribute("WPdto", wpdto); //플랜 제목, 시작/끝 날짜, 설명 가져올 수 있음.
 		model.addAttribute("EPdto", epdto); //각각의 gps 좌표 가져올 수 있음.
