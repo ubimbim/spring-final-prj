@@ -16,5 +16,13 @@
 			insert into Trv_Cart values((select count(c_no) from Trv_Cart)+1, #{U_id}, '#'||#{Prod_no})
 		]]>
 	</insert>
+	
+	<select id="wp_select" parameterType="int" resultType="com.spring.model.Plan.WholePlanDTO">
+		select * from Trv_WholePlan where Planner_no = #{Planner_no}
+	</select>
+	
+	<select id="EP_list" parameterType="int" resultType="com.spring.model.Plan.EachPlanDTO">
+		select * from Trv_EachPlan where Planner_no = #{Planner_no}
+	</select>
   
   </mapper>
