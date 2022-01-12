@@ -18,8 +18,15 @@ import com.spring.model.Activity.CartDTO;
 @Controller
 public class PlanController {
 	
+
+	@RequestMapping("plan_make.do")
+	public String plan_make() {
+		return "plan/plan_make";
+	}
+
 	@Autowired
 	private CartDAO cdao;
+
 	
 	@RequestMapping("plan_list.do")
 	public String plan_list(HttpServletRequest request, Model model) {
