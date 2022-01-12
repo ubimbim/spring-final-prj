@@ -107,7 +107,7 @@
 							<div class="swiper-wrapper" style="width: 2160px; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
 								<!-- 추천 상품 -->
 								<c:forEach items="${alist }" var="adto">
-								<a href="" class="CardContainer-module__container--B5cqm CardShare-module__container--lu1iP CardContainer-module__fixedWidth--XQbwP CardContainer-module__offer--Npil0 CardContainer-module__swiper--xl_Sd swiper-slide swiper-slide-active" style="width: 270px;">
+								<a data-toggle="modal" href="${adto.getA_no() }"  class="CardContainer-module__container--B5cqm CardShare-module__container--lu1iP CardContainer-module__fixedWidth--XQbwP CardContainer-module__offer--Npil0 CardContainer-module__swiper--xl_Sd swiper-slide swiper-slide-active" style="width: 270px;">
 									<!-- 이미지 -->
 									<div class="OfferVerticalCard-module__thumbnail--hPkZk">
 										<div class="CardThumbnail-module__container--t05no CardThumbnail-module__vertical--fg4fQ">
@@ -229,6 +229,7 @@
 	
 	<!-- 추천일정 -->
 	<c:set var="srdto" value="${SRdto }" />
+	<c:set var="udto" value="${Udto }" />
 	
 	<section class="LocationOffers-module__container--YvQqd">
 		<div class="Grid-module__container--YH1rv">
@@ -254,7 +255,7 @@
 						<div class="swiper-container swiper-container-horizontal">
 							<div class="swiper-wrapper" style="width: 2160px; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
 								<!-- 추천일정 첫 번째 -->
-								<a a data-toggle="modal" href="${srdto.getSr_no() }"  class="CardContainer-module__container--B5cqm CardShare-module__container--lu1iP CardContainer-module__fixedWidth--XQbwP CardContainer-module__offer--Npil0 CardContainer-module__swiper--xl_Sd swiper-slide swiper-slide-active" style="width: 270px;">
+								<a data-toggle="modal" href="${srdto.getSr_no() }"  class="CardContainer-module__container--B5cqm CardShare-module__container--lu1iP CardContainer-module__fixedWidth--XQbwP CardContainer-module__offer--Npil0 CardContainer-module__swiper--xl_Sd swiper-slide swiper-slide-active" style="width: 270px;">
 									<!-- 이미지 -->
 									<div class="OfferVerticalCard-module__thumbnail--hPkZk">
 										<div class="CardThumbnail-module__container--t05no CardThumbnail-module__vertical--fg4fQ">
@@ -268,7 +269,7 @@
 									<div class="OfferVerticalCard-module__body--QqE0h CardShare-module__body--SgF6m">
 										<!-- 추천일정 작성자, 이름 -->
 										<div class="CardCategory-module__container--QvB9e">
-											<div class="CardCategory-module__label--cLofl" style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 1;">${srdto.getU_id() }님 일정 속 이곳은?</div>
+											<div class="CardCategory-module__label--cLofl" style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 1;">${udto.getU_name() }님 일정 속 이곳은?</div>
 										</div>
 										<h3 class="CardTitle-module__container--l9OrK CardTitle-module__vertical--COffX">
 											<div class="CardTitle-module__title--WAHI8" style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">도두봉</div>
@@ -286,6 +287,27 @@
 		</div>
 	</section> <!-- 추천 일정 section end -->
 	
+	<!-- 추천 액티비티 모달창 -->
+	<c:forEach items="${alist }" var="aadto">
+	<div class= "modal fade modal-dialog-centered modal-dialog-scrollable" id="${fn:split(aadto.getA_no(), '#')[0] }" role="dialog">  <!-- 사용자 지정 부분① : id명 --> 
+		<div class="modal-dialog">
+		<!-- Modal content -->
+		<div class="modal-content">
+	       <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h4 class="plan-modal-title">상세 정보</h4> <!-- 사용자 지정 부분② : 타이틀 --> 
+			</div>
+			
+			<div class="modal-body">
+				<div class="modal-text">
+					<img alt="" src="resources/img/${aadto.getA_img_cont() }" width="100%" height="60%">
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</c:forEach>
+	
 	<!-- 관광 명소 모달창 -->
 	<c:forEach items="${slist }" var="mdto">
 	<div class="modal fade modal-dialog-centered modal-dialog-scrollable" id="${fn:split(mdto.getS_no(), '#')[0] }" role="dialog">  <!-- 사용자 지정 부분① : id명 --> 
@@ -298,7 +320,7 @@
 			</div>
 		
 			<div class="modal-body">
-				<img alt="" src="resources/img/${mdto.getS_img_cont() }" width="90%" height="60%"> <!-- 사용자 지정 부분③ : 텍스트 메시지 --> 
+				<img alt="" src="resources/img/${mdto.getS_img_cont() }" width="100%" height="60%"> <!-- 사용자 지정 부분③ : 텍스트 메시지 --> 
 				<div class="modal-text">
 					<p>${mdto.getS_cont() }</p>
 				</div>
@@ -314,7 +336,6 @@
 	</c:forEach>
 	
 	<!-- 추천 일정 모달창 -->
-	<c:set var="udto" value="${Udto }" />
 	<div class="modal fade modal-dialog-centered modal-dialog-scrollable" id="${fn:split(srdto.getSr_no(), '#')[0] }" role="dialog">  <!-- 사용자 지정 부분① : id명 --> 
 		<div class="modal-dialog">
 		<!-- Modal content -->
@@ -325,7 +346,7 @@
 			</div>
 			
 			<div class="modal-body">
-				<img alt="" src="resources/img/${srdto.getSr_img() }" width="90%" height="60%"> <!-- 사용자 지정 부분③ : 텍스트 메시지 --> 
+				<img alt="" src="resources/img/${srdto.getSr_img() }" width="100%" height="60%"> <!-- 사용자 지정 부분③ : 텍스트 메시지 --> 
 				<div class="modal-text">
 					<p>${srdto.getSr_cont() }</p>
 					<p>${srdto.getSr_cont() }</p>
