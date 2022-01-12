@@ -6,13 +6,13 @@
 
 <mapper namespace="com.spring.model.Review.P_ReviewDAO">
 	
-	<select id="pr_list" resultType="com.spring.model.Review.P_ReviewDTO">
-		select * from Trv_P_Review order by pr_no desc
+	<select id="pr_list" resultType="com.spring.model.Review.P_ReviewDTO" parameterType="int">
+		select * from Trv_P_Review 
 	</select>
 	
 	<insert id="pr_add" parameterType="com.spring.model.Review.P_ReviewDTO">
-		insert into Trv_P_Review values(pr_no.nextval, 5, #{U_id}, #{pr_cont} , sysdate , 
-		 #{pr_grade},#{pr_img},#{pr_upload})
+		insert into Trv_P_Review values('asdf', #{pr_cont}, sysdate, #{pr_grade},
+		 #{pr_img}, #{pr_upload}, '#PlaceModal1' , 'lyubin0716@gmail.com')
 	</insert>
 	
 	<delete id="pr_del" parameterType="int">

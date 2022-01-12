@@ -12,12 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.spring.model.Place.PageDTO;
 import com.spring.model.Place.PlaceDAO;
 import com.spring.model.Place.PlaceDTO;
+import com.spring.model.Review.P_ReviewDAO;
+import com.spring.model.Review.P_ReviewDTO;
 
 @Controller
 public class PlaceController {
 	
 	@Autowired
 	private PlaceDAO dao;
+	
+	@Autowired
+	private P_ReviewDAO pdao;
 
 	private final int rowsize = 5;        // 한 페이지당 보여질 게시물의 수
 	private int totalRecord = 0;          // DB 상의 게시물 전체 수	
@@ -43,6 +48,10 @@ public class PlaceController {
 		PageDTO dto = new PageDTO(page, rowsize, totalRecord);		
 		
 		List<PlaceDTO> pageList = this.dao.getPlaceList(dto);
+		
+		List<P_ReviewDTO> pList = this.pdao.PRList();
+		
+		model.addAttribute("pList", pList);
 		
 		model.addAttribute("List", pageList); 
 

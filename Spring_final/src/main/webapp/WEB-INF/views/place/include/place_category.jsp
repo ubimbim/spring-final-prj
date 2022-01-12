@@ -53,6 +53,7 @@
 </head>
 <body>
 
+
 	<!-- 카테고리 -->	
 	<aside id = "sidebar">								
 		 			   						

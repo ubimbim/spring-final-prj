@@ -154,8 +154,6 @@
     
     
 	<table cellspacing="0" style="border-top: none";>
-	<c:set var="list" value="${pList }" />
-	
 	
 	<c:forEach items="${list }" var="i">
 	<input type="hidden" name="pr_no" value="${i.getPr_no() }">

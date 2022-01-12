@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-OK 시원하게 들어갑니다
+
 </body>
 </html>

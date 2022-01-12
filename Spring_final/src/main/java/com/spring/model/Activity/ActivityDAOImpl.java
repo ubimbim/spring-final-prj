@@ -97,6 +97,7 @@ public class ActivityDAOImpl implements ActivityDAO {
 
 	@Override
 	public List<ActivityDTO> getCategorylist(PageDTO dto) {
+		
 		if(dto.getCategory().equals("아웃도어")) {                   //아웃도어와 같은 이름을 가져옴
 			return this.sqlSession.selectList("outdoor", dto);
 		}else if(dto.getCategory().equals("스노우클링/다이빙")) {
@@ -109,18 +110,29 @@ public class ActivityDAOImpl implements ActivityDAO {
 			return this.sqlSession.selectList("yacht", dto);
 		}else if(dto.getCategory().equals("골프")) {
 			return this.sqlSession.selectList("golf", dto);
-		}else if(dto.getCategory().equals("실내")) {
+		}else if(dto.getCategory().equals("실내액티비티")) {
 			return this.sqlSession.selectList("indoor", dto);
 		}else if(dto.getCategory().equals("익스트림액티비티")) {
 			return this.sqlSession.selectList("extreme", dto);
 		}else if(dto.getCategory().equals("이색체험")) {
 			return this.sqlSession.selectList("uniq", dto);
 			
-			
 		}else if(dto.getCategory().equals("제주시")) {
 			return this.sqlSession.selectList("jeju", dto);
 		}else if(dto.getCategory().equals("서귀포")) {
 			return this.sqlSession.selectList("seogwipo", dto);
+		}else if(dto.getCategory().equals("표선")) {
+			return this.sqlSession.selectList("pyoseon", dto);
+		}else if(dto.getCategory().equals("중문")) {
+			return this.sqlSession.selectList("jungmun", dto);
+		}else if(dto.getCategory().equals("함덕/구좌")) {
+			return this.sqlSession.selectList("hamdokri", dto);
+		}else if(dto.getCategory().equals("성산/우도")) {
+			return this.sqlSession.selectList("seogsan", dto);
+		}else if(dto.getCategory().equals("한림/협재")) {
+			return this.sqlSession.selectList("hallim", dto);
+		}else if(dto.getCategory().equals("애월")) {
+			return this.sqlSession.selectList("aewoleup", dto);
 	    }else {
 			return this.sqlSession.selectList("writerList", dto);
 		}

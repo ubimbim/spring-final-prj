@@ -28,7 +28,12 @@ $(function (){
   	$("#map-toggle").toggle();
   });
 });
- 
+
+$(function (){
+	$("#btn-mapModal").click(function (){
+	$("map-toggle-wrap").toggle();
+	});
+});
  
   
   function sort(how) {
@@ -38,6 +43,8 @@ $(function (){
   
   
 	
+  
+  
   
 </script>
 </head>
@@ -54,7 +61,7 @@ $(function (){
 				</div>
 				<div class="Act-contentsWrapper">
 					<aside class="Act-filterBar">
-						<div class="Act-map-container">
+						
 							<%-- 지역으로 보기 버튼 --%>
 							<button class="Act-map-contentWrapper" type="button" id="btn-mapModal" class="main-css-imgWrapper" data-toggle="modal"
 								data-target="#Map" data-seq="${i.getA_no() }">
@@ -90,7 +97,7 @@ $(function (){
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-4.png">
 											중문
 										</button>
-										<c:set var="str" value="함덕/구좌" />
+										<c:set var="str" value="함덕/구좌" />										
 										<button class="map-5" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-5.png">
 											함덕/구좌
@@ -105,15 +112,15 @@ $(function (){
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-7.png">
 											애월
 										</button>
-										<c:set var="str" value="한립/협재" />
+										<c:set var="str" value="한립/협재" />									
 										<button class="map-8" onclick="location.href='activity_category.do?result=${str }'">
 											<img class=map-icon alt="" src="<%=request.getContextPath()%>/resources/img/map-8.png">
 											한립/협재
 										</button>
 										
 									</div> <%-- 지역으로 지도 버튼 end --%>
-								</div>	<%--map-wrap --%>
-							</div>
+								</div>
+						 	 </div>
 							</div>
 							<%--전체 카테고리st --%>
 							<h3 class="cat-title">카테고리</h3>
@@ -211,7 +218,7 @@ $(function (){
 
 							</ul>
 							<%--전체 카테고리end --%>
-						</div>
+						
 					</aside>
 					<%--왼쪽 카테고리end --%>
 					<%--가운데 main st --%>
@@ -271,7 +278,7 @@ $(function (){
 																src="https://dffoxz5he03rp.cloudfront.net/icons/ic_rating_star_12x12_filled_blue_400.svg">
 														</div>
 													</div>
-													856
+											
 												</div>
 												<%-- 별점 end --%>
 												<div class="main-css-10v0401">
