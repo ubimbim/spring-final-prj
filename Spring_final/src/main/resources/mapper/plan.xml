@@ -22,7 +22,9 @@
 	</select>
 	
 	<select id="EP_list" parameterType="int" resultType="com.spring.model.Plan.EachPlanDTO">
-		select * from Trv_EachPlan where Planner_no = #{Planner_no}
+		select e.*, n.name
+		from trv_eachplan e, trv_namematching n
+		where e.category_no = n.category_no and e.Planner_no = #{Planner_no} order by plan_no
 	</select>
   
   </mapper>
