@@ -219,6 +219,7 @@
 
 .main-css-content {
 	margin-left: 10px;
+	max-width: -webkit-fill-available;
 } /*모달*/
 
 /* 중앙 리스트 전체 end */
