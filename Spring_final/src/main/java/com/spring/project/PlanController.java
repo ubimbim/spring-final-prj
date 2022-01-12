@@ -28,8 +28,13 @@ public class PlanController {
 	  return "plan/plan_list";
 
 	  
-	}
-	
+	}	
+
+	@RequestMapping("plan_detail.do")
+	public String plan_detail() {
+		
+		return "plan/plan_detail";
+
 	@RequestMapping("prod_cart.do")
 	public void cartadd(@RequestParam("userid") String userid, @RequestParam("id") String prodid, 
 			CartDTO dto, HttpServletResponse response) throws IOException {
@@ -54,5 +59,5 @@ public class PlanController {
 		}
 		
 	}
-  
+
 }
