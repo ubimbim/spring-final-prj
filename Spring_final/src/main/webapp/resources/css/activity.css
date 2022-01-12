@@ -267,6 +267,14 @@
 		border: 2px solid #4D8FD0;
 	}
 	
+	/* 찜하기 버튼
+	.OfferVerticalCard-module__wishlist--fZNLW {
+	    position: absolute;
+	    right: 10px;
+	    bottom: 10px;
+	    z-index: 1;
+	} */
+	
 	button, a {
 	    outline: none;
 	    color: inherit;
