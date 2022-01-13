@@ -267,14 +267,6 @@
 		border: 2px solid #4D8FD0;
 	}
 	
-	/* 찜하기 버튼
-	.OfferVerticalCard-module__wishlist--fZNLW {
-	    position: absolute;
-	    right: 10px;
-	    bottom: 10px;
-	    z-index: 1;
-	} */
-	
 	button, a {
 	    outline: none;
 	    color: inherit;
@@ -335,7 +327,7 @@
     }
     
     .CardContainer-module__container--B5cqm.CardContainer-module__offer--Npil0 {
-	    height: 313px; /* 기존 311 */
+	    height: 313px; /* 기존 313 */
 	}
 	
 	.CardContainer-module__container--B5cqm.swiper-slide {
@@ -428,7 +420,7 @@
 	
 	/* 추천 상품 카드 콘텐츠 내용(이름, 가격) */
 	.OfferVerticalCard-module__body--QqE0h {
-	    height: 145px;
+	    height: 145px; /* 기존 145 */
 	}
 	
 	.CardShare-module__body--SgF6m {
@@ -558,8 +550,8 @@
 	    color: #343a40;
 	    font-size: 15px;
 	    font-weight: 600;
-	    line-height: 1.33;
 	    word-break: break-all;
+	    margin-top: 5px;
 	}
 	
 	.CityLandmarkItem-module__body--xsaV6>span {
@@ -609,26 +601,21 @@
 	    max-width: 100%;
 	}
 
-	
+	/* activity 장바구니 버튼 div */
 	.btn_cart {
-		height: 30px; 
-		width: 60px; 
-		margin-left: 170px;
+		margin-left: 190px;
 		margin-top: 20px;
 	}
 	
+	/* 장바구니 버튼 크기 */
+	#cart_button {
+		width: 25px;
+		height: 25px;
+	}
 	
-	.cart_button {
-		height: 30px; 
-		width: 50px; 
-		border-radius: 10px; 
-		border: 0px; 
-		background-color: rgb(87, 121, 244); 
-		font-family: Ubuntu, sans-serif; 
-		color: rgb(255, 255, 255); 
-		font-size: 14px; 
-		font-weight: 1000; 
-		letter-spacing: 2px;
+	.spot_cart {
+		margin-top: 150ox;
+		margin-left: 105px;
 	}
 	
 	.cart_button:hover {

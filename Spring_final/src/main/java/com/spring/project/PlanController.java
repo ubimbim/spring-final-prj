@@ -14,20 +14,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.spring.model.Activity.CartDAO;
-import com.spring.model.Activity.CartDTO;
+import com.spring.model.Plan.CartDAO;
+import com.spring.model.Plan.CartDTO;
 import com.spring.model.Plan.EachPlanDTO;
 import com.spring.model.Plan.PlanDAO;
 import com.spring.model.Plan.WholePlanDTO;
 
 @Controller
 public class PlanController {
-	
-
-	@RequestMapping("plan_make.do")
-	public String plan_make() {
-		return "plan/plan_make";
-	}
 
 	@Autowired
 	private CartDAO cdao;
@@ -43,7 +37,14 @@ public class PlanController {
 	  return "plan/plan_list";
 
 	  
-	}	
+	}
+	
+	@RequestMapping("plan_make.do")
+	public String plan_make() {
+		
+		return "plan/plan_make";
+		
+	}
 
 	@RequestMapping("plan_detail.do")
 	public String plan_detail(Model model, @RequestParam("Planner_no") int no) {
@@ -66,7 +67,7 @@ public class PlanController {
 			CartDTO dto, HttpServletResponse response) throws IOException {
 		System.out.println("상품 id >> " + prodid);
 		
-		int res = this.cdao.insertCart(dto, prodid, prodid);
+		int res = this.cdao.insertCart(dto, userid, prodid);
 		System.out.println("res >>> " + res);
 
 		response.setContentType("text/html; charset=UTF-8");
