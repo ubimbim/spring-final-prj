@@ -338,6 +338,7 @@
 				<div class="modal-footer-cart">
 					<p class="modal-footer-title">이 곳이 마음에 든다면</p>
 					<button type="button" class="modal-footer-button">담기</button>
+					
 				</div>
 				<div class="modal-footer-plan">
 					<p class="modal-footer-title">전체 일정이 궁금하다면</p>

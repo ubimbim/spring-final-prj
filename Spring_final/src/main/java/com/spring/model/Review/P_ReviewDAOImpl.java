@@ -15,8 +15,8 @@ public class P_ReviewDAOImpl implements P_ReviewDAO{
 	
 
 	@Override
-	public List<P_ReviewDTO> PRList() {
-		return this.sqlSession.selectList("pr_list");
+	public List<P_ReviewDTO> PRList(String str) {
+		return this.sqlSession.selectList("pr_list", str);
 	}
 
 	@Override
@@ -33,7 +33,8 @@ public class P_ReviewDAOImpl implements P_ReviewDAO{
 	@Override
 	public int deletePR(int no) {
 		return this.sqlSession.delete("pr_del", no);
-	}	
-	
+	}
+
+
 	
 }

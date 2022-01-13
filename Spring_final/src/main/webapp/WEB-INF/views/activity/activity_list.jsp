@@ -288,6 +288,9 @@ $(function (){
 														</span>
 													</div>
 													<span class="main-css-11wj8nz"> <!-- <input class="main-btn-11wj8nz" type="image" src="./resources/img/add.png"> -->
+														<input type="button" class = "main-btn-11wj8nz" 
+															onclick="location.href='activity_review.do?a_no=${fn:split(i.getA_no(), '#')[0] }'" 
+															value="리뷰">&nbsp;&nbsp;&nbsp;
 														<input class="main-btn-11wj8nz" type="button" value="담기">
 													</span>
 												</div>
