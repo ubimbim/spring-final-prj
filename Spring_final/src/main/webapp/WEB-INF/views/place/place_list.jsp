@@ -35,9 +35,7 @@
     
     <!-- 하얀 박스 -->
     <div class = "container2" > 
-    <div class = "container3" >   
-	  <div class = "container4" >
-	    <div id = "navi">
+	  <div id = "navi">
 	    <ul>            
           <li><a href="place_list.do"><img src="<%=request.getContextPath() %>/resources/image/acc.svg"/> 숙소</a></li> 
           <li><a href="activity_main.do"><img src="<%=request.getContextPath() %>/resources/image/act.png"/> 액티비티</a></li> 
@@ -48,9 +46,7 @@
 	      <c:set var = "str" value = "펜션" />
 	      <li><a href="place_category.do?result=${str }"><img src="<%=request.getContextPath() %>/resources/image/pension.svg"/> 펜션  · 풀빌라  </a></li> 	    
         </ul>
-        </div>		      
-	  </div>
-	</div>
+      </div>		      
 	</div>
 	
 	<h1 class = "headline"> &nbsp; 어떤 숙소 찾으세요? </h1>
@@ -80,10 +76,16 @@
 		        <h1 class = "info" align = "left"><fmt:formatNumber value = "${rows.getP_price() }" pattern = "###,###,###원"/>
 		          <button type = "button" class = "btn btn-light" data-toggle = "modal" data-target = "${rows.getP_no() }"> 상세 정보 </button>
 
-		          <button type = "button" class = " btn btn-outline-info btn-sm"> 담기 </button>		 
+		          <button type = "button" class = " btn btn-cart"> 담기 </button>		 
 		       	
-		          <button type="button" class = " btn btn-outline-info btn-sm" onclick="location.href='place_review.do?p_no=${fn:split(rows.getP_no(), '#')[0] }'">리뷰</button>
+		          <button type="button" data-toggle="modal" data-target="${rows.p_no }_rv">리뷰</button>
+
+		          <button type="button" class = " btn btn-cart" onclick="location.href='place_review.do?p_no=${fn:split(rows.getP_no(), '#')[0] }'">리뷰</button>
+
+
+		          <button type="button" class = " btn btn-cart" onclick="location.href='place_review.do?p_no=${fn:split(rows.getP_no(), '#')[0] }'">리뷰</button>
 				 
+
 		        </h1>
 	            
 				  <!-- 모달 -->
