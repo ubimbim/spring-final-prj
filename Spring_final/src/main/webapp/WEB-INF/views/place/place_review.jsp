@@ -147,10 +147,10 @@ textarea:focus{
 
             
 				<c:if test="${!empty kdto.u_id }">
-					<input type="submit" class="btn btn-outline-info btn-sm" value="등록">
+					<input type="submit" class="btn btn-cart" value="등록">
 				</c:if>
 				<c:if test="${!empty edto.u_id }">
-					<input type="submit" class="btn btn-outline-info btn-sm" value="등록">
+					<input type="submit" class="btn btn-cart" value="등록">
 				</c:if>
 				</td>
 			</tr>

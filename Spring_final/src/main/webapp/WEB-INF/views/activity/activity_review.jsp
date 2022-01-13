@@ -8,8 +8,12 @@
 <head>
 <meta charset="UTF-8">
 <title>트래블래너 :: 나다운 진짜 여행</title>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./resources/css/place.css?after" type="text/css" /> 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <style type="text/css">
 .big{	
 		margin-top: 200px;
@@ -116,12 +120,12 @@ textarea:focus{
     		</c:if>
 
     			<td colspan="3" align="center">
-    				<button type="button" class = " btn btn-outline-info btn-sm" onclick="location.href='activity_list.do'">돌아가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    				<button type="button" class = " btn btn-cart" onclick="location.href='activity_list.do'">뒤로</button>&nbsp;&nbsp;&nbsp;&nbsp;
 					<c:if test="${!empty kdto.u_id }">
-					<input type="submit" class="btn btn-outline-info btn-sm" value="등록">
+					<input type="submit" class="btn btn-cart" value="등록">
 				</c:if>
 				<c:if test="${!empty edto.u_id }">
-					<input type="submit" class="btn btn-outline-info btn-sm" value="등록">
+					<input type="submit" class="btn btn-cart" value="등록">
 				</c:if>
 				</td>
 			</tr>
