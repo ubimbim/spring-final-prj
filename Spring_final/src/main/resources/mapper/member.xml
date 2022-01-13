@@ -7,7 +7,7 @@
 <mapper namespace="MemberDAO">
 	
 	<insert id="m_join" parameterType="com.spring.model.Member.MemberDTO">
-		insert into Trv_User values (#{U_id}, #{U_pwd}, #{U_name}, #{U_email}, #{U_phone}, #{U_img}, #{U_oauth})	
+		insert into Trv_User values (#{U_id}, #{U_pwd}, #{U_name}, #{U_email}, #{U_phone}, #{U_img})	
 	</insert>
 	
 	<select id="m_check" parameterType="string" resultType="com.spring.model.Member.MemberDTO">

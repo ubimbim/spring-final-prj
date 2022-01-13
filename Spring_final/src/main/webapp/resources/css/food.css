@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/*웅선님 end*/
+
+
+.food_content{
+	position: relative;
+	width:100%;
+	
+}
+.food_row{
+	margin: 0 auto;
+    position: relative;
+    width: 1060px;
+}
+
+.food_common{
+	left: -10px;
+    position: relative;
+    width: 1080px
+}
+
+.food_bsSzp{
+	height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.food_swiper{
+	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.food_wrapper{
+	width: 2700px;
+    transform: translate3d(0px, 0px, 0px);    
+    padding-bottom: 8px;
+    padding-top: 2px;
+    
+}
+	
+.food-cont-a{
+	width: 250px!important;
+	height: 311px;
+	left: 10px;
+    margin-right: 20px;
+}
+}

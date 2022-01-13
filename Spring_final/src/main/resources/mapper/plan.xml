@@ -12,8 +12,19 @@
 			select max(board_no) from board
 		</selectKey>
 		 -->
-		
-		insert into Trv_Cart (U_id, C_no, A_no) values('lyubin0716@gmail.com', 'number', #{A_no})
+		<![CDATA[
+			insert into Trv_Cart values((select count(c_no) from Trv_Cart)+1, #{U_id}, '#'||#{Prod_no})
+		]]>
 	</insert>
+	
+	<select id="wp_select" parameterType="int" resultType="com.spring.model.Plan.WholePlanDTO">
+		select * from Trv_WholePlan where Planner_no = #{Planner_no}
+	</select>
+	
+	<select id="EP_list" parameterType="int" resultType="com.spring.model.Plan.EachPlanDTO">
+		select e.*, n.name
+		from trv_eachplan e, trv_namematching n
+		where e.category_no = n.category_no and e.Planner_no = #{Planner_no} order by plan_no
+	</select>
   
   </mapper>
