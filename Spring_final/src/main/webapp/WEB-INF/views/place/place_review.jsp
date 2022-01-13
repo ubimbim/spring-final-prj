@@ -145,7 +145,6 @@ textarea:focus{
 
     			<button type="button" class = " btn btn-cart" onclick="location.href='place_list.do'"> 뒤로 </button>&nbsp;&nbsp;&nbsp;&nbsp;
 
-    			<button type="button" class = " btn btn-cart" onclick="location.href='place_list.do'">돌아가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
             
 				<c:if test="${!empty kdto.u_id }">
 					<input type="submit" class="btn btn-outline-info btn-sm" value="등록">
