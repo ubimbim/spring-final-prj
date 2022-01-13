@@ -13,8 +13,8 @@ public class A_ReviewDAOImpl implements A_ReviewDAO {
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<A_ReviewDTO> ARList() {
-		return this.sqlSession.selectList("alist");
+	public List<A_ReviewDTO> ARList(String str) {
+		return this.sqlSession.selectList("alist", str);
 	}
 
 	@Override
