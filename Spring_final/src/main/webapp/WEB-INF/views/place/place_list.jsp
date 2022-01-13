@@ -76,14 +76,10 @@
 		        <h1 class = "info" align = "left"><fmt:formatNumber value = "${rows.getP_price() }" pattern = "###,###,###원"/>
 		          <button type = "button" class = "btn btn-light" data-toggle = "modal" data-target = "${rows.getP_no() }"> 상세 정보 </button>
 
-		          <button type = "button" class = " btn btn-cart"> 담기 </button>		 
-		       	
-		          <button type="button" data-toggle="modal" data-target="${rows.p_no }_rv">리뷰</button>
+		          <button type = "button" class = " btn btn-cart"> 담기 </button>		
 
 		          <button type="button" class = " btn btn-cart" onclick="location.href='place_review.do?p_no=${fn:split(rows.getP_no(), '#')[0] }'">리뷰</button>
 
-
-		          <button type="button" class = " btn btn-cart" onclick="location.href='place_review.do?p_no=${fn:split(rows.getP_no(), '#')[0] }'">리뷰</button>
 				 
 
 		        </h1>
