@@ -1,4 +1,4 @@
-package com.spring.model.Activity;
+package com.spring.model.Plan;
 
 import lombok.Data;
 
