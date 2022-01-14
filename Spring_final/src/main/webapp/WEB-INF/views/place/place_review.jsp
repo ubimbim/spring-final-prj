@@ -15,7 +15,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <style type="text/css">
-.big{
+.big{		
+
+			margin-left: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -86,12 +88,13 @@ textarea:focus{
 		<jsp:include page="include/place_header.jsp" />
 	</header>
 	
-	<section>
-	<!-- 하얀 박스 -->
+    <!-- 본문 시작 -->
+   
+    <section>
+    
+    <!-- 하얀 박스 -->
     <div class = "container2" > 
-    <div class = "container3" >   
-	  <div class = "container4" >
-	    <div id = "navi">
+	  <div id = "navi">
 	    <ul>            
           <li><a href="place_list.do"><img src="<%=request.getContextPath() %>/resources/image/acc.svg"/> 숙소</a></li> 
           <li><a href="activity_main.do"><img src="<%=request.getContextPath() %>/resources/image/act.png"/> 액티비티</a></li> 
@@ -102,15 +105,21 @@ textarea:focus{
 	      <c:set var = "str" value = "펜션" />
 	      <li><a href="place_category.do?result=${str }"><img src="<%=request.getContextPath() %>/resources/image/pension.svg"/> 펜션  · 풀빌라  </a></li> 	    
         </ul>
-        </div>		      
-	  </div>
-	</div>
+      </div>		      
 	</div>
 	
-	
-	<h1 class = "headline"> &nbsp; </h1>
-	  
-   	<div class="big">
+	<h1 class = "headline"> &nbsp; 후기를 확인하세요! </h1>
+
+    <!-- 카테고리바 -->
+    <jsp:include page="include/place_category.jsp"/>	
+	 
+    <!-- 카드형 숙소 리스트 -->
+    <div class = "container5" align = "center">
+        <div class = "container6">           
+          
+	    <!-- 카드 이미지 -->
+	    
+	    	<div class="big">
     
     
         <div class="preview" >
@@ -259,7 +268,16 @@ textarea:focus{
 
     
     </div>
-    
-  </section>  	
+	
+                  <!-- 모달 끝 -->
+
+              </div>
+            </div>
+	      
+	</section>	
+  
+  	<footer>
+			<jsp:include page="../include/footer.jsp" />
+	</footer>
 </body>
 </html>

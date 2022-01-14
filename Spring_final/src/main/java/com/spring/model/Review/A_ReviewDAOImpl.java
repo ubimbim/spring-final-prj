@@ -6,6 +6,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+
+
 @Repository
 public class A_ReviewDAOImpl implements A_ReviewDAO {
 	
@@ -32,5 +34,6 @@ public class A_ReviewDAOImpl implements A_ReviewDAO {
 	public int deleteAR(int no) {
 		return this.sqlSession.delete("adel", no);
 	}
+
 	
 }

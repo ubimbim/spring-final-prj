@@ -29,6 +29,7 @@
 		select * from Trv_A_Review where A_no = '#'||#{str} order by ar_date desc
 		]]>
 	</select>
+
 	
 	<insert id="aadd" parameterType="com.spring.model.Review.A_ReviewDTO">
 		<![CDATA[
