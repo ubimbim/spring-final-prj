@@ -288,8 +288,20 @@ $(function (){
 														</span>
 													</div>
 													<span class="main-css-11wj8nz"> <!-- <input class="main-btn-11wj8nz" type="image" src="./resources/img/add.png"> -->
-														<input class="main-btn-11wj8nz" type="button" value="담기">
-													</span>
+			                                          <button type="button" class = " main-btn-11wj8nz" onclick="location.href='activity_review.do?a_no=${fn:split(i.getA_no(), '#')[0] }'">리뷰</button>&nbsp;&nbsp;&nbsp;
+			                                          
+			                                          <c:if test="${!empty kdto }">
+			                                             <input class="main-btn-11wj8nz" type="button" value="담기" onclick="location.href='prod_cart.do?userid=${kdto.getU_id()}&id=${fn:split(i.getA_no(), '#')[0] }'">
+			                                          </c:if>
+			                                          
+			                                          <c:if test="${!empty edto }">
+			                                             <input class="main-btn-11wj8nz" type="button" value="담기" onclick="location.href='prod_cart.do?userid=${edto.getU_id()}&id=${fn:split(i.getA_no(), '#')[0] }'">
+			                                          </c:if>
+			                                          
+			                                          <c:if test="${empty kdto and empty edto }">
+			                                             <input class="main-btn-11wj8nz" type="button" value="담기" onclick="location.href='prod_cart.do?userid=${edto.getU_id()}&id=${fn:split(i.getA_no(), '#')[0] }'">
+			                                          </c:if>
+                                      				 </span>
 												</div>
 											</div>
 										</div>

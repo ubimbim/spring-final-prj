@@ -110,10 +110,7 @@ body {
 	
 	<div id="recomm">	
 			<h3></h3>
-		
-		<br>
-		<input type="button" value="평점 4.5 이상" class="gradeBtn">
-		
+	
 		
 		
 		

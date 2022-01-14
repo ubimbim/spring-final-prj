@@ -134,8 +134,15 @@ public class ProjectController {
 	}
 	
 	@RequestMapping("email_logout.do")
-	public String emailLogout() {
+	public String emailLogout(Model model) {
 		session.invalidate();
+		
+		List<ActivityDTO> aList = this.adao.getActivityList(dto);
+		List<PlaceDTO> pList = this.pdao.getPlaceList(dto);
+		
+		model.addAttribute("aList", aList); 
+		model.addAttribute("pList", pList);
+		
 		return "main";
 	}
 	

@@ -68,6 +68,7 @@ public class trvlrController {
 		
 		PrintWriter out = response.getWriter();
 		
+		
 		if(res>0) {
 			out.println("<script>");
 			out.println("alert('탈퇴가 완료되었습니다.')");
