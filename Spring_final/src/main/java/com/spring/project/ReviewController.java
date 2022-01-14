@@ -82,7 +82,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-                 "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
+                 "C:\\Users\\anws9\\Documents\\GitHub\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);
@@ -218,7 +218,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-        		   "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
+        		   "C:\\Users\\anws9\\Documents\\GitHub\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);
@@ -344,7 +344,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-        		   "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
+        		   "C:\\Users\\anws9\\Documents\\GitHub\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);
@@ -467,7 +467,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-        		   "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
+        		   "C:\\Users\\anws9\\Documents\\GitHub\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);

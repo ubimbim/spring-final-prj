@@ -1,6 +1,7 @@
 package com.spring.project.user;
 
 
+import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpSession;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,10 +23,15 @@ import org.springframework.web.servlet.ModelAndView;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.spring.model.Activity.ActivityDAO;
+import com.spring.model.Activity.ActivityDTO;
 import com.spring.model.Member.MemberDAO;
 import com.spring.model.Member.MemberDTO;
 import com.spring.model.OAuth.KakaoProfile;
 import com.spring.model.OAuth.OAuthToken;
+import com.spring.model.Place.PageDTO;
+import com.spring.model.Place.PlaceDAO;
+import com.spring.model.Place.PlaceDTO;
 
 @RestController
 public class KakaoController {
@@ -34,6 +41,17 @@ public class KakaoController {
 	
 	@Autowired
 	private HttpSession session;
+	
+	@Autowired
+	private ActivityDAO adao;
+	
+	@Autowired
+	private PlaceDAO pdao;
+	
+	private final int rowsize = 8;      
+	private int totalRecord = 0; 
+	private int page = 1;
+	PageDTO dto = new PageDTO(page, rowsize, totalRecord);
 	
 	@GetMapping("kakao_login_ok.do")
 	public ModelAndView kakaoCallback(String code) { //Data를 리턴해주는 컨트롤러 메서드
@@ -162,9 +180,15 @@ public class KakaoController {
 	}
 	
 	@RequestMapping("logout.do")
-	public ModelAndView kakaoLogout(ModelAndView mav) {
+	public ModelAndView kakaoLogout(ModelAndView mav, Model model) {
 		session.invalidate();
-		mav.setViewName("main");		
+		mav.setViewName("main");
+		
+		List<ActivityDTO> aList = this.adao.getActivityList(dto);
+		List<PlaceDTO> pList = this.pdao.getPlaceList(dto);
+		
+		model.addAttribute("aList", aList); 
+		model.addAttribute("pList", pList);
 		return mav;
 		
 	}

@@ -397,7 +397,7 @@
 				</div>
 				<div class="modal-footer-plan">
 					<p class="modal-footer-title">전체 일정이 궁금하다면</p>
-					<button type="button" class="modal-footer-button">보러가기</button>
+					<button type="button" class="modal-footer-button" onclick="location.href='plan_detail.do?Planner_no=1'">보러가기</button>
 				</div>
 			</div>
 		</div>
