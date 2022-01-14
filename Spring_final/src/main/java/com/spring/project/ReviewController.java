@@ -8,14 +8,17 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+
 
 import com.spring.model.Review.A_ReviewDAO;
 import com.spring.model.Review.A_ReviewDTO;
@@ -25,6 +28,7 @@ import com.spring.model.Review.N_ReviewDAO;
 import com.spring.model.Review.N_ReviewDTO;
 import com.spring.model.Review.P_ReviewDAO;
 import com.spring.model.Review.P_ReviewDTO;
+
 
 @Controller
 public class ReviewController {
@@ -41,22 +45,31 @@ public class ReviewController {
 	@Autowired
 	private N_ReviewDAO ndao;
 	
-	@RequestMapping("prlist.do")
+	
+	@RequestMapping("place_review.do")
 	public String plist(HttpServletRequest request, Model model) {
 		
-		List<P_ReviewDTO> plist = this.dao.PRList();
+		String str = request.getParameter("p_no");
+		System.out.println("str >>> " + str);
+
+		List<P_ReviewDTO> plist = this.dao.PRList(str);
 		
+		
+		model.addAttribute("p_no", str);
 		model.addAttribute("pList", plist);
 		
 		
 		
-		return "review/p_review";
+		return "place/place_review";
 		
 	}
 	
 	@RequestMapping("prlist_write.do")
-	public void writeOk(P_ReviewDTO dto, HttpServletResponse response,
+	public void writeOk(P_ReviewDTO dto, HttpServletResponse response, 
+			HttpServletRequest request,
 			MultipartHttpServletRequest mRequest) throws IOException {
+		
+		String aaa = request.getParameter("p_no");
 		
 		 // 지정구역을 안정한 경우 돌려보내기
         
@@ -69,7 +82,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-                 "C:\\prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
+                 "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);
@@ -127,12 +140,12 @@ public class ReviewController {
 		if(res > 0) {
 			out.println("<script>");
 			out.println("alert('리뷰가 작성되었습니다.')");
-			out.println("location.href='place_list.do'");
+			out.println("location.href='place_review.do?p_no="+aaa+"'");
 			out.println("</script>");
 		}else {
 			out.println("<script>");
 			out.println("alert('리뷰가 작성되지않았습니다.')");
-			out.println("location.href='place_list.do'");
+			out.println("location.href='place_review.do?p_no="+aaa+"'");
 			out.println("</script>");
 		}
         }
@@ -140,39 +153,49 @@ public class ReviewController {
 	}
 	
 	@RequestMapping("prlist_delete.do")
-	public void delete(P_ReviewDTO dto,
+	public void delete(P_ReviewDTO dto,HttpServletResponse response,
 			@RequestParam("no") int no, Model model,
-			HttpServletResponse response) throws IOException {
+			HttpServletRequest request) throws IOException {
 		
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
-		int res = this.dao.deletePR(no);
 		
-		if(res > 0) {
-			out.println("<script>");
-			out.println("alert('리뷰 삭제 성공')");
-			out.println("location.href='prlist.do'");
-			out.println("</script>");
-		}else {
-			out.println("<script>");
-			out.println("alert('리뷰 삭제 실패')");
-			out.println("location.href='prlist.do'");
-			out.println("</script>");
-		}
+		String aaa = request.getParameter("p_no");
+		
+		
+			int res = this.dao.deletePR(no);
+			
+			if(res > 0) {
+				out.println("<script>");
+				out.println("alert('리뷰 삭제 성공')");
+				out.println("location.href='place_review.do?p_no="+aaa+"'");
+				out.println("</script>");
+			}else {
+				out.println("<script>");
+				out.println("alert('리뷰 삭제 실패')");
+				out.println("location.href='place_review.do?p_no="+aaa+"'");
+				out.println("</script>");
+			}
+		
+
+		
+		
 	}
 	
 	
-	@RequestMapping("arlist.do")
+	@RequestMapping("activity_review.do")
 	public String alist(HttpServletRequest request, Model model) {
 		
-		List<A_ReviewDTO> alist = this.adao.ARList();
+		String str = request.getParameter("a_no");
+		
+		List<A_ReviewDTO> alist = this.adao.ARList(str);
 		
 		model.addAttribute("aList", alist);
+		model.addAttribute("a_no", str);
 		
 		
-		
-		return "review/a_review";
+		return "activity/activity_review";
 		
 	}
 	
@@ -180,8 +203,10 @@ public class ReviewController {
 	
 	@RequestMapping("arlist_write.do")
 	public void awriteOk(A_ReviewDTO dto, HttpServletResponse response,
+			HttpServletRequest request,
 			MultipartHttpServletRequest mRequest) throws IOException {
 		
+		String a_no = request.getParameter("a_no");
 		 // 지정구역을 안정한 경우 돌려보내기
         
         MultipartFile mf = mRequest.getFile("file2");
@@ -193,7 +218,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-                 "C:\\NCS\\workspace(spring)\\Spring_final\\src\\main\\webapp\\resources\\image\\";
+        		   "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);
@@ -251,12 +276,12 @@ public class ReviewController {
 		if(res > 0) {
 			out.println("<script>");
 			out.println("alert('리뷰가 작성되었습니다.')");
-			out.println("location.href='arlist.do'");
+			out.println("location.href='activity_review.do?a_no="+a_no+"'");
 			out.println("</script>");
 		}else {
 			out.println("<script>");
 			out.println("alert('리뷰가 작성되지않았습니다.')");
-			out.println("location.href='arlist.do'");
+			out.println("location.href='activity_review.do?a_no="+a_no+"'");
 			out.println("</script>");
 		}
         }
@@ -266,7 +291,11 @@ public class ReviewController {
 	@RequestMapping("arlist_delete.do")
 	public void adelete(A_ReviewDTO dto,
 			@RequestParam("no") int no, Model model,
+			HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
+		
+		
+		String a_no = request.getParameter("a_no");
 		
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
@@ -276,12 +305,12 @@ public class ReviewController {
 		if(res > 0) {
 			out.println("<script>");
 			out.println("alert('리뷰 삭제 성공')");
-			out.println("location.href='arlist.do'");
+			out.println("location.href='activity_review.do?a_no="+a_no+"'");
 			out.println("</script>");
 		}else {
 			out.println("<script>");
 			out.println("alert('리뷰 삭제 실패')");
-			out.println("location.href='arlist.do'");
+			out.println("location.href='activity_review.do?a_no="+a_no+"'");
 			out.println("</script>");
 		}	
 }
@@ -315,7 +344,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-                 "C:\\NCS\\workspace(spring)\\Spring_final\\src\\main\\webapp\\resources\\image\\";
+        		   "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);
@@ -438,7 +467,7 @@ public class ReviewController {
            String originalFileName = mf.getOriginalFilename();   
            String finalname="";
            String uploadPath = 
-                 "C:\\git\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\image\\";
+        		   "C:\\NCS\\workspace(spring)\\spring-final-prj\\Spring_final\\src\\main\\webapp\\resources\\review\\";
            
            Calendar cal = Calendar.getInstance();
            int year = cal.get(Calendar.YEAR);

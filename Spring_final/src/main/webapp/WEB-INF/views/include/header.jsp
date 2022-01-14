@@ -68,5 +68,10 @@
 			<li><a href="activity_main.do"><img src="<%=request.getContextPath() %>/resources/images/act.png"/>&nbsp;액티비티</a></li>
 			<li><a href="food_main.do"><img src="<%=request.getContextPath() %>/resources/images/resto.png"/>&nbsp;맛집</a></li>
 			<li><a href="plan_list.do"><img src="<%=request.getContextPath() %>/resources/images/plan.png"/>&nbsp;플랜</a></li>
+				<ul>
+					<li><a href="plan_make.do">플랜 짜기</a></li>
+					<li><a href="">추천 플랜</a></li>
+				</ul>
+			</li>
 		</ul>
 	</div>

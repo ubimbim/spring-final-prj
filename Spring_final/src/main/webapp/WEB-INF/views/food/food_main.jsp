@@ -68,7 +68,6 @@ body {
 	margin-top: 400px;
 	background-color: #fff;
 }
-
 </style>
 </head>
 <body>
@@ -111,6 +110,35 @@ body {
 	
 	<div id="recomm">	
 			<h3></h3>
+		
+		<br>
+		<input type="button" value="평점 4.5 이상" class="gradeBtn">
+		
+		
+		
+		
+		<%--재연 --%>
+		
+		<div class="food_content">
+			<div class="food_row">
+				<div class="food_common">
+					<div class="food_bsSzp">
+						<div class="food_swiper">
+							<div class="food_wrapper">
+								<a class="food-cont-a" href="https://www.myrealtrip.com/offers/112179">
+									<div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+
 	</div>
 	
 	<footer>

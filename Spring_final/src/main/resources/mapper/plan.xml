@@ -4,9 +4,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="com.spring.model.Activity.CartDAO">
+  <mapper namespace="com.spring.model.Plan.CartDAO">
   
-  	<insert id="cartadd" parameterType="com.spring.model.Activity.CartDTO">
+  	<insert id="cartadd" parameterType="com.spring.model.Plan.CartDTO">
 		<!-- 
 			<selectKey resultType="String" keyProperty="prod_id" order="BEFORE">
 			select max(board_no) from board
@@ -16,5 +16,15 @@
 			insert into Trv_Cart values((select count(c_no) from Trv_Cart)+1, #{U_id}, '#'||#{Prod_no})
 		]]>
 	</insert>
+	
+	<select id="wp_select" parameterType="int" resultType="com.spring.model.Plan.WholePlanDTO">
+		select * from Trv_WholePlan where Planner_no = #{Planner_no}
+	</select>
+	
+	<select id="EP_list" parameterType="int" resultType="com.spring.model.Plan.EachPlanDTO">
+		select e.*, n.name
+		from trv_eachplan e, trv_namematching n
+		where e.category_no = n.category_no and e.Planner_no = #{Planner_no} order by plan_no
+	</select>
   
   </mapper>

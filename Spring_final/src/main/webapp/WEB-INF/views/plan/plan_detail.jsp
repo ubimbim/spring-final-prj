@@ -90,43 +90,38 @@ main {
 	<div class="map_wrapper">
 		<div align="center" id="map" style="width:800px;height:500px;"></div>
 		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a3436731ffb3d80999f96a351ece49b1&libraries=services,clusterer,drawing"></script>
-		<script>
+		<script type="text/javaScript">
 			let container = document.getElementById('map');
 			let options = {
 					center: new kakao.maps.LatLng(33.362596126296225, 126.52854588407249), //지도의 중심 좌표.		
 					level: 10	//지도의 확대 축소 정도
-			};
+			};			
 			
-			let map = new kakao.maps.Map(container, options);
+			let map = new kakao.maps.Map(container, options);			
 			
-			//마커를 표시하기
-			let positions = [ {
-				title : '<span class="info-title">한라산</span>',
-				latlng : new kakao.maps.LatLng(33.362596126296225, 126.52854588407249)
-			}, {
-				title : '<span class="info-title">우진해장국</span>',
-				latlng : new kakao.maps.LatLng(33.5116816892772, 126.5200543555591)
-			}, {
-				title : '<span class="info-title">코델리아 S 호텔</span>',
-				latlng : new kakao.maps.LatLng(33.4551747598665, 126.91038404021734)
-			}, {
-				title : '<span class="info-title">나무 리스 acti</span>',
-				latlng : new kakao.maps.LatLng(33.27347020190726, 126.65639521383837)
-			}
-				
-			];			
+			//gps 좌표로 반복문으로 마커 생성
+			let positions = new Array();
+			
+			<c:forEach items="${EPdto}" var="list" varStatus="i">
+				positions.push(	 
+						{
+							title : '<span class="info-title">${list.name}</span>',
+							latlng : new kakao.maps.LatLng(${list.x}, ${list.y})
+						}
+				);
+			</c:forEach>
 			
 			//마커 생성
-			for (let i = 0; i < positions.length; i++) {
+			for (let i=0; i<${size}; i++) {
 				let marker = new kakao.maps.Marker({
 					map : map,
-					position : positions[i].latlng,										
+					position : positions[i].latlng
 				});
 				
 				let infowindow = new kakao.maps.InfoWindow({
 					map: map,
 					position : positions[i].latlng,
-					content : positions[i].title,					
+					content : positions[i].title					
 				});
 			}
 			
@@ -148,35 +143,20 @@ main {
 	
 	<div class="main_wrapper">
 		<div class="body_header">
-			<h4>#태그로 #내용 #요약</h4>
-			<h4>22.01.11 ~ 22.01.12</h4>			
+			<h4>${WPdto.description }</h4>
+			<h4>${WPdto.start_date } ~ ${WPdto.last_date }</h4>			
 		</div>
 		<div class="body_table_wrapper">
-			<table class="table">
-				<tr>
-					<th style="width: 70%;">DAY 1</th> <td style="width: 30%;"> </td>					
-				</tr>
-				<tr>
-					<td>1. 걸어서 설경 속으로, 한라푸르나 하이킹 크루</td>	<td> <button>담기</button> </td>
-				</tr>
-				<tr>
-					<td>2. 우진해장국</td>	<td> <button>담기</button> </td>
-				</tr>
-				<tr>
-					<td>3. 코델리아S 호텔</td>	<td> <button>담기</button> </td>
-				</tr>				
-			</table>
-			<table class="table">
-				<tr>
-					<th style="width: 70%;">DAY 2</th> <td style="width: 30%;"> </td>					
-				</tr>
-				<tr>
-					<td>1. 마이 빈티지 홀리데이, 제주 나무 리스 클래스</td>	<td> <button>담기</button> </td>
-				</tr>
-				<tr>
-					<td>2. 우진해장국</td>	<td> <button>담기</button> </td>
-				</tr>								
-			</table>
+			<c:forEach items="${EPdto}" var="list" varStatus="i">				
+					<table class="table">
+						<tr>
+							<th style="width: 70%;">${list.day }</th> <td style="width: 30%;"> </td>					
+						</tr>
+						<tr>
+							<td>${i.index + 1 }. ${list.name }</td>	<td> <button>담기</button> </td>
+						</tr>									
+					</table>		
+			</c:forEach>
 		</div>
 	</div>
 </main>	
