@@ -784,3 +784,13 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.modal-price-cont{
+	position: relative;
+    padding: 15px;
+	background-color: rgb(241 244 255);
+	
+	
+}
+
+
