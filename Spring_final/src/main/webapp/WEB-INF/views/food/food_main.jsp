@@ -5,29 +5,69 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="./resources/css/main.css?after" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <style>
-	
-	#food_body {
-		margin-top: 100px;
-		padding: 50px 0px;
-		background-color: #fff;
-	}
-	
-	.display_none {
-		display: none;
-	}
-	
-	.map_all {
-		margin-left: 450px;
-		width: 200px;
-	}
-	
-    .map_grade {
-		margin-left: 450px;
-		width: 200px;
-	}
+
+body {
+	text-align: center;
+	font-family:'Noto Sans KR';
+}
+
+#food_title {
+	text-align: left;
+	margin-top: 50px;
+	margin-left: 300px;
+}
+
+#food_body {
+	display: flex;
+	background-color: #fff;
+}
+
+#maps {
+	flex: 1;
+}
+
+#map_all, #map_grade, #map_jeju, #map_seogwipo {
+	margin-left: 280px;
+	position: absolute;
+}
+
+#food_bar {
+	flex: 1;	
+	display: flex;
+    flex-direction: column;
+	width: 100px;
+	height: 130px;
+	padding-top: 30px;
+}
+
+.allBtn, .gradeBtn, .jejuBtn, .seogwipoBtn {
+	width: 150px;
+	margin-left: 400px;
+	margin-bottom: 50px;
+	border-radius: 10px;
+	border: solid 1px lightgrey;
+}
+
+.hoverBtn {
+	cursor: pointer;
+	/* background-color: #dbdbdb; */
+	border: solid 1px black;
+}
+
+.allBtn:hover, .gradeBtn:hover, .jejuBtn:hover, .seogwipoBtn:hover {
+	cursor: pointer;
+	/* background-color: #dbdbdb; */
+	border: solid 1px black;
+}
+
+#recomm {
+	margin-top: 400px;
+	background-color: #fff;
+}
 
 </style>
 </head>
@@ -37,19 +77,40 @@
 		<jsp:include page="../include/header.jsp" />
 	</header>
 	
+	<h2 id="food_title">제주 맛집 지도</h2>
+	
 	<div id="food_body">
 		
-		<div class="map_all">
-			<%@ include file="/WEB-INF/views/food/map_all.html" %>
+		<div id="maps">
+			<div id="map_grade">
+				<%@ include file="/WEB-INF/views/food/maps/map_grade.html" %>
+			</div> 	
+			
+			<div id="map_jeju">
+				<%@ include file="/WEB-INF/views/food/maps/map_jeju_si.html" %>
+			</div>	
+			
+			<div id="map_seogwipo">
+				<%@ include file="/WEB-INF/views/food/maps/map_seogwipo_si.html" %>
+			</div>	
+			
+			<div id="map_all">
+				<%@ include file="/WEB-INF/views/food/maps/map_all.html" %>
+			</div> 
+
+		</div>	
+		
+		<div id="food_bar">
+			<div class="allBtn hoverBtn"><h4>맛집 전체</h4></div>
+			<div class="gradeBtn"><h4>평점 4.5점 이상</h4></div>
+			<div class="jejuBtn"><h4>제주시</h4></div>
+			<div class="seogwipoBtn"><h4>서귀포시</h4></div>
 		</div>
-		
- 		<div class="map_grade display_none">
-			<%@ include file="/WEB-INF/views/food/map_grade.html" %>
-		</div>
-		
-		<br>
-		<input type="button" value="평점 4.5 이상" class="gradeBtn">
-		
+	
+	</div>
+	
+	<div id="recomm">	
+			<h3></h3>
 	</div>
 	
 	<footer>
@@ -57,26 +118,68 @@
 	</footer>
 
 <script>
-	const map_all = document.querySelector(".map_all");	
-	const map_grade = document.querySelector(".map_grade");
-	const gradeBtn = document.querySelector(".gradeBtn");
+	const all = document.getElementById("map_all");	
+	const grade = document.getElementById("map_grade");
+	const jeju = document.getElementById("map_jeju");
+	const seogwipo = document.getElementById("map_seogwipo");
 	
-	function switch_map() {
-		$('#map2').load(location.href + '#map2');
+	const allBtn = document.querySelector(".allBtn");
+	const gradeBtn = document.querySelector(".gradeBtn");
+	const jejuBtn = document.querySelector(".jejuBtn");
+	const seogwipoBtn = document.querySelector(".seogwipoBtn");
+	
+	function all_map() {
+		all.style.display = "block";
+		grade.style.display = "none";
+		jeju.style.display = "none";
+		seogwipo.style.display = "none";
 		
-		map_all.classList.toggle('display_none');
-		map_grade.classList.toggle('display_none');
-		
-		if (gradeBtn.value == '전체') {
-			gradeBtn.value = '평점 4.5점 이상'
-		} else {
-			gradeBtn.value = '전체';
-		}
-		
-		console.log('switched!')
+		allBtn.classList.add("hoverBtn");
+		gradeBtn.classList.remove("hoverBtn");
+		jejuBtn.classList.remove("hoverBtn");
+		seogwipoBtn.classList.remove("hoverBtn");
 	}
 	
-	gradeBtn.addEventListener('click', switch_map);
+	function grade_map() {
+		grade.style.display = "block";
+		all.style.display = "none";
+		jeju.style.display = "none";
+		seogwipo.style.display = "none";	
+		
+		gradeBtn.classList.add("hoverBtn");
+		allBtn.classList.remove("hoverBtn");
+		jejuBtn.classList.remove("hoverBtn");
+		seogwipoBtn.classList.remove("hoverBtn");
+	}
+	
+	function jeju_map() {
+		jeju.style.display = "block";
+		all.style.display = "none";
+		grade.style.display = "none";
+		seogwipo.style.display = "none";	
+		
+		jejuBtn.classList.add("hoverBtn");
+		allBtn.classList.remove("hoverBtn");
+		gradeBtn.classList.remove("hoverBtn");
+		seogwipoBtn.classList.remove("hoverBtn");
+	}
+	
+	function seo_map() {
+		seogwipo.style.display = "block";
+		all.style.display = "none";
+		grade.style.display = "none";
+		jeju.style.display = "none";	
+		
+		seogwipoBtn.classList.add("hoverBtn");
+		allBtn.classList.remove("hoverBtn");
+		gradeBtn.classList.remove("hoverBtn");
+		jejuBtn.classList.remove("hoverBtn");
+	}
+	
+	allBtn.addEventListener('click', all_map);
+	gradeBtn.addEventListener('click', grade_map);
+	jejuBtn.addEventListener('click', jeju_map);
+	seogwipoBtn.addEventListener('click', seo_map);
 </script>
 </body>
 </html>

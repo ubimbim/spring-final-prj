@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page session="false" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,17 +18,25 @@
 	<div id="back_color">
 		<div id="recomm_acc">
 			<h2>추천 숙소</h2>
+			<!--  -->
+			<c:set var="plist" value="${pList}" />
+			<!--  -->
 				<div id="itemSlide">
-					<div id="acc_firstItem" class="item">
-						<a href=""><img src="resources/images/example.jpg"><span>모다 스테이<br><br>100,000원<small>/1인</small></span></a>									
-					</div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">2<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">3<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">4<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">5<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">6<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">7<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">8<br></a></div>
+					<c:forEach items="${plist}" var="pdto" end="0">
+						<div id="acc_firstItem" class="item">
+							<a href=""><img src="resources/image/${pdto.getP_img() }">${pdto.getP_name()}<br>
+							<small>${pdto.getP_grade() }성급</small><br><br>
+							<fmt:formatNumber value="${pdto.getP_price() }" pattern="#,###" />원</a>
+						</div>
+					</c:forEach>
+					
+					<c:forEach items="${plist}" var="pdto" begin="1" end="7">
+						<div class="item">
+							<a href=""><img src="resources/image/${pdto.getP_img() }">${pdto.getP_name()}<br>
+							<small>${pdto.getP_grade() }성급</small><br><br>
+							<fmt:formatNumber value="${pdto.getP_price() }" pattern="#,###" />원</a>
+						</div>
+					</c:forEach>	
 				</div>
 			<input type="button" value="〉" id="acc_nextBtn">
 		</div>
@@ -36,15 +45,23 @@
 		
 		<div id="recomm_act">	
 			<h2>추천 액티비티</h2>
+			<!--  -->
+			<c:set var="alist" value="${aList}" />
+			<!--  -->
 				<div id="itemSlide">
-					<div id="act_firstItem" class="item"><a href=""><img src="resources/images/example.jpg">1<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">2<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">3<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">4<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">5<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">6<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">7<br></a></div>
-					<div class="item"><a href=""><img src="resources/images/example.jpg">8<br></a></div>
+					<c:forEach items="${alist}" var="adto" end="0">
+						<div id="act_firstItem" class="item">
+							<a href=""><img src="resources/img/${adto.getA_img() }">${adto.getA_name()}<br><br>
+							<fmt:formatNumber value="${adto.getA_price() }" pattern="#,###" />원<small>/1인</small></a>
+						</div>
+					</c:forEach> 
+					
+					<c:forEach items="${alist}" var="adto" begin="1" end="7">
+						<div class="item">
+							<a href=""><img src="resources/img/${adto.getA_img() }">${adto.getA_name()}<br><br>
+							<fmt:formatNumber value="${adto.getA_price() }" pattern="#,###" />원<small>/1인</small></a>
+						</div>
+					</c:forEach>
 				</div>
 			<input type="button" value="〉" id="act_nextBtn">
 		</div>

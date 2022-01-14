@@ -167,6 +167,12 @@ public class ActivityDAOImpl implements ActivityDAO {
 		
 	}
 	
+	// 메인페이지 추천 리스트
+	@Override
+	public List<ActivityDTO> getActivityList(com.spring.model.Place.PageDTO dto) {
+		return this.sqlSession.selectList("acti_main_all",dto);
+	}
+	
 	
 
 }

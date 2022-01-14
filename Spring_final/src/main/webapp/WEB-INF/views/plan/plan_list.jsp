@@ -243,7 +243,7 @@
     <header>
 	  <jsp:include page="../include/header.jsp" />
 	</header>   
-
+	
 	<div id="Main" >	
 	  <div class="Mainmod">
 	  <h2> 추천 플랜 </h2>

@@ -10,7 +10,7 @@
 </head>
 <body>
 	
-  <img src = "./resources/images/main.png" id="mainImage">	
+  <img src = "./resources/images/main_1.png" id="mainImage">	
 	
   <div id="header">
 	<a href="<%=request.getContextPath()%>/main.do"><img src="./resources/images/logo.svg" width="200px" id="logo"/></a>
@@ -25,7 +25,7 @@
 				<c:if test="${!empty kdto }">
 				<li><a href="mypage.do?id=${kdto.u_email}"><img
 						src="${kdto.u_img }"
-						width="80px" /></a>
+						width="80px" style="border-radius: 40px"/></a>
 				</c:if>
 				<c:if test="${!empty edto }">				
 				<li><a href="mypage.do?id=${edto.u_email}"><img
@@ -67,11 +67,6 @@
 			<li><a href="place_list.do"><img src="<%=request.getContextPath() %>/resources/images/acc.svg"/>&nbsp;숙소</a></li>
 			<li><a href="activity_main.do"><img src="<%=request.getContextPath() %>/resources/images/act.png"/>&nbsp;액티비티</a></li>
 			<li><a href="food_main.do"><img src="<%=request.getContextPath() %>/resources/images/resto.png"/>&nbsp;맛집</a></li>
-			<li><a href="plan_list.do"><img src="<%=request.getContextPath() %>/resources/images/plan.png"/>&nbsp;플랜</a>
-				<ul>
-					<li><a href="">플랜 짜기</a></li>
-					<li><a href="">추천 플랜</a></li>
-				</ul>
-			</li>
+			<li><a href="plan_list.do"><img src="<%=request.getContextPath() %>/resources/images/plan.png"/>&nbsp;플랜</a></li>
 		</ul>
 	</div>

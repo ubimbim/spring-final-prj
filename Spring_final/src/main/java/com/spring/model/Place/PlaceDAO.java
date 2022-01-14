@@ -14,5 +14,8 @@ public interface PlaceDAO {
 	
 	List<PlaceDTO> getCategoryList(PageDTO dto);
 	
+	// 메인페이지 추천 리스트
+	List<PlaceDTO> getPlaceList(com.spring.model.Activity.PageDTO dto);
+	
 
 }

@@ -25,25 +25,6 @@ public class trvlrController {
 
 	@Autowired	
 	private MemberDAO mdao; 
-	@Autowired	
-	private ActivityDAO Adao; 
-	@Autowired	
-	private PlaceDAO Pdao; 
-
-	
-	private final int rowsize = 3;        // 한 페이지당 보여질 게시물의 수
-	private int totalRecord = 0;          // DB 상의 게시물 전체 수
-	
-	@RequestMapping("home.do") 
-	public String Main(Model model) {
-		List<ActivityDTO> aList = this.Adao.getActivityList();
-		List<PlaceDTO> pList = this.Pdao.getPlaceList(null);
-			
-		model.addAttribute("aList", aList);
-		model.addAttribute("pList", pList);
-		
-		return "main";
-	}
 	
 	@GetMapping("mypage.do") 
 	public String Mypage(Model model, @RequestParam("id") String id) {
@@ -68,7 +49,7 @@ public class trvlrController {
 		 if(res>0) {
 			out.println("<script>");
 			out.println("alert('정보를 수정했습니다.')");
-			out.println("location.href='mypage.do'");
+			out.println("location.href='mypage.do?id="+id+"'");
 			out.println("</script>");
 		 } else {
 			out.println("<script>");
