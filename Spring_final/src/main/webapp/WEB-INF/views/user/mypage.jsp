@@ -22,7 +22,15 @@
 	<div id="mypage">
 		<h2>마이페이지</h2>
 		<div id="box">
+			
+		<c:if test="${empty kdto }">
 			<img src="<%=request.getContextPath() %>/resources/images/horse.svg" width="80px"/>
+		</c:if>
+		
+		<c:if test="${!empty kdto }">
+			<img src="${kdto.u_img }" style="width: 80px; border-radius: 40px">
+		</c:if>
+			
 			<h4>${c.getU_name()} 님 </h4>
 			<button id="edit">편집</button>
 		

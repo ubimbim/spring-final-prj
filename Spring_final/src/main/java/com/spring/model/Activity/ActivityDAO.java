@@ -1,6 +1,6 @@
 package com.spring.model.Activity;
 
-import java.util.List;
+import java.util.List; 
 
 import com.spring.model.Member.MemberDTO;
 import com.spring.model.Review.S_ReviewDTO;
@@ -40,5 +40,9 @@ public interface ActivityDAO {
 	public S_ReviewDTO getSpotReview();
 	
 	public MemberDTO getUserName();
+	
+	
+	// 메인페이지 추천 리스트
+	List<ActivityDTO> getActivityList(com.spring.model.Place.PageDTO dto);
 	
 }

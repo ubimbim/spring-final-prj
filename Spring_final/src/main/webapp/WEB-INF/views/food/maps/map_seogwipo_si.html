@@ -1,0 +1,2870 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0828ced9a4025f0ff4d6082c7dbb0990 {
+                    position: relative;
+                    width: 1000.0px;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                    font-family:'Noto Sans KR';
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_0828ced9a4025f0ff4d6082c7dbb0990" ></div>
+        
+</body>
+<script>    
+    
+            var map_0828ced9a4025f0ff4d6082c7dbb0990 = L.map(
+                "map_0828ced9a4025f0ff4d6082c7dbb0990",
+                {
+                    center: [33.36171750046072, 126.52915838098806],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c87aaf8a80499780ac5a678da69d3072 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var marker_81307fcc834f84a20574fdada1ace7f0 = L.marker(
+                [33.2589317, 126.4072788],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_a83c73915303e7f382a83612cc41b3f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_81307fcc834f84a20574fdada1ace7f0.setIcon(icon_a83c73915303e7f382a83612cc41b3f9);
+        
+    
+        var popup_80ca7173ffb552d43dc8399132ec1a64 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4501e4addf8aa32e6155a08994fa8219 = $(`<div id="html_4501e4addf8aa32e6155a08994fa8219" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>연돈</strong>&nbsp;&nbsp;<small>돈까스,우동</small><br>                평점: 3.9 | <small>리뷰갯수: 568</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 968-10 1층 (지번) 색달동 2156-2 </span><br>                <br><a href='https://place.map.kakao.com/1890778114' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_80ca7173ffb552d43dc8399132ec1a64.setContent(html_4501e4addf8aa32e6155a08994fa8219);
+        
+
+        marker_81307fcc834f84a20574fdada1ace7f0.bindPopup(popup_80ca7173ffb552d43dc8399132ec1a64)
+        ;
+
+        
+    
+    
+            marker_81307fcc834f84a20574fdada1ace7f0.bindTooltip(
+                `<div>
+                     연돈 / 3.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c1af7d5bbb0f8aa44ecab0d12b60a1e = L.marker(
+                [33.2444327, 126.4161942],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_1969f6466bbf48fd9d7db5e30716d451 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_4c1af7d5bbb0f8aa44ecab0d12b60a1e.setIcon(icon_1969f6466bbf48fd9d7db5e30716d451);
+        
+    
+        var popup_3562b170e98ab763220c5415b4c71f31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66b372473144be3aa5bd0a0f9851999c = $(`<div id="html_66b372473144be3aa5bd0a0f9851999c" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>퍼시픽리솜 더클리프</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 3.9 | <small>리뷰갯수: 717</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로 154-17 (지번) 색달동 2950-4 </span><br>                <br><a href='https://place.map.kakao.com/1378746048' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_3562b170e98ab763220c5415b4c71f31.setContent(html_66b372473144be3aa5bd0a0f9851999c);
+        
+
+        marker_4c1af7d5bbb0f8aa44ecab0d12b60a1e.bindPopup(popup_3562b170e98ab763220c5415b4c71f31)
+        ;
+
+        
+    
+    
+            marker_4c1af7d5bbb0f8aa44ecab0d12b60a1e.bindTooltip(
+                `<div>
+                     퍼시픽리솜 더클리프 / 3.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b94f718b1b85e27e5ef171a26fc8d4e4 = L.marker(
+                [33.2579925, 126.4167597],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_bff59318c42c0435527767ea3f5d7156 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b94f718b1b85e27e5ef171a26fc8d4e4.setIcon(icon_bff59318c42c0435527767ea3f5d7156);
+        
+    
+        var popup_d3d85a2a3e239165a6f363ba4e4b8685 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2490842b436817e409e93b8f96efc876 = $(`<div id="html_2490842b436817e409e93b8f96efc876" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>고집돌우럭 중문점</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 4.8 | <small>리뷰갯수: 1998</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 879 2층 (지번) 색달동 2351 </span><br>                <br><a href='https://place.map.kakao.com/1580890176' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_d3d85a2a3e239165a6f363ba4e4b8685.setContent(html_2490842b436817e409e93b8f96efc876);
+        
+
+        marker_b94f718b1b85e27e5ef171a26fc8d4e4.bindPopup(popup_d3d85a2a3e239165a6f363ba4e4b8685)
+        ;
+
+        
+    
+    
+            marker_b94f718b1b85e27e5ef171a26fc8d4e4.bindTooltip(
+                `<div>
+                     고집돌우럭 중문점 / 4.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5809c357f7e5e9917bf67d0cae224080 = L.marker(
+                [33.2496757, 126.5675722],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_f574972848a8d98b454f1890fe48f290 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5809c357f7e5e9917bf67d0cae224080.setIcon(icon_f574972848a8d98b454f1890fe48f290);
+        
+    
+        var popup_94085942d43541c1cc69ca981b6a71e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c49c9a346242dc043daaad7cabfb1241 = $(`<div id="html_c49c9a346242dc043daaad7cabfb1241" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>오는정김밥</strong>&nbsp;&nbsp;<small>분식</small><br>                평점: 3.2 | <small>리뷰갯수: 976</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 동문동로 2 (지번) 서귀동 254-6 </span><br>                <br><a href='https://place.map.kakao.com/8453998' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_94085942d43541c1cc69ca981b6a71e5.setContent(html_c49c9a346242dc043daaad7cabfb1241);
+        
+
+        marker_5809c357f7e5e9917bf67d0cae224080.bindPopup(popup_94085942d43541c1cc69ca981b6a71e5)
+        ;
+
+        
+    
+    
+            marker_5809c357f7e5e9917bf67d0cae224080.bindTooltip(
+                `<div>
+                     오는정김밥 / 3.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ce4d631dc074a725daf09dacccc48762 = L.marker(
+                [33.2576253, 126.4135534],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_c8b268b90d2f1532d84973f57a251295 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ce4d631dc074a725daf09dacccc48762.setIcon(icon_c8b268b90d2f1532d84973f57a251295);
+        
+    
+        var popup_fedd712c2f1d260dc05ddc21580e8867 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a532836a22f6abc0d4ea5e8dbb98cf55 = $(`<div id="html_a532836a22f6abc0d4ea5e8dbb98cf55" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>색달식당 중문본점</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 4.5 | <small>리뷰갯수: 7240</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 색달중앙로 23 (지번) 색달동 2276-5 </span><br>                <br><a href='https://place.map.kakao.com/17809788' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_fedd712c2f1d260dc05ddc21580e8867.setContent(html_a532836a22f6abc0d4ea5e8dbb98cf55);
+        
+
+        marker_ce4d631dc074a725daf09dacccc48762.bindPopup(popup_fedd712c2f1d260dc05ddc21580e8867)
+        ;
+
+        
+    
+    
+            marker_ce4d631dc074a725daf09dacccc48762.bindTooltip(
+                `<div>
+                     색달식당 중문본점 / 4.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b5c0fd8205da4a74d55e9b549fad5d55 = L.marker(
+                [33.2378889, 126.4365638],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_d06224ff02e57324b4c61a44b5cb3d19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_b5c0fd8205da4a74d55e9b549fad5d55.setIcon(icon_d06224ff02e57324b4c61a44b5cb3d19);
+        
+    
+        var popup_1ab653a81935cf6f61df233a13e0580a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_addf5b0b0e9a1cdd877b12922362d398 = $(`<div id="html_addf5b0b0e9a1cdd877b12922362d398" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>바다다</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 2.7 | <small>리뷰갯수: 337</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 대포로 148-15 (지번) 대포동 2384 </span><br>                <br><a href='https://place.map.kakao.com/1983315941' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_1ab653a81935cf6f61df233a13e0580a.setContent(html_addf5b0b0e9a1cdd877b12922362d398);
+        
+
+        marker_b5c0fd8205da4a74d55e9b549fad5d55.bindPopup(popup_1ab653a81935cf6f61df233a13e0580a)
+        ;
+
+        
+    
+    
+            marker_b5c0fd8205da4a74d55e9b549fad5d55.bindTooltip(
+                `<div>
+                     바다다 / 2.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_331f0c073e7875cde0bcfe04133f7b2b = L.marker(
+                [33.2444906, 126.5638992],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_edbbbb0708ea0e828f20db3d59690a58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_331f0c073e7875cde0bcfe04133f7b2b.setIcon(icon_edbbbb0708ea0e828f20db3d59690a58);
+        
+    
+        var popup_d2d999e24b2e63240d4f403d74dcffaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d422f467c23e61754886dff90826237 = $(`<div id="html_2d422f467c23e61754886dff90826237" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>유동커피</strong>&nbsp;&nbsp;<small>커피전문점</small><br>                평점: 4.3 | <small>리뷰갯수: 292</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 태평로 406-1 (지번) 서귀동 581-4 </span><br>                <br><a href='https://place.map.kakao.com/21160031' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_d2d999e24b2e63240d4f403d74dcffaf.setContent(html_2d422f467c23e61754886dff90826237);
+        
+
+        marker_331f0c073e7875cde0bcfe04133f7b2b.bindPopup(popup_d2d999e24b2e63240d4f403d74dcffaf)
+        ;
+
+        
+    
+    
+            marker_331f0c073e7875cde0bcfe04133f7b2b.bindTooltip(
+                `<div>
+                     유동커피 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f93fee0e715545eb1f319f1ad74e7331 = L.marker(
+                [33.263631, 126.610153],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_762bb323eb099ceba51c93f06b675e35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_f93fee0e715545eb1f319f1ad74e7331.setIcon(icon_762bb323eb099ceba51c93f06b675e35);
+        
+    
+        var popup_4cd056aa3b4a9e240862711c1ff612ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_259c057344d3a21ad07657c87206aed0 = $(`<div id="html_259c057344d3a21ad07657c87206aed0" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>베케</strong>&nbsp;&nbsp;<small>디저트카페</small><br>                평점: 3.7 | <small>리뷰갯수: 403</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 효돈로 54 (지번) 신효동 1137-1 </span><br>                <br><a href='https://place.map.kakao.com/1191128222' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_4cd056aa3b4a9e240862711c1ff612ac.setContent(html_259c057344d3a21ad07657c87206aed0);
+        
+
+        marker_f93fee0e715545eb1f319f1ad74e7331.bindPopup(popup_4cd056aa3b4a9e240862711c1ff612ac)
+        ;
+
+        
+    
+    
+            marker_f93fee0e715545eb1f319f1ad74e7331.bindTooltip(
+                `<div>
+                     베케 / 3.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7df5c36c314c3815fe82c75942f65f42 = L.marker(
+                [33.2515765, 126.4251078],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_e83c0187c9c57e006968f5835fe2e8a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7df5c36c314c3815fe82c75942f65f42.setIcon(icon_e83c0187c9c57e006968f5835fe2e8a4);
+        
+    
+        var popup_7dc7a31c324dccba5eb2b47b1647094d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3e6517a472de0585d9898174990ca22 = $(`<div id="html_d3e6517a472de0585d9898174990ca22" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>수두리보말칼국수</strong>&nbsp;&nbsp;<small>국수</small><br>                평점: 4.4 | <small>리뷰갯수: 312</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 천제연로 192 1층 (지번) 중문동 2056-2 </span><br>                <br><a href='https://place.map.kakao.com/1148098112' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_7dc7a31c324dccba5eb2b47b1647094d.setContent(html_d3e6517a472de0585d9898174990ca22);
+        
+
+        marker_7df5c36c314c3815fe82c75942f65f42.bindPopup(popup_7dc7a31c324dccba5eb2b47b1647094d)
+        ;
+
+        
+    
+    
+            marker_7df5c36c314c3815fe82c75942f65f42.bindTooltip(
+                `<div>
+                     수두리보말칼국수 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b578f459971aace5ab30c997cc2f365 = L.marker(
+                [33.2442683, 126.4150026],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_a21c3ee69219a8686399b5124fb98a04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2b578f459971aace5ab30c997cc2f365.setIcon(icon_a21c3ee69219a8686399b5124fb98a04);
+        
+    
+        var popup_5940dc653c4530a6f4e4be73ea6fc625 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6faac9653d67f4182eba437c44ada4cb = $(`<div id="html_6faac9653d67f4182eba437c44ada4cb" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>제주 오성 본점</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 4.3 | <small>리뷰갯수: 774</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로 27 2층 (지번) 색달동 2507-1 </span><br>                <br><a href='https://place.map.kakao.com/10627937' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_5940dc653c4530a6f4e4be73ea6fc625.setContent(html_6faac9653d67f4182eba437c44ada4cb);
+        
+
+        marker_2b578f459971aace5ab30c997cc2f365.bindPopup(popup_5940dc653c4530a6f4e4be73ea6fc625)
+        ;
+
+        
+    
+    
+            marker_2b578f459971aace5ab30c997cc2f365.bindTooltip(
+                `<div>
+                     제주 오성 본점 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79f8f916598b49e7268670dfcf3d2730 = L.marker(
+                [33.2452878, 126.5787493],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_d752aebaebefc304f4636ce93f578896 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_79f8f916598b49e7268670dfcf3d2730.setIcon(icon_d752aebaebefc304f4636ce93f578896);
+        
+    
+        var popup_2efe8d5c0f0648c859ec93c78035fcbe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ede5db5111542b137731b8e94e78b4cc = $(`<div id="html_ede5db5111542b137731b8e94e78b4cc" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>허니문하우스</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 4.3 | <small>리뷰갯수: 244</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 칠십리로 228-13 (지번) 토평동 511 </span><br>                <br><a href='https://place.map.kakao.com/775734317' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_2efe8d5c0f0648c859ec93c78035fcbe.setContent(html_ede5db5111542b137731b8e94e78b4cc);
+        
+
+        marker_79f8f916598b49e7268670dfcf3d2730.bindPopup(popup_2efe8d5c0f0648c859ec93c78035fcbe)
+        ;
+
+        
+    
+    
+            marker_79f8f916598b49e7268670dfcf3d2730.bindTooltip(
+                `<div>
+                     허니문하우스 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_58579209aa018a4bfafb9830196dee4e = L.marker(
+                [33.246589, 126.5629979],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_bed19243550ed817b6ecf27298aa9186 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_58579209aa018a4bfafb9830196dee4e.setIcon(icon_bed19243550ed817b6ecf27298aa9186);
+        
+    
+        var popup_5974d0cb4549b88aae6fecb65fc32366 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_505a77a89f7c0c6d65e8dd871ca5785e = $(`<div id="html_505a77a89f7c0c6d65e8dd871ca5785e" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>쌍둥이횟집</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 2.7 | <small>리뷰갯수: 183</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중정로62번길 14 (지번) 서귀동 496-18 </span><br>                <br><a href='https://place.map.kakao.com/11600257' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_5974d0cb4549b88aae6fecb65fc32366.setContent(html_505a77a89f7c0c6d65e8dd871ca5785e);
+        
+
+        marker_58579209aa018a4bfafb9830196dee4e.bindPopup(popup_5974d0cb4549b88aae6fecb65fc32366)
+        ;
+
+        
+    
+    
+            marker_58579209aa018a4bfafb9830196dee4e.bindTooltip(
+                `<div>
+                     쌍둥이횟집 / 2.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_54dfa4be7bbca3f0afb088bdfa70ff34 = L.marker(
+                [33.2482683, 126.6165067],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_b20ecf264d5b206407c276ed8a36bc7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_54dfa4be7bbca3f0afb088bdfa70ff34.setIcon(icon_b20ecf264d5b206407c276ed8a36bc7c);
+        
+    
+        var popup_8f72cd49963f7442256b32dc45a688bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_accc2136a7a5b74d87b5beb0d78616ce = $(`<div id="html_accc2136a7a5b74d87b5beb0d78616ce" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>테라로사 서귀포점</strong>&nbsp;&nbsp;<small>커피전문점</small><br>                평점: 4.0 | <small>리뷰갯수: 342</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 칠십리로658번길 27-16 (지번) 하효동 1306-1 </span><br>                <br><a href='https://place.map.kakao.com/25161792' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_8f72cd49963f7442256b32dc45a688bc.setContent(html_accc2136a7a5b74d87b5beb0d78616ce);
+        
+
+        marker_54dfa4be7bbca3f0afb088bdfa70ff34.bindPopup(popup_8f72cd49963f7442256b32dc45a688bc)
+        ;
+
+        
+    
+    
+            marker_54dfa4be7bbca3f0afb088bdfa70ff34.bindTooltip(
+                `<div>
+                     테라로사 서귀포점 / 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_510def366e180387d89d1aea59f52806 = L.marker(
+                [33.2646227, 126.3908426],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_9627d885a9c04766bade501b5d3dee28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_510def366e180387d89d1aea59f52806.setIcon(icon_9627d885a9c04766bade501b5d3dee28);
+        
+    
+        var popup_ee4e472ada30cf20d8aead27d0738025 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_503b66605c851381f690392344e236bb = $(`<div id="html_503b66605c851381f690392344e236bb" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>갈치왕</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 4.7 | <small>리뷰갯수: 371</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 1146 (지번) 상예동 1719-1 </span><br>                <br><a href='https://place.map.kakao.com/967549394' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_ee4e472ada30cf20d8aead27d0738025.setContent(html_503b66605c851381f690392344e236bb);
+        
+
+        marker_510def366e180387d89d1aea59f52806.bindPopup(popup_ee4e472ada30cf20d8aead27d0738025)
+        ;
+
+        
+    
+    
+            marker_510def366e180387d89d1aea59f52806.bindTooltip(
+                `<div>
+                     갈치왕 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bef89251cf09b95436cf623f76136a85 = L.marker(
+                [33.2485206, 126.559362],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_d52106dbef9dcf911475bc5daa7c6bac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bef89251cf09b95436cf623f76136a85.setIcon(icon_d52106dbef9dcf911475bc5daa7c6bac);
+        
+    
+        var popup_c347da674747660b78a1c79f0a1126cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c523a2d68982424238c192770863e742 = $(`<div id="html_c523a2d68982424238c192770863e742" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>네거리식당</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 3.1 | <small>리뷰갯수: 260</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 서문로29번길 20 (지번) 서귀동 320-9 </span><br>                <br><a href='https://place.map.kakao.com/9733194' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_c347da674747660b78a1c79f0a1126cf.setContent(html_c523a2d68982424238c192770863e742);
+        
+
+        marker_bef89251cf09b95436cf623f76136a85.bindPopup(popup_c347da674747660b78a1c79f0a1126cf)
+        ;
+
+        
+    
+    
+            marker_bef89251cf09b95436cf623f76136a85.bindTooltip(
+                `<div>
+                     네거리식당 / 3.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27febef7fa1f36fe4951644198c4b78b = L.marker(
+                [33.257733, 126.4087182],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_37fcd06a1698f490cec6f44881d63fa2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_27febef7fa1f36fe4951644198c4b78b.setIcon(icon_37fcd06a1698f490cec6f44881d63fa2);
+        
+    
+        var popup_24a6170d6f2a4c77831f7f2f18843a4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f9dce03d48b5f5a941b19dbd3b24c85 = $(`<div id="html_6f9dce03d48b5f5a941b19dbd3b24c85" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>돈이랑</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.4 | <small>리뷰갯수: 863</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 953 (지번) 색달동 2182 </span><br>                <br><a href='https://place.map.kakao.com/26586223' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_24a6170d6f2a4c77831f7f2f18843a4f.setContent(html_6f9dce03d48b5f5a941b19dbd3b24c85);
+        
+
+        marker_27febef7fa1f36fe4951644198c4b78b.bindPopup(popup_24a6170d6f2a4c77831f7f2f18843a4f)
+        ;
+
+        
+    
+    
+            marker_27febef7fa1f36fe4951644198c4b78b.bindTooltip(
+                `<div>
+                     돈이랑 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_831cca60c4806a7853c195cfec7f4abd = L.marker(
+                [33.2390498, 126.5068234],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_59d0282c625339129b9faed415112522 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_831cca60c4806a7853c195cfec7f4abd.setIcon(icon_59d0282c625339129b9faed415112522);
+        
+    
+        var popup_d1f242bf1fd91725d3a70025dc8222a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce3f9364e6715b45413b6e678e4734b8 = $(`<div id="html_ce3f9364e6715b45413b6e678e4734b8" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>제주김만복김밥 서귀포점</strong>&nbsp;&nbsp;<small>분식</small><br>                평점: 4.2 | <small>리뷰갯수: 279</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 월드컵로 117 1층 (지번) 강정동 428-4 </span><br>                <br><a href='https://place.map.kakao.com/2185536' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_d1f242bf1fd91725d3a70025dc8222a5.setContent(html_ce3f9364e6715b45413b6e678e4734b8);
+        
+
+        marker_831cca60c4806a7853c195cfec7f4abd.bindPopup(popup_d1f242bf1fd91725d3a70025dc8222a5)
+        ;
+
+        
+    
+    
+            marker_831cca60c4806a7853c195cfec7f4abd.bindTooltip(
+                `<div>
+                     제주김만복김밥 서귀포점 / 4.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4db6341950719d1ad75939c5ab6a0047 = L.marker(
+                [33.2436722, 126.5683032],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_a6f8af4838db7e1402dc3bca2359e119 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4db6341950719d1ad75939c5ab6a0047.setIcon(icon_a6f8af4838db7e1402dc3bca2359e119);
+        
+    
+        var popup_23e31eb224f41b041aadc1dec43ef2fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9ef1ea7a1c0da7c34b32c8768abf3e3 = $(`<div id="html_e9ef1ea7a1c0da7c34b32c8768abf3e3" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>동해미락</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 4.0 | <small>리뷰갯수: 375</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 칠십리로 133 (지번) 서귀동 72-1 </span><br>                <br><a href='https://place.map.kakao.com/12663386' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_23e31eb224f41b041aadc1dec43ef2fe.setContent(html_e9ef1ea7a1c0da7c34b32c8768abf3e3);
+        
+
+        marker_4db6341950719d1ad75939c5ab6a0047.bindPopup(popup_23e31eb224f41b041aadc1dec43ef2fe)
+        ;
+
+        
+    
+    
+            marker_4db6341950719d1ad75939c5ab6a0047.bindTooltip(
+                `<div>
+                     동해미락 / 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_116c5f838e026268dc6a9347af29b97a = L.marker(
+                [33.2551064, 126.4152612],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_a4e6bac3ce71ced496fb11047392dad6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_116c5f838e026268dc6a9347af29b97a.setIcon(icon_a4e6bac3ce71ced496fb11047392dad6);
+        
+    
+        var popup_2712508979c5c0e8c3f669a79a6a7712 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bd2c33b1c610114b17b240c0538f9cd = $(`<div id="html_5bd2c33b1c610114b17b240c0538f9cd" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>큰돈가 중문점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.4 | <small>리뷰갯수: 277</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 천제연로 89 (지번) 색달동 2505-2 </span><br>                <br><a href='https://place.map.kakao.com/2060352745' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_2712508979c5c0e8c3f669a79a6a7712.setContent(html_5bd2c33b1c610114b17b240c0538f9cd);
+        
+
+        marker_116c5f838e026268dc6a9347af29b97a.bindPopup(popup_2712508979c5c0e8c3f669a79a6a7712)
+        ;
+
+        
+    
+    
+            marker_116c5f838e026268dc6a9347af29b97a.bindTooltip(
+                `<div>
+                     큰돈가 중문점 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5521fe29863144adfeb7a12b7329158 = L.marker(
+                [33.2482417, 126.5613677],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_6f78698de5ac8ca18b944ca71867f203 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e5521fe29863144adfeb7a12b7329158.setIcon(icon_6f78698de5ac8ca18b944ca71867f203);
+        
+    
+        var popup_3dc51b7d7e2fddd56ba7510fd0580a56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06bc4ca4b2b2aaf811820314d82592c2 = $(`<div id="html_06bc4ca4b2b2aaf811820314d82592c2" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>천짓골식당</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.1 | <small>리뷰갯수: 159</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로41번길 4 (지번) 서귀동 294-10 </span><br>                <br><a href='https://place.map.kakao.com/12501703' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_3dc51b7d7e2fddd56ba7510fd0580a56.setContent(html_06bc4ca4b2b2aaf811820314d82592c2);
+        
+
+        marker_e5521fe29863144adfeb7a12b7329158.bindPopup(popup_3dc51b7d7e2fddd56ba7510fd0580a56)
+        ;
+
+        
+    
+    
+            marker_e5521fe29863144adfeb7a12b7329158.bindTooltip(
+                `<div>
+                     천짓골식당 / 4.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d52cc9a8b4251b2e8bc902a3252c3d5d = L.marker(
+                [33.2511825, 126.5605673],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_21aa62d3587771385c37f816a75c70ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d52cc9a8b4251b2e8bc902a3252c3d5d.setIcon(icon_21aa62d3587771385c37f816a75c70ab);
+        
+    
+        var popup_cb760994737571d7f70f6dac75f57da2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ded6f6abc305c13af34ddd49abf8bfae = $(`<div id="html_ded6f6abc305c13af34ddd49abf8bfae" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>용이식당</strong>&nbsp;&nbsp;<small>불고기,두루치기</small><br>                평점: 3.1 | <small>리뷰갯수: 183</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로79번길 9 (지번) 서귀동 297-6 </span><br>                <br><a href='https://place.map.kakao.com/8526214' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_cb760994737571d7f70f6dac75f57da2.setContent(html_ded6f6abc305c13af34ddd49abf8bfae);
+        
+
+        marker_d52cc9a8b4251b2e8bc902a3252c3d5d.bindPopup(popup_cb760994737571d7f70f6dac75f57da2)
+        ;
+
+        
+    
+    
+            marker_d52cc9a8b4251b2e8bc902a3252c3d5d.bindTooltip(
+                `<div>
+                     용이식당 / 3.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bc5966984428874a4d566deb6ac8740f = L.marker(
+                [33.2487954, 126.4198849],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_c083a5968e85baaab6bfa25a0337b539 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bc5966984428874a4d566deb6ac8740f.setIcon(icon_c083a5968e85baaab6bfa25a0337b539);
+        
+    
+        var popup_878d5d4453c9a4d53d0160810acf6def = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be277903af17c6c76f083e2751ff141e = $(`<div id="html_be277903af17c6c76f083e2751ff141e" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>칠돈가 중문점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 3.4 | <small>리뷰갯수: 301</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로 8 (지번) 색달동 2312-1 </span><br>                <br><a href='https://place.map.kakao.com/1258744113' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_878d5d4453c9a4d53d0160810acf6def.setContent(html_be277903af17c6c76f083e2751ff141e);
+        
+
+        marker_bc5966984428874a4d566deb6ac8740f.bindPopup(popup_878d5d4453c9a4d53d0160810acf6def)
+        ;
+
+        
+    
+    
+            marker_bc5966984428874a4d566deb6ac8740f.bindTooltip(
+                `<div>
+                     칠돈가 중문점 / 3.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_590e29bbf0e899e36719b8a25f263d24 = L.marker(
+                [33.2494552, 126.5669792],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_14cde737099118610352a740c4644519 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_590e29bbf0e899e36719b8a25f263d24.setIcon(icon_14cde737099118610352a740c4644519);
+        
+    
+        var popup_1a3019bd074568b48f7351c2c4f7a4f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4a1d6ae6875d593d815552fc6927a85 = $(`<div id="html_f4a1d6ae6875d593d815552fc6927a85" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>다정이네김밥 올레시장본점</strong>&nbsp;&nbsp;<small>분식</small><br>                평점: 4.0 | <small>리뷰갯수: 175</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 동문로 59-1 (지번) 서귀동 335 </span><br>                <br><a href='https://place.map.kakao.com/21473782' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_1a3019bd074568b48f7351c2c4f7a4f9.setContent(html_f4a1d6ae6875d593d815552fc6927a85);
+        
+
+        marker_590e29bbf0e899e36719b8a25f263d24.bindPopup(popup_1a3019bd074568b48f7351c2c4f7a4f9)
+        ;
+
+        
+    
+    
+            marker_590e29bbf0e899e36719b8a25f263d24.bindTooltip(
+                `<div>
+                     다정이네김밥 올레시장본점 / 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60ddf2aef8e36ec8c482e9c2211a6c23 = L.marker(
+                [33.2555395, 126.5747673],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_4cc234212b58695bc8fcbea596387075 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_60ddf2aef8e36ec8c482e9c2211a6c23.setIcon(icon_4cc234212b58695bc8fcbea596387075);
+        
+    
+        var popup_7d924ca44f8dd067b3cf4a1fe8f07b6f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6eaf68b09eae46e3bcc4653f51ba368d = $(`<div id="html_6eaf68b09eae46e3bcc4653f51ba368d" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>자리돔횟집</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 4.2 | <small>리뷰갯수: 474</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 동홍동로 7 (지번) 동홍동 473-2 </span><br>                <br><a href='https://place.map.kakao.com/9445099' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_7d924ca44f8dd067b3cf4a1fe8f07b6f.setContent(html_6eaf68b09eae46e3bcc4653f51ba368d);
+        
+
+        marker_60ddf2aef8e36ec8c482e9c2211a6c23.bindPopup(popup_7d924ca44f8dd067b3cf4a1fe8f07b6f)
+        ;
+
+        
+    
+    
+            marker_60ddf2aef8e36ec8c482e9c2211a6c23.bindTooltip(
+                `<div>
+                     자리돔횟집 / 4.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f383e42774226510e94751c35987529c = L.marker(
+                [33.2465341, 126.5596585],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_329cd857c522019a76f93e7c4c239bb9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f383e42774226510e94751c35987529c.setIcon(icon_329cd857c522019a76f93e7c4c239bb9);
+        
+    
+        var popup_49828b659c80b3f23757644e45869a34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e3f3d3e121147eec3fe5b76fdd1c160 = $(`<div id="html_3e3f3d3e121147eec3fe5b76fdd1c160" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>흑돼지BBQ</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.7 | <small>리뷰갯수: 127</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 태평로353번길 4 (지번) 서귀동 817-2 </span><br>                <br><a href='https://place.map.kakao.com/25448888' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_49828b659c80b3f23757644e45869a34.setContent(html_3e3f3d3e121147eec3fe5b76fdd1c160);
+        
+
+        marker_f383e42774226510e94751c35987529c.bindPopup(popup_49828b659c80b3f23757644e45869a34)
+        ;
+
+        
+    
+    
+            marker_f383e42774226510e94751c35987529c.bindTooltip(
+                `<div>
+                     흑돼지BBQ / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f442d97ccd386baf49a0b83cb8067582 = L.marker(
+                [33.2517365, 126.560833],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_bbadd2b4a68e23ff81f88ab9e65f3fdb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f442d97ccd386baf49a0b83cb8067582.setIcon(icon_bbadd2b4a68e23ff81f88ab9e65f3fdb);
+        
+    
+        var popup_f537641ed72100b3531893c0a134238a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b49d8596c9f65d336f784b9f850ee969 = $(`<div id="html_b49d8596c9f65d336f784b9f850ee969" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>고씨네천지국수</strong>&nbsp;&nbsp;<small>국수</small><br>                평점: 4.4 | <small>리뷰갯수: 254</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로79번길 4 (지번) 서귀동 298-1 </span><br>                <br><a href='https://place.map.kakao.com/1197785972' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_f537641ed72100b3531893c0a134238a.setContent(html_b49d8596c9f65d336f784b9f850ee969);
+        
+
+        marker_f442d97ccd386baf49a0b83cb8067582.bindPopup(popup_f537641ed72100b3531893c0a134238a)
+        ;
+
+        
+    
+    
+            marker_f442d97ccd386baf49a0b83cb8067582.bindTooltip(
+                `<div>
+                     고씨네천지국수 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd4913f0530779628c878d5cdcb6e269 = L.marker(
+                [33.2506684, 126.5632005],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_d0056076f2726e4f4415c85bcdb010d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bd4913f0530779628c878d5cdcb6e269.setIcon(icon_d0056076f2726e4f4415c85bcdb010d0);
+        
+    
+        var popup_49b79a532acd7953bcd582c8f1181581 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94a39870baa8a2b67930b376e1652c54 = $(`<div id="html_94a39870baa8a2b67930b376e1652c54" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>뽈살집 제주본점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.4 | <small>리뷰갯수: 198</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중정로91번길 37 (지번) 서귀동 278-5 </span><br>                <br><a href='https://place.map.kakao.com/11733078' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_49b79a532acd7953bcd582c8f1181581.setContent(html_94a39870baa8a2b67930b376e1652c54);
+        
+
+        marker_bd4913f0530779628c878d5cdcb6e269.bindPopup(popup_49b79a532acd7953bcd582c8f1181581)
+        ;
+
+        
+    
+    
+            marker_bd4913f0530779628c878d5cdcb6e269.bindTooltip(
+                `<div>
+                     뽈살집 제주본점 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af1f515cd4e4b37eeaea5680c170de0a = L.marker(
+                [33.2584326, 126.4353135],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_64b3b41c456697c775ba93d71dba71f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_af1f515cd4e4b37eeaea5680c170de0a.setIcon(icon_64b3b41c456697c775ba93d71dba71f0);
+        
+    
+        var popup_3f79b9d04dca5bc5bb24a932d35c5503 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0b23bb9f8c51ff354782dc904772383 = $(`<div id="html_c0b23bb9f8c51ff354782dc904772383" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>국수바다 본점</strong>&nbsp;&nbsp;<small>국수</small><br>                평점: 3.8 | <small>리뷰갯수: 411</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 982 (지번) 색달동 2130 </span><br>                <br><a href='https://place.map.kakao.com/24839193' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_3f79b9d04dca5bc5bb24a932d35c5503.setContent(html_c0b23bb9f8c51ff354782dc904772383);
+        
+
+        marker_af1f515cd4e4b37eeaea5680c170de0a.bindPopup(popup_3f79b9d04dca5bc5bb24a932d35c5503)
+        ;
+
+        
+    
+    
+            marker_af1f515cd4e4b37eeaea5680c170de0a.bindTooltip(
+                `<div>
+                     국수바다 본점 / 3.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_74b5e07c68272105a3b325564d0a4051 = L.marker(
+                [33.2491357, 126.5633575],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_44c6c3ee4fae1367ae852e535f92f757 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_74b5e07c68272105a3b325564d0a4051.setIcon(icon_44c6c3ee4fae1367ae852e535f92f757);
+        
+    
+        var popup_066bb78b279833e832669041a0170c45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e072672fa7f7770678c504481713c2de = $(`<div id="html_e072672fa7f7770678c504481713c2de" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>마농치킨 본점</strong>&nbsp;&nbsp;<small>치킨</small><br>                평점: 2.4 | <small>리뷰갯수: 91</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로48번길 14-1 (지번) 서귀동 275-27 </span><br>                <br><a href='https://place.map.kakao.com/11291724' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_066bb78b279833e832669041a0170c45.setContent(html_e072672fa7f7770678c504481713c2de);
+        
+
+        marker_74b5e07c68272105a3b325564d0a4051.bindPopup(popup_066bb78b279833e832669041a0170c45)
+        ;
+
+        
+    
+    
+            marker_74b5e07c68272105a3b325564d0a4051.bindTooltip(
+                `<div>
+                     마농치킨 본점 / 2.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cf0f2e98891967a82a58d9796a338938 = L.marker(
+                [33.2346331, 126.3712777],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_7dcdbaa42eb9bab42033c76dbc977055 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_cf0f2e98891967a82a58d9796a338938.setIcon(icon_7dcdbaa42eb9bab42033c76dbc977055);
+        
+    
+        var popup_2326cc5dfca6a739fdf350340486fd32 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6979b7c61aecc8d1f95148f27173452e = $(`<div id="html_6979b7c61aecc8d1f95148f27173452e" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>난드르바당</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 3.6 | <small>리뷰갯수: 248</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 하예하동로16번길 11-1 (지번) 하예동 1798-4 </span><br>                <br><a href='https://place.map.kakao.com/26883584' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_2326cc5dfca6a739fdf350340486fd32.setContent(html_6979b7c61aecc8d1f95148f27173452e);
+        
+
+        marker_cf0f2e98891967a82a58d9796a338938.bindPopup(popup_2326cc5dfca6a739fdf350340486fd32)
+        ;
+
+        
+    
+    
+            marker_cf0f2e98891967a82a58d9796a338938.bindTooltip(
+                `<div>
+                     난드르바당 / 3.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba7286277f78c4a507c51bad00db4dfd = L.marker(
+                [33.2403093, 126.4286681],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_f304e7351b2af343e1e6a66c7eb946cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ba7286277f78c4a507c51bad00db4dfd.setIcon(icon_f304e7351b2af343e1e6a66c7eb946cf);
+        
+    
+        var popup_bae6d72285fdad17398284a1a617d4cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_721a9f05bb1cbfa3ac8ea0bff5efd11a = $(`<div id="html_721a9f05bb1cbfa3ac8ea0bff5efd11a" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>대기정</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 4.1 | <small>리뷰갯수: 389</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 이어도로 41 (지번) 대포동 1787 </span><br>                <br><a href='https://place.map.kakao.com/15383715' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_bae6d72285fdad17398284a1a617d4cb.setContent(html_721a9f05bb1cbfa3ac8ea0bff5efd11a);
+        
+
+        marker_ba7286277f78c4a507c51bad00db4dfd.bindPopup(popup_bae6d72285fdad17398284a1a617d4cb)
+        ;
+
+        
+    
+    
+            marker_ba7286277f78c4a507c51bad00db4dfd.bindTooltip(
+                `<div>
+                     대기정 / 4.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_425b833aaf9c0ed294e265d05a8d19f4 = L.marker(
+                [33.2476846, 126.559189],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_233c83cb5bdf377f784b447fd1a767f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_425b833aaf9c0ed294e265d05a8d19f4.setIcon(icon_233c83cb5bdf377f784b447fd1a767f7);
+        
+    
+        var popup_06f30c69338af58cf36301635baa4e49 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_684eec1a4583467a525beba6e6df5c9d = $(`<div id="html_684eec1a4583467a525beba6e6df5c9d" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>삼보식당</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 2.8 | <small>리뷰갯수: 121</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중정로 25 (지번) 서귀동 319-8 </span><br>                <br><a href='https://place.map.kakao.com/11486940' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_06f30c69338af58cf36301635baa4e49.setContent(html_684eec1a4583467a525beba6e6df5c9d);
+        
+
+        marker_425b833aaf9c0ed294e265d05a8d19f4.bindPopup(popup_06f30c69338af58cf36301635baa4e49)
+        ;
+
+        
+    
+    
+            marker_425b833aaf9c0ed294e265d05a8d19f4.bindTooltip(
+                `<div>
+                     삼보식당 / 2.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_50f681e0e21fc75839783083608e3869 = L.marker(
+                [33.2431104, 126.5675903],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_a4a8016eca3fa839689c5f8c518154d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_50f681e0e21fc75839783083608e3869.setIcon(icon_a4a8016eca3fa839689c5f8c518154d4);
+        
+    
+        var popup_5c8b6b77dacb924f47d25b77e0e1c410 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b954ea37e296b9e5f7e5e4a7efa32945 = $(`<div id="html_b954ea37e296b9e5f7e5e4a7efa32945" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>바다를본돼지 서귀포점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.0 | <small>리뷰갯수: 269</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 칠십리로 123 2층 (지번) 서귀동 42 </span><br>                <br><a href='https://place.map.kakao.com/1868841420' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_5c8b6b77dacb924f47d25b77e0e1c410.setContent(html_b954ea37e296b9e5f7e5e4a7efa32945);
+        
+
+        marker_50f681e0e21fc75839783083608e3869.bindPopup(popup_5c8b6b77dacb924f47d25b77e0e1c410)
+        ;
+
+        
+    
+    
+            marker_50f681e0e21fc75839783083608e3869.bindTooltip(
+                `<div>
+                     바다를본돼지 서귀포점 / 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a96199fe71b0ea3dfca6c06d49f222ec = L.marker(
+                [33.2428254, 126.549614],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_c13fc9e3e06b2cd26f6c2f7deaa59ece = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_a96199fe71b0ea3dfca6c06d49f222ec.setIcon(icon_c13fc9e3e06b2cd26f6c2f7deaa59ece);
+        
+    
+        var popup_eeb3cecebe8d2115d2050ce95783d301 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fabe04d9c4435103f88da2106c193625 = $(`<div id="html_fabe04d9c4435103f88da2106c193625" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>꽃이피다앤블라썸</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 4.7 | <small>리뷰갯수: 389</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 남성로 136 1층 (지번) 서홍동 744-9 </span><br>                <br><a href='https://place.map.kakao.com/1028406499' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_eeb3cecebe8d2115d2050ce95783d301.setContent(html_fabe04d9c4435103f88da2106c193625);
+        
+
+        marker_a96199fe71b0ea3dfca6c06d49f222ec.bindPopup(popup_eeb3cecebe8d2115d2050ce95783d301)
+        ;
+
+        
+    
+    
+            marker_a96199fe71b0ea3dfca6c06d49f222ec.bindTooltip(
+                `<div>
+                     꽃이피다앤블라썸 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e062e62d193788adfab7504b06e7ebe = L.marker(
+                [33.2576625, 126.4082795],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_857cafbf919cd8b3b0805ca5f1a83b69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7e062e62d193788adfab7504b06e7ebe.setIcon(icon_857cafbf919cd8b3b0805ca5f1a83b69);
+        
+    
+        var popup_de215af1a36e20e4ce8c34a02c3f5981 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec4cb4d6704bce45958b2d07ff624eb6 = $(`<div id="html_ec4cb4d6704bce45958b2d07ff624eb6" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>덤장 중문점</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 3.0 | <small>리뷰갯수: 272</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 천제연로 17 (지번) 색달동 2119 </span><br>                <br><a href='https://place.map.kakao.com/8258838' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_de215af1a36e20e4ce8c34a02c3f5981.setContent(html_ec4cb4d6704bce45958b2d07ff624eb6);
+        
+
+        marker_7e062e62d193788adfab7504b06e7ebe.bindPopup(popup_de215af1a36e20e4ce8c34a02c3f5981)
+        ;
+
+        
+    
+    
+            marker_7e062e62d193788adfab7504b06e7ebe.bindTooltip(
+                `<div>
+                     덤장 중문점 / 3.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16312c31df4543a4f5ca086d0b25a2ee = L.marker(
+                [33.2443245, 126.59071],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_db9b978ba474945d5756f1f4f3053581 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_16312c31df4543a4f5ca086d0b25a2ee.setIcon(icon_db9b978ba474945d5756f1f4f3053581);
+        
+    
+        var popup_d5291798efc47a88053d3e6aba4f9c8c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7569721f1829a5ca951c9c9de83a4255 = $(`<div id="html_7569721f1829a5ca951c9c9de83a4255" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>보래드베이커스</strong>&nbsp;&nbsp;<small>제과,베이커리</small><br>                평점: 4.4 | <small>리뷰갯수: 549</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 보목로64번길 178 호텔서귀피안 1층 (지번) 보목동 1453 </span><br>                <br><a href='https://place.map.kakao.com/460384368' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_d5291798efc47a88053d3e6aba4f9c8c.setContent(html_7569721f1829a5ca951c9c9de83a4255);
+        
+
+        marker_16312c31df4543a4f5ca086d0b25a2ee.bindPopup(popup_d5291798efc47a88053d3e6aba4f9c8c)
+        ;
+
+        
+    
+    
+            marker_16312c31df4543a4f5ca086d0b25a2ee.bindTooltip(
+                `<div>
+                     보래드베이커스 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_094eee0e12a49dcec1718d3c4ab0f727 = L.marker(
+                [33.2786689, 126.5886438],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_f1ff78a0c28851f03c05e505210d5a00 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_094eee0e12a49dcec1718d3c4ab0f727.setIcon(icon_f1ff78a0c28851f03c05e505210d5a00);
+        
+    
+        var popup_ec34c0b1e040727a305a57fd21fe862f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6732fb732a79f52c03b6e97180020698 = $(`<div id="html_6732fb732a79f52c03b6e97180020698" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>은희네해장국 서귀포점</strong>&nbsp;&nbsp;<small>해장국</small><br>                평점: 4.1 | <small>리뷰갯수: 78</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 516로 84 (지번) 토평동 1001-7 </span><br>                <br><a href='https://place.map.kakao.com/24839178' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_ec34c0b1e040727a305a57fd21fe862f.setContent(html_6732fb732a79f52c03b6e97180020698);
+        
+
+        marker_094eee0e12a49dcec1718d3c4ab0f727.bindPopup(popup_ec34c0b1e040727a305a57fd21fe862f)
+        ;
+
+        
+    
+    
+            marker_094eee0e12a49dcec1718d3c4ab0f727.bindTooltip(
+                `<div>
+                     은희네해장국 서귀포점 / 4.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_372380e413e7acf71e430a16773d01e4 = L.marker(
+                [33.2477094, 126.5617231],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_f91e8419d45f7e5a5a9a84a06450722a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_372380e413e7acf71e430a16773d01e4.setIcon(icon_f91e8419d45f7e5a5a9a84a06450722a);
+        
+    
+        var popup_aeaf769bee6ea2d174612732eee76441 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a70eb3ff02c6e92822c79d8500f9ae05 = $(`<div id="html_a70eb3ff02c6e92822c79d8500f9ae05" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>제주약수터 본점</strong>&nbsp;&nbsp;<small>호프,요리주점</small><br>                평점: 4.7 | <small>리뷰갯수: 210</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로 35 1층 (지번) 서귀동 294-20 </span><br>                <br><a href='https://place.map.kakao.com/1510813713' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_aeaf769bee6ea2d174612732eee76441.setContent(html_a70eb3ff02c6e92822c79d8500f9ae05);
+        
+
+        marker_372380e413e7acf71e430a16773d01e4.bindPopup(popup_aeaf769bee6ea2d174612732eee76441)
+        ;
+
+        
+    
+    
+            marker_372380e413e7acf71e430a16773d01e4.bindTooltip(
+                `<div>
+                     제주약수터 본점 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f52193cb1cd6e3a05631bda1eebb0b9a = L.marker(
+                [33.240469, 126.493008],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_b9e65b57121953a00374c0e550bfd66d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f52193cb1cd6e3a05631bda1eebb0b9a.setIcon(icon_b9e65b57121953a00374c0e550bfd66d);
+        
+    
+        var popup_f7114d9d81f4271e74c9ff23eb448803 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bfaefd7cc41c7258845dd0f99ee8326c = $(`<div id="html_bfaefd7cc41c7258845dd0f99ee8326c" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>하원가흑돼지</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.8 | <small>리뷰갯수: 186</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 이어도로 278 (지번) 하원동 1662-1 </span><br>                <br><a href='https://place.map.kakao.com/1480065759' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_f7114d9d81f4271e74c9ff23eb448803.setContent(html_bfaefd7cc41c7258845dd0f99ee8326c);
+        
+
+        marker_f52193cb1cd6e3a05631bda1eebb0b9a.bindPopup(popup_f7114d9d81f4271e74c9ff23eb448803)
+        ;
+
+        
+    
+    
+            marker_f52193cb1cd6e3a05631bda1eebb0b9a.bindTooltip(
+                `<div>
+                     하원가흑돼지 / 4.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6725b06f9f45007dd64bd13a47f3b67 = L.marker(
+                [33.2397608, 126.437082],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_9420b21196db8d9934a5c5891f77616a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c6725b06f9f45007dd64bd13a47f3b67.setIcon(icon_9420b21196db8d9934a5c5891f77616a);
+        
+    
+        var popup_a4f4b1c3ca5ea551017e276f3811961e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4577c191b3151dc2c214d04e171c56e = $(`<div id="html_d4577c191b3151dc2c214d04e171c56e" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>중문흑돼지천국</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 4.8 | <small>리뷰갯수: 362</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 이어도로 137 (지번) 대포동 2066-1 </span><br>                <br><a href='https://place.map.kakao.com/184274845' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_a4f4b1c3ca5ea551017e276f3811961e.setContent(html_d4577c191b3151dc2c214d04e171c56e);
+        
+
+        marker_c6725b06f9f45007dd64bd13a47f3b67.bindPopup(popup_a4f4b1c3ca5ea551017e276f3811961e)
+        ;
+
+        
+    
+    
+            marker_c6725b06f9f45007dd64bd13a47f3b67.bindTooltip(
+                `<div>
+                     중문흑돼지천국 / 4.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d4366ee62b52b9968a83e8afa4213a08 = L.marker(
+                [33.2501459, 126.5672963],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_b51aaf3e25e5c6395b0a5cb81788c487 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d4366ee62b52b9968a83e8afa4213a08.setIcon(icon_b51aaf3e25e5c6395b0a5cb81788c487);
+        
+    
+        var popup_e106df9119af1de357c64e56b3d3ccbb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1bdedde1c43ac0b30ee234a45b5ed474 = $(`<div id="html_1bdedde1c43ac0b30ee234a45b5ed474" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>짱구분식</strong>&nbsp;&nbsp;<small>분식</small><br>                평점: 3.9 | <small>리뷰갯수: 172</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중동로48번길 3 (지번) 서귀동 254-2 </span><br>                <br><a href='https://place.map.kakao.com/19358629' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_e106df9119af1de357c64e56b3d3ccbb.setContent(html_1bdedde1c43ac0b30ee234a45b5ed474);
+        
+
+        marker_d4366ee62b52b9968a83e8afa4213a08.bindPopup(popup_e106df9119af1de357c64e56b3d3ccbb)
+        ;
+
+        
+    
+    
+            marker_d4366ee62b52b9968a83e8afa4213a08.bindTooltip(
+                `<div>
+                     짱구분식 / 3.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f81638e3a5a8ab94c8e221b3f5c49596 = L.marker(
+                [33.2502561, 126.4245006],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_9182f42dcad3303a05afb27eec62ef09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f81638e3a5a8ab94c8e221b3f5c49596.setIcon(icon_9182f42dcad3303a05afb27eec62ef09);
+        
+    
+        var popup_47682e85bd8d6156c132087ba7867aea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5c5c8422bd97642bc940fb3e00d6390 = $(`<div id="html_c5c5c8422bd97642bc940fb3e00d6390" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>제주한라국수</strong>&nbsp;&nbsp;<small>국수</small><br>                평점: 3.7 | <small>리뷰갯수: 116</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 천제연로188번길 17 (지번) 중문동 2048-1 </span><br>                <br><a href='https://place.map.kakao.com/27447640' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_47682e85bd8d6156c132087ba7867aea.setContent(html_c5c5c8422bd97642bc940fb3e00d6390);
+        
+
+        marker_f81638e3a5a8ab94c8e221b3f5c49596.bindPopup(popup_47682e85bd8d6156c132087ba7867aea)
+        ;
+
+        
+    
+    
+            marker_f81638e3a5a8ab94c8e221b3f5c49596.bindTooltip(
+                `<div>
+                     제주한라국수 / 3.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ff4d392d7c3378dd264f34e055476503 = L.marker(
+                [33.2492549, 126.5672067],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_a2b3442523ede877390f7dacaea2d99c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ff4d392d7c3378dd264f34e055476503.setIcon(icon_a2b3442523ede877390f7dacaea2d99c);
+        
+    
+        var popup_9421323de207d7a68c3337d8d578b012 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b881ebf3a467eb99afa48da9ec9d4816 = $(`<div id="html_b881ebf3a467eb99afa48da9ec9d4816" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>88버거</strong>&nbsp;&nbsp;<small>햄버거</small><br>                평점: 3.3 | <small>리뷰갯수: 419</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 동문로 63 (지번) 서귀동 255-9 </span><br>                <br><a href='https://place.map.kakao.com/27559019' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_9421323de207d7a68c3337d8d578b012.setContent(html_b881ebf3a467eb99afa48da9ec9d4816);
+        
+
+        marker_ff4d392d7c3378dd264f34e055476503.bindPopup(popup_9421323de207d7a68c3337d8d578b012)
+        ;
+
+        
+    
+    
+            marker_ff4d392d7c3378dd264f34e055476503.bindTooltip(
+                `<div>
+                     88버거 / 3.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6f24d35609a39c74bf12521d981371e = L.marker(
+                [33.2682594, 126.589636],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_e0cb5840aa099962320e0910176c8fbe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b6f24d35609a39c74bf12521d981371e.setIcon(icon_e0cb5840aa099962320e0910176c8fbe);
+        
+    
+        var popup_3aa38e58dc4eac37fbcefa897d013e61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d42b0889bbfa30f0300bd4f02b5b66b6 = $(`<div id="html_d42b0889bbfa30f0300bd4f02b5b66b6" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>오가네전복설렁탕 서귀포본점</strong>&nbsp;&nbsp;<small>설렁탕</small><br>                평점: 4.7 | <small>리뷰갯수: 352</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중산간동로 7738 (지번) 토평동 1284 </span><br>                <br><a href='https://place.map.kakao.com/19143360' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_3aa38e58dc4eac37fbcefa897d013e61.setContent(html_d42b0889bbfa30f0300bd4f02b5b66b6);
+        
+
+        marker_b6f24d35609a39c74bf12521d981371e.bindPopup(popup_3aa38e58dc4eac37fbcefa897d013e61)
+        ;
+
+        
+    
+    
+            marker_b6f24d35609a39c74bf12521d981371e.bindTooltip(
+                `<div>
+                     오가네전복설렁탕 서귀포본점 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_56a636de25c84826ebc7b7bbf6278eda = L.marker(
+                [33.2496086, 126.5633187],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_47ec5b6dd1bbc6ea3671df845dcbba6c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_56a636de25c84826ebc7b7bbf6278eda.setIcon(icon_47ec5b6dd1bbc6ea3671df845dcbba6c);
+        
+    
+        var popup_26402e5c0362b46465d269e3c8be7324 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_81bb6bf0b438a17d7dad23e086aef379 = $(`<div id="html_81bb6bf0b438a17d7dad23e086aef379" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>우정회센타</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 3.3 | <small>리뷰갯수: 241</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로54번길 32 (지번) 서귀동 276-20 </span><br>                <br><a href='https://place.map.kakao.com/25047828' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_26402e5c0362b46465d269e3c8be7324.setContent(html_81bb6bf0b438a17d7dad23e086aef379);
+        
+
+        marker_56a636de25c84826ebc7b7bbf6278eda.bindPopup(popup_26402e5c0362b46465d269e3c8be7324)
+        ;
+
+        
+    
+    
+            marker_56a636de25c84826ebc7b7bbf6278eda.bindTooltip(
+                `<div>
+                     우정회센타 / 3.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1fb14d030bcfded1e69b324fa6eff623 = L.marker(
+                [33.2532184, 126.4272791],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_84306eca81bf32e015883c5529b73664 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1fb14d030bcfded1e69b324fa6eff623.setIcon(icon_84306eca81bf32e015883c5529b73664);
+        
+    
+        var popup_3f52be6ab890a459333d5278d7356838 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f65a16fabd202f6110161f965af0cb2d = $(`<div id="html_f65a16fabd202f6110161f965af0cb2d" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>돈사돈 중문점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 2.0 | <small>리뷰갯수: 252</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 천제연로 264-1 (지번) 중문동 1884-7 </span><br>                <br><a href='https://place.map.kakao.com/25890705' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_3f52be6ab890a459333d5278d7356838.setContent(html_f65a16fabd202f6110161f965af0cb2d);
+        
+
+        marker_1fb14d030bcfded1e69b324fa6eff623.bindPopup(popup_3f52be6ab890a459333d5278d7356838)
+        ;
+
+        
+    
+    
+            marker_1fb14d030bcfded1e69b324fa6eff623.bindTooltip(
+                `<div>
+                     돈사돈 중문점 / 2.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d2bbb18e64d2450fedf6bb45d9292fc7 = L.marker(
+                [33.2449505, 126.5635161],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_640cd1cb453101065c92d6cb35c629fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d2bbb18e64d2450fedf6bb45d9292fc7.setIcon(icon_640cd1cb453101065c92d6cb35c629fd);
+        
+    
+        var popup_e09ab1cb11d910c680edb6f72abec781 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bde477d39e81e891a70c4c8da09c21e3 = $(`<div id="html_bde477d39e81e891a70c4c8da09c21e3" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>덕성원 본점</strong>&nbsp;&nbsp;<small>중화요리</small><br>                평점: 3.0 | <small>리뷰갯수: 81</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 태평로401번길 4 (지번) 서귀동 472-1 </span><br>                <br><a href='https://place.map.kakao.com/15838018' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_e09ab1cb11d910c680edb6f72abec781.setContent(html_bde477d39e81e891a70c4c8da09c21e3);
+        
+
+        marker_d2bbb18e64d2450fedf6bb45d9292fc7.bindPopup(popup_e09ab1cb11d910c680edb6f72abec781)
+        ;
+
+        
+    
+    
+            marker_d2bbb18e64d2450fedf6bb45d9292fc7.bindTooltip(
+                `<div>
+                     덕성원 본점 / 3.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e7715d7c4f429a8bd8be6238fee0b24a = L.marker(
+                [33.2458896, 126.4130778],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_7a391c63219bc6983f7eebe4600f441c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_e7715d7c4f429a8bd8be6238fee0b24a.setIcon(icon_7a391c63219bc6983f7eebe4600f441c);
+        
+    
+        var popup_79f90ea918c16f3e8564d8b1e109359d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_151b2608f6b40a8c1fdc5c277591f96a = $(`<div id="html_151b2608f6b40a8c1fdc5c277591f96a" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>바다2822</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 3.3 | <small>리뷰갯수: 88</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로72번길 29-51 (지번) 색달동 2822-12 </span><br>                <br><a href='https://place.map.kakao.com/299559976' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_79f90ea918c16f3e8564d8b1e109359d.setContent(html_151b2608f6b40a8c1fdc5c277591f96a);
+        
+
+        marker_e7715d7c4f429a8bd8be6238fee0b24a.bindPopup(popup_79f90ea918c16f3e8564d8b1e109359d)
+        ;
+
+        
+    
+    
+            marker_e7715d7c4f429a8bd8be6238fee0b24a.bindTooltip(
+                `<div>
+                     바다2822 / 3.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e81f1eb7704711defb3a6bff5141cce5 = L.marker(
+                [33.2784399, 126.5169922],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_7f748185b4beb85cc1a4ffbf6ba3f175 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e81f1eb7704711defb3a6bff5141cce5.setIcon(icon_7f748185b4beb85cc1a4ffbf6ba3f175);
+        
+    
+        var popup_dcde960d94dda7e27c0f877edd74f9bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cb83df6a3b65264133bc1e4b4518c3b = $(`<div id="html_7cb83df6a3b65264133bc1e4b4518c3b" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>돈블랙 서귀포본점</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 4.7 | <small>리뷰갯수: 185</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 서호남로32번길 24 (지번) 서호동 1553-7 </span><br>                <br><a href='https://place.map.kakao.com/375676806' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_dcde960d94dda7e27c0f877edd74f9bc.setContent(html_7cb83df6a3b65264133bc1e4b4518c3b);
+        
+
+        marker_e81f1eb7704711defb3a6bff5141cce5.bindPopup(popup_dcde960d94dda7e27c0f877edd74f9bc)
+        ;
+
+        
+    
+    
+            marker_e81f1eb7704711defb3a6bff5141cce5.bindTooltip(
+                `<div>
+                     돈블랙 서귀포본점 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_516db8bc61e7f3e5457877da25215c36 = L.marker(
+                [33.2496037, 126.431444],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_6694be72f56563e268a691f579e7e40e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_516db8bc61e7f3e5457877da25215c36.setIcon(icon_6694be72f56563e268a691f579e7e40e);
+        
+    
+        var popup_0af6d1103841dbfacff7cf6d532e93c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a1b7d295636a943e568105560071c8b = $(`<div id="html_9a1b7d295636a943e568105560071c8b" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>가람돌솥밥</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 3.9 | <small>리뷰갯수: 156</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로 332 (지번) 대포동 747-3 </span><br>                <br><a href='https://place.map.kakao.com/10954053' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_0af6d1103841dbfacff7cf6d532e93c5.setContent(html_9a1b7d295636a943e568105560071c8b);
+        
+
+        marker_516db8bc61e7f3e5457877da25215c36.bindPopup(popup_0af6d1103841dbfacff7cf6d532e93c5)
+        ;
+
+        
+    
+    
+            marker_516db8bc61e7f3e5457877da25215c36.bindTooltip(
+                `<div>
+                     가람돌솥밥 / 3.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_137c091a5318c4c464de1347043d10aa = L.marker(
+                [33.2506983, 126.5125441],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_bac590f9a6146627f9f31bc637e87f0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_137c091a5318c4c464de1347043d10aa.setIcon(icon_bac590f9a6146627f9f31bc637e87f0f);
+        
+    
+        var popup_0509eb1e1641d6775f1ccad6dcc7b522 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15c5d59747453dd0d80e4c5ef139693c = $(`<div id="html_15c5d59747453dd0d80e4c5ef139693c" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>섬돼지</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.6 | <small>리뷰갯수: 254</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 신동로 25 (지번) 서호동 1477-8 </span><br>                <br><a href='https://place.map.kakao.com/1862055456' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_0509eb1e1641d6775f1ccad6dcc7b522.setContent(html_15c5d59747453dd0d80e4c5ef139693c);
+        
+
+        marker_137c091a5318c4c464de1347043d10aa.bindPopup(popup_0509eb1e1641d6775f1ccad6dcc7b522)
+        ;
+
+        
+    
+    
+            marker_137c091a5318c4c464de1347043d10aa.bindTooltip(
+                `<div>
+                     섬돼지 / 4.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03b48a3acaa62ea0c8bd7ec7265959a5 = L.marker(
+                [33.240469, 126.493008],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_56b80cb1f366e7f099e9ad9907caed0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_03b48a3acaa62ea0c8bd7ec7265959a5.setIcon(icon_56b80cb1f366e7f099e9ad9907caed0a);
+        
+    
+        var popup_848a37373dddd40536a8928992660ead = L.popup({"maxWidth": "100%"});
+
+        
+            var html_513ac5ee209f2db160221129be4db0ea = $(`<div id="html_513ac5ee209f2db160221129be4db0ea" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>제주곰집</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.2 | <small>리뷰갯수: 397</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 이어도로 703-4 (지번) 강정동 2623-1 </span><br>                <br><a href='https://place.map.kakao.com/20631993' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_848a37373dddd40536a8928992660ead.setContent(html_513ac5ee209f2db160221129be4db0ea);
+        
+
+        marker_03b48a3acaa62ea0c8bd7ec7265959a5.bindPopup(popup_848a37373dddd40536a8928992660ead)
+        ;
+
+        
+    
+    
+            marker_03b48a3acaa62ea0c8bd7ec7265959a5.bindTooltip(
+                `<div>
+                     제주곰집 / 4.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_14f8aded226556260f970c300eb606ca = L.marker(
+                [33.248556, 126.5628176],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_2167bc92d65ca8aa0114c350bb50c2c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_14f8aded226556260f970c300eb606ca.setIcon(icon_2167bc92d65ca8aa0114c350bb50c2c8);
+        
+    
+        var popup_6e1f99b65c6ab6b01b59aa81984f11ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9609694b49a12c1fbf061a5f77486a99 = $(`<div id="html_9609694b49a12c1fbf061a5f77486a99" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>올레왕갈치</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 4.5 | <small>리뷰갯수: 357</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로42번길 9 1층 (지번) 서귀동 292-17 </span><br>                <br><a href='https://place.map.kakao.com/1056381412' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_6e1f99b65c6ab6b01b59aa81984f11ba.setContent(html_9609694b49a12c1fbf061a5f77486a99);
+        
+
+        marker_14f8aded226556260f970c300eb606ca.bindPopup(popup_6e1f99b65c6ab6b01b59aa81984f11ba)
+        ;
+
+        
+    
+    
+            marker_14f8aded226556260f970c300eb606ca.bindTooltip(
+                `<div>
+                     올레왕갈치 / 4.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_efd1dbe79e194699be5f76178a783405 = L.marker(
+                [33.2533714, 126.5056409],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_0d0a434ca6e33d065e213fc288b756b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_efd1dbe79e194699be5f76178a783405.setIcon(icon_0d0a434ca6e33d065e213fc288b756b3);
+        
+    
+        var popup_9ed805bb14ada93ad9360daaf54e05dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_191a912e1f958e58eeb1c25921645798 = $(`<div id="html_191a912e1f958e58eeb1c25921645798" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>문치비 본점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.0 | <small>리뷰갯수: 159</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 신서로32번길 14 (지번) 강정동 172-2 </span><br>                <br><a href='https://place.map.kakao.com/26397051' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_9ed805bb14ada93ad9360daaf54e05dc.setContent(html_191a912e1f958e58eeb1c25921645798);
+        
+
+        marker_efd1dbe79e194699be5f76178a783405.bindPopup(popup_9ed805bb14ada93ad9360daaf54e05dc)
+        ;
+
+        
+    
+    
+            marker_efd1dbe79e194699be5f76178a783405.bindTooltip(
+                `<div>
+                     문치비 본점 / 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_097062c62e6571d2d1c312a5d90fdfb6 = L.marker(
+                [33.2514372, 126.5604451],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_85d4b6277cede541fa34a5cee769c0f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_097062c62e6571d2d1c312a5d90fdfb6.setIcon(icon_85d4b6277cede541fa34a5cee769c0f9);
+        
+    
+        var popup_1399d286449506ce90159b1ab7c5014e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83794e9b604837cbe9a66e5c30423a92 = $(`<div id="html_83794e9b604837cbe9a66e5c30423a92" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>제일수산횟집</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 4.5 | <small>리뷰갯수: 89</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로79번길 8 (지번) 서귀동 298-3 </span><br>                <br><a href='https://place.map.kakao.com/1471703833' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_1399d286449506ce90159b1ab7c5014e.setContent(html_83794e9b604837cbe9a66e5c30423a92);
+        
+
+        marker_097062c62e6571d2d1c312a5d90fdfb6.bindPopup(popup_1399d286449506ce90159b1ab7c5014e)
+        ;
+
+        
+    
+    
+            marker_097062c62e6571d2d1c312a5d90fdfb6.bindTooltip(
+                `<div>
+                     제일수산횟집 / 4.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f98d64bda8e9c5d3df546142d092f666 = L.marker(
+                [33.23449, 126.512782],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_4895a465aaac59da2a4bdd5e99af67bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_f98d64bda8e9c5d3df546142d092f666.setIcon(icon_4895a465aaac59da2a4bdd5e99af67bc);
+        
+    
+        var popup_519c22b925c809d9c942676682193a2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb034ee3ca6c18afbb4801a563d6c90c = $(`<div id="html_eb034ee3ca6c18afbb4801a563d6c90c" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>벙커하우스</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 4.3 | <small>리뷰갯수: 85</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 막숙포로41번길 66 1층 (지번) 법환동 140 </span><br>                <br><a href='https://place.map.kakao.com/670044535' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_519c22b925c809d9c942676682193a2b.setContent(html_eb034ee3ca6c18afbb4801a563d6c90c);
+        
+
+        marker_f98d64bda8e9c5d3df546142d092f666.bindPopup(popup_519c22b925c809d9c942676682193a2b)
+        ;
+
+        
+    
+    
+            marker_f98d64bda8e9c5d3df546142d092f666.bindTooltip(
+                `<div>
+                     벙커하우스 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f4b95af8963e3406fe4f37493245e9e2 = L.marker(
+                [33.2584326, 126.4353135],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_fbc01597d4ff2804dd86ee6cf49c8b13 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_f4b95af8963e3406fe4f37493245e9e2.setIcon(icon_fbc01597d4ff2804dd86ee6cf49c8b13);
+        
+    
+        var popup_15b3d6d1afc8d73cf1a9825b408415ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e662dbe7d039f8b879dad03c58f3265c = $(`<div id="html_e662dbe7d039f8b879dad03c58f3265c" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>카페바나나 중문점</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 4.7 | <small>리뷰갯수: 1140</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 875 (지번) 색달동 2353 </span><br>                <br><a href='https://place.map.kakao.com/2095612103' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_15b3d6d1afc8d73cf1a9825b408415ff.setContent(html_e662dbe7d039f8b879dad03c58f3265c);
+        
+
+        marker_f4b95af8963e3406fe4f37493245e9e2.bindPopup(popup_15b3d6d1afc8d73cf1a9825b408415ff)
+        ;
+
+        
+    
+    
+            marker_f4b95af8963e3406fe4f37493245e9e2.bindTooltip(
+                `<div>
+                     카페바나나 중문점 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_232bccf320ce805fd7043cb920e8e58c = L.marker(
+                [33.2466096, 126.4293043],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_ea8bb6697cee48fce03c0c9d18780bfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_232bccf320ce805fd7043cb920e8e58c.setIcon(icon_ea8bb6697cee48fce03c0c9d18780bfd);
+        
+    
+        var popup_138cadad3ae7070d67f7cd8a89b0513d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f579220fa743e2ca543b1856b2aea627 = $(`<div id="html_f579220fa743e2ca543b1856b2aea627" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>중문회포장센터 새벽야시장</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 3.3 | <small>리뷰갯수: 96</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로 293 (지번) 대포동 770 </span><br>                <br><a href='https://place.map.kakao.com/1111784272' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_138cadad3ae7070d67f7cd8a89b0513d.setContent(html_f579220fa743e2ca543b1856b2aea627);
+        
+
+        marker_232bccf320ce805fd7043cb920e8e58c.bindPopup(popup_138cadad3ae7070d67f7cd8a89b0513d)
+        ;
+
+        
+    
+    
+            marker_232bccf320ce805fd7043cb920e8e58c.bindTooltip(
+                `<div>
+                     중문회포장센터 새벽야시장 / 3.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e62090425a63f1efbe2c17b56db34c7a = L.marker(
+                [33.2584326, 126.4353135],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_035dab7e9f8b6433c88c416a1f8cbee4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e62090425a63f1efbe2c17b56db34c7a.setIcon(icon_035dab7e9f8b6433c88c416a1f8cbee4);
+        
+    
+        var popup_aa5e909dfae02e34b3d4d0a80813c91d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90525299fb535f24b25b59de23495636 = $(`<div id="html_90525299fb535f24b25b59de23495636" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>숙성도 중문점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 3.7 | <small>리뷰갯수: 403</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 966 (지번) 색달동 2123 </span><br>                <br><a href='https://place.map.kakao.com/204534740' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_aa5e909dfae02e34b3d4d0a80813c91d.setContent(html_90525299fb535f24b25b59de23495636);
+        
+
+        marker_e62090425a63f1efbe2c17b56db34c7a.bindPopup(popup_aa5e909dfae02e34b3d4d0a80813c91d)
+        ;
+
+        
+    
+    
+            marker_e62090425a63f1efbe2c17b56db34c7a.bindTooltip(
+                `<div>
+                     숙성도 중문점 / 3.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4737623164fbf360a13eebe5e1379282 = L.marker(
+                [33.2784399, 126.5169922],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_2b9b5dc05ee144303360d70d2b2c424e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_4737623164fbf360a13eebe5e1379282.setIcon(icon_2b9b5dc05ee144303360d70d2b2c424e);
+        
+    
+        var popup_513fee5bd809b2a83fedbca63bc00159 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a22f9399a1e456dde6370462ab467052 = $(`<div id="html_a22f9399a1e456dde6370462ab467052" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>비브레이브 혁신도시점</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 4.3 | <small>리뷰갯수: 112</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 서호중앙로 85-13 1층 (지번) 서호동 1525-2 </span><br>                <br><a href='https://place.map.kakao.com/767876049' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_513fee5bd809b2a83fedbca63bc00159.setContent(html_a22f9399a1e456dde6370462ab467052);
+        
+
+        marker_4737623164fbf360a13eebe5e1379282.bindPopup(popup_513fee5bd809b2a83fedbca63bc00159)
+        ;
+
+        
+    
+    
+            marker_4737623164fbf360a13eebe5e1379282.bindTooltip(
+                `<div>
+                     비브레이브 혁신도시점 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a860875681502e02492d47685aaa1a9d = L.marker(
+                [33.2519011, 126.4266075],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_fc7c4802e9c5648ca25ae50b49fe726c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a860875681502e02492d47685aaa1a9d.setIcon(icon_fc7c4802e9c5648ca25ae50b49fe726c);
+        
+    
+        var popup_e22546e66a3b6cb26bc197e684d636b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8577fd6d392a1b13090f94213580e70 = $(`<div id="html_c8577fd6d392a1b13090f94213580e70" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>해심가든</strong>&nbsp;&nbsp;<small>갈비</small><br>                평점: 4.1 | <small>리뷰갯수: 99</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 천제연로 203-4 (지번) 중문동 2018-8 </span><br>                <br><a href='https://place.map.kakao.com/8608467' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_e22546e66a3b6cb26bc197e684d636b3.setContent(html_c8577fd6d392a1b13090f94213580e70);
+        
+
+        marker_a860875681502e02492d47685aaa1a9d.bindPopup(popup_e22546e66a3b6cb26bc197e684d636b3)
+        ;
+
+        
+    
+    
+            marker_a860875681502e02492d47685aaa1a9d.bindTooltip(
+                `<div>
+                     해심가든 / 4.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03102bad5361a7c100355be17eec220e = L.marker(
+                [33.249826, 126.4109614],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_bea37edb21c66e848969126de31579ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_03102bad5361a7c100355be17eec220e.setIcon(icon_bea37edb21c66e848969126de31579ff);
+        
+    
+        var popup_098711d4b15afc9a471367d5374779c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ced95fe33cf8de49f2bfa50d469b2f5d = $(`<div id="html_ced95fe33cf8de49f2bfa50d469b2f5d" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>카페세렌디</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 4.7 | <small>리뷰갯수: 80</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로72번길 29-5 (지번) 색달동 2822-2 </span><br>                <br><a href='https://place.map.kakao.com/367412374' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_098711d4b15afc9a471367d5374779c6.setContent(html_ced95fe33cf8de49f2bfa50d469b2f5d);
+        
+
+        marker_03102bad5361a7c100355be17eec220e.bindPopup(popup_098711d4b15afc9a471367d5374779c6)
+        ;
+
+        
+    
+    
+            marker_03102bad5361a7c100355be17eec220e.bindTooltip(
+                `<div>
+                     카페세렌디 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_207d478b017f767263cbe981ce494e9a = L.marker(
+                [33.2532837, 126.4267136],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_8acb779d392d666b25f2ee06be64f8ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_207d478b017f767263cbe981ce494e9a.setIcon(icon_8acb779d392d666b25f2ee06be64f8ac);
+        
+    
+        var popup_550d20995b9556c2c245d217f5d41432 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2197d638c34a10fd0a8475ea2933ab43 = $(`<div id="html_2197d638c34a10fd0a8475ea2933ab43" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>만족한상회</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 4.6 | <small>리뷰갯수: 374</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문상로 58-5 1층 (지번) 중문동 1665-5 </span><br>                <br><a href='https://place.map.kakao.com/489037210' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_550d20995b9556c2c245d217f5d41432.setContent(html_2197d638c34a10fd0a8475ea2933ab43);
+        
+
+        marker_207d478b017f767263cbe981ce494e9a.bindPopup(popup_550d20995b9556c2c245d217f5d41432)
+        ;
+
+        
+    
+    
+            marker_207d478b017f767263cbe981ce494e9a.bindTooltip(
+                `<div>
+                     만족한상회 / 4.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fb236aa93357c38676a14fed4be7719a = L.marker(
+                [33.2498739, 126.5588998],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_7ac3f258fe174b99c9a0d7d62aa64914 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fb236aa93357c38676a14fed4be7719a.setIcon(icon_7ac3f258fe174b99c9a0d7d62aa64914);
+        
+    
+        var popup_4431740829559d1e21abf71c07295933 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcb2ba1148c09f88a771e99145cfdbab = $(`<div id="html_bcb2ba1148c09f88a771e99145cfdbab" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>기운네흑돼지</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.3 | <small>리뷰갯수: 111</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 서문로29번길 6 (지번) 서귀동 321-3 </span><br>                <br><a href='https://place.map.kakao.com/20402606' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_4431740829559d1e21abf71c07295933.setContent(html_bcb2ba1148c09f88a771e99145cfdbab);
+        
+
+        marker_fb236aa93357c38676a14fed4be7719a.bindPopup(popup_4431740829559d1e21abf71c07295933)
+        ;
+
+        
+    
+    
+            marker_fb236aa93357c38676a14fed4be7719a.bindTooltip(
+                `<div>
+                     기운네흑돼지 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c161597363e0a76d82b043b2c73f5b75 = L.marker(
+                [33.2667236, 126.3944186],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_d7b0fef2bb081e0979255449c7d8c301 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c161597363e0a76d82b043b2c73f5b75.setIcon(icon_d7b0fef2bb081e0979255449c7d8c301);
+        
+    
+        var popup_5717054a55a325c3f8e0d832be89ae6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd8428b0aae19b02f5f4150166863d66 = $(`<div id="html_cd8428b0aae19b02f5f4150166863d66" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>오전열한시</strong>&nbsp;&nbsp;<small>퓨전한식</small><br>                평점: 3.8 | <small>리뷰갯수: 378</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 상예로 248 (지번) 상예동 1765-1 </span><br>                <br><a href='https://place.map.kakao.com/1489783324' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_5717054a55a325c3f8e0d832be89ae6e.setContent(html_cd8428b0aae19b02f5f4150166863d66);
+        
+
+        marker_c161597363e0a76d82b043b2c73f5b75.bindPopup(popup_5717054a55a325c3f8e0d832be89ae6e)
+        ;
+
+        
+    
+    
+            marker_c161597363e0a76d82b043b2c73f5b75.bindTooltip(
+                `<div>
+                     오전열한시 / 3.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6afe260e2099e9bc018513a2138c0623 = L.marker(
+                [33.2492888, 126.5575788],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_02318f5391b15b8cdb644be09ce86291 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6afe260e2099e9bc018513a2138c0623.setIcon(icon_02318f5391b15b8cdb644be09ce86291);
+        
+    
+        var popup_8e6115a4e6949c759df3b45d658fd602 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f37cdb8c11c45165d813483089c47406 = $(`<div id="html_f37cdb8c11c45165d813483089c47406" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>고미</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 4.4 | <small>리뷰갯수: 12</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 서문로 46 (지번) 서귀동 325-27 </span><br>                <br><a href='https://place.map.kakao.com/15861671' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_8e6115a4e6949c759df3b45d658fd602.setContent(html_f37cdb8c11c45165d813483089c47406);
+        
+
+        marker_6afe260e2099e9bc018513a2138c0623.bindPopup(popup_8e6115a4e6949c759df3b45d658fd602)
+        ;
+
+        
+    
+    
+            marker_6afe260e2099e9bc018513a2138c0623.bindTooltip(
+                `<div>
+                     고미 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d58f9856ad9bab250743854fd9d1b00 = L.marker(
+                [33.2584326, 126.4353135],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_a63a1ba1df9f444c6d62855041b3f172 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1d58f9856ad9bab250743854fd9d1b00.setIcon(icon_a63a1ba1df9f444c6d62855041b3f172);
+        
+    
+        var popup_46aeb4ca79b5397849697a4237214db5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f7de1b319b616af55b2ce21c7871d27 = $(`<div id="html_9f7de1b319b616af55b2ce21c7871d27" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>형제도식당 본점</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 4.4 | <small>리뷰갯수: 1158</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 915 (지번) 색달동 2273-1 </span><br>                <br><a href='https://place.map.kakao.com/2014412408' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_46aeb4ca79b5397849697a4237214db5.setContent(html_9f7de1b319b616af55b2ce21c7871d27);
+        
+
+        marker_1d58f9856ad9bab250743854fd9d1b00.bindPopup(popup_46aeb4ca79b5397849697a4237214db5)
+        ;
+
+        
+    
+    
+            marker_1d58f9856ad9bab250743854fd9d1b00.bindTooltip(
+                `<div>
+                     형제도식당 본점 / 4.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f3e0be2e9963455ec8861ddcac8a5a54 = L.marker(
+                [33.2430043, 126.5653506],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_07961697886f2b30596047d6506ff0a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f3e0be2e9963455ec8861ddcac8a5a54.setIcon(icon_07961697886f2b30596047d6506ff0a4);
+        
+    
+        var popup_e4c1d2e741197662ebc00801d06e823c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90df129e7aaa9b21e303642cc919f55a = $(`<div id="html_90df129e7aaa9b21e303642cc919f55a" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>솔동산고기국수</strong>&nbsp;&nbsp;<small>국수</small><br>                평점: 4.0 | <small>리뷰갯수: 53</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 부두로 23 (지번) 서귀동 724-5 </span><br>                <br><a href='https://place.map.kakao.com/23825088' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_e4c1d2e741197662ebc00801d06e823c.setContent(html_90df129e7aaa9b21e303642cc919f55a);
+        
+
+        marker_f3e0be2e9963455ec8861ddcac8a5a54.bindPopup(popup_e4c1d2e741197662ebc00801d06e823c)
+        ;
+
+        
+    
+    
+            marker_f3e0be2e9963455ec8861ddcac8a5a54.bindTooltip(
+                `<div>
+                     솔동산고기국수 / 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40f27a01403fe3e4cf77dcfd3cbf165d = L.marker(
+                [33.239454, 126.6067645],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_c119b56e3b30e35e63fae6f737b484bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_40f27a01403fe3e4cf77dcfd3cbf165d.setIcon(icon_c119b56e3b30e35e63fae6f737b484bc);
+        
+    
+        var popup_936e3d3541e3fbefddc2158be33bb86c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf43b4b1d3e4b97e028eb8fc6dd9bf1b = $(`<div id="html_cf43b4b1d3e4b97e028eb8fc6dd9bf1b" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>김부자식당</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 4.6 | <small>리뷰갯수: 109</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 보목포로 45 (지번) 보목동 563 </span><br>                <br><a href='https://place.map.kakao.com/527851699' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_936e3d3541e3fbefddc2158be33bb86c.setContent(html_cf43b4b1d3e4b97e028eb8fc6dd9bf1b);
+        
+
+        marker_40f27a01403fe3e4cf77dcfd3cbf165d.bindPopup(popup_936e3d3541e3fbefddc2158be33bb86c)
+        ;
+
+        
+    
+    
+            marker_40f27a01403fe3e4cf77dcfd3cbf165d.bindTooltip(
+                `<div>
+                     김부자식당 / 4.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_383a01edd599cc06127a780ff53e2212 = L.marker(
+                [33.2496778, 126.4113633],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_04bdc00f1806c6240d144510f94b026e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_383a01edd599cc06127a780ff53e2212.setIcon(icon_04bdc00f1806c6240d144510f94b026e);
+        
+    
+        var popup_4449b63edb2218d4c00b67db02a711f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae4756e9c521e4d46dcc7ede9a2da193 = $(`<div id="html_ae4756e9c521e4d46dcc7ede9a2da193" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>신우성흑돼지</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.7 | <small>리뷰갯수: 23</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로72번길 29-9 (지번) 색달동 2822-2 </span><br>                <br><a href='https://place.map.kakao.com/2028723819' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_4449b63edb2218d4c00b67db02a711f8.setContent(html_ae4756e9c521e4d46dcc7ede9a2da193);
+        
+
+        marker_383a01edd599cc06127a780ff53e2212.bindPopup(popup_4449b63edb2218d4c00b67db02a711f8)
+        ;
+
+        
+    
+    
+            marker_383a01edd599cc06127a780ff53e2212.bindTooltip(
+                `<div>
+                     신우성흑돼지 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1423510e5606a7f8704d363534380c21 = L.marker(
+                [33.2530797, 126.569959],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_348210dd4f339458fe9d995023d7274a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1423510e5606a7f8704d363534380c21.setIcon(icon_348210dd4f339458fe9d995023d7274a);
+        
+    
+        var popup_8ddfb627843cc90ce49b5786c7af88e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3addeef7dbaa8a55e336dea9f92ce346 = $(`<div id="html_3addeef7dbaa8a55e336dea9f92ce346" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>올레삼다정</strong>&nbsp;&nbsp;<small>해물,생선</small><br>                평점: 4.3 | <small>리뷰갯수: 228</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 태평로537번길 48 (지번) 동홍동 646-2 </span><br>                <br><a href='https://place.map.kakao.com/26845442' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_8ddfb627843cc90ce49b5786c7af88e9.setContent(html_3addeef7dbaa8a55e336dea9f92ce346);
+        
+
+        marker_1423510e5606a7f8704d363534380c21.bindPopup(popup_8ddfb627843cc90ce49b5786c7af88e9)
+        ;
+
+        
+    
+    
+            marker_1423510e5606a7f8704d363534380c21.bindTooltip(
+                `<div>
+                     올레삼다정 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_239d67c86cc21b5d7a1f64bf320b6428 = L.marker(
+                [33.2603577, 126.6173331],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_3140b5f1963d3c54e641853c8a88a989 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_239d67c86cc21b5d7a1f64bf320b6428.setIcon(icon_3140b5f1963d3c54e641853c8a88a989);
+        
+    
+        var popup_af265342972d273494cd70f6ddb33afb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d865cd6ac422afc3efce3666aed6045d = $(`<div id="html_d865cd6ac422afc3efce3666aed6045d" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>아서원</strong>&nbsp;&nbsp;<small>중화요리</small><br>                평점: 2.6 | <small>리뷰갯수: 98</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주동로 8143 (지번) 하효동 629-2 </span><br>                <br><a href='https://place.map.kakao.com/7989149' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_af265342972d273494cd70f6ddb33afb.setContent(html_d865cd6ac422afc3efce3666aed6045d);
+        
+
+        marker_239d67c86cc21b5d7a1f64bf320b6428.bindPopup(popup_af265342972d273494cd70f6ddb33afb)
+        ;
+
+        
+    
+    
+            marker_239d67c86cc21b5d7a1f64bf320b6428.bindTooltip(
+                `<div>
+                     아서원 / 2.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_506821f895d5dba587fab7e318472402 = L.marker(
+                [33.2551463, 126.5775949],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_c43d25dd9a16593304930a72bd9ee015 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_506821f895d5dba587fab7e318472402.setIcon(icon_c43d25dd9a16593304930a72bd9ee015);
+        
+    
+        var popup_95455405be5b489cf1c1f7faa1815dd3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25f53afdc68607933866bd1c934471de = $(`<div id="html_25f53afdc68607933866bd1c934471de" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>까망돼지 서귀포점</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.3 | <small>리뷰갯수: 100</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주동로 8524 (지번) 토평동 865-1 </span><br>                <br><a href='https://place.map.kakao.com/27357703' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_95455405be5b489cf1c1f7faa1815dd3.setContent(html_25f53afdc68607933866bd1c934471de);
+        
+
+        marker_506821f895d5dba587fab7e318472402.bindPopup(popup_95455405be5b489cf1c1f7faa1815dd3)
+        ;
+
+        
+    
+    
+            marker_506821f895d5dba587fab7e318472402.bindTooltip(
+                `<div>
+                     까망돼지 서귀포점 / 4.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c751614d1e194d070aed66c94c6dff7c = L.marker(
+                [33.2516805, 126.5608349],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_45840aa5df30d8043b2897a4a6b4ec01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c751614d1e194d070aed66c94c6dff7c.setIcon(icon_45840aa5df30d8043b2897a4a6b4ec01);
+        
+    
+        var popup_75b190b4b68edaaedc26a5b90fcfaf35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6c8f979108417bb4739d35774cf0f1ca = $(`<div id="html_6c8f979108417bb4739d35774cf0f1ca" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>낭쿰낭쿰</strong>&nbsp;&nbsp;<small>한식</small><br>                평점: 4.7 | <small>리뷰갯수: 285</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로79번길 4 1층 낭쿰낭쿰 (지번) 서귀동 298-1 </span><br>                <br><a href='https://place.map.kakao.com/500756909' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_75b190b4b68edaaedc26a5b90fcfaf35.setContent(html_6c8f979108417bb4739d35774cf0f1ca);
+        
+
+        marker_c751614d1e194d070aed66c94c6dff7c.bindPopup(popup_75b190b4b68edaaedc26a5b90fcfaf35)
+        ;
+
+        
+    
+    
+            marker_c751614d1e194d070aed66c94c6dff7c.bindTooltip(
+                `<div>
+                     낭쿰낭쿰 / 4.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9671387bd8aa67065c07fbc0eb4a58a9 = L.marker(
+                [33.2487954, 126.4198849],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_1803d73058c959793d2eaa0e4e135df7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9671387bd8aa67065c07fbc0eb4a58a9.setIcon(icon_1803d73058c959793d2eaa0e4e135df7);
+        
+    
+        var popup_b594d11444807174e5402d9f8374389d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_570b25aef78a64402addda871781b38a = $(`<div id="html_570b25aef78a64402addda871781b38a" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>은희네해장국</strong>&nbsp;&nbsp;<small>해장국</small><br>                평점: 3.0 | <small>리뷰갯수: 93</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중문관광로 348 (지번) 중문동 1920-1 </span><br>                <br><a href='https://place.map.kakao.com/995569353' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_b594d11444807174e5402d9f8374389d.setContent(html_570b25aef78a64402addda871781b38a);
+        
+
+        marker_9671387bd8aa67065c07fbc0eb4a58a9.bindPopup(popup_b594d11444807174e5402d9f8374389d)
+        ;
+
+        
+    
+    
+            marker_9671387bd8aa67065c07fbc0eb4a58a9.bindTooltip(
+                `<div>
+                     은희네해장국 / 3.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6733052bc1a79b2a1fca681ef4b290f = L.marker(
+                [33.2584159, 126.4071294],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_8a12f4869f359ed248640cb3da5896a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c6733052bc1a79b2a1fca681ef4b290f.setIcon(icon_8a12f4869f359ed248640cb3da5896a2);
+        
+    
+        var popup_29044d2388ccf803953f9833980ecd26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6acca27905479c3324f4f6222f4176b2 = $(`<div id="html_6acca27905479c3324f4f6222f4176b2" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>목포고을</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 2.9 | <small>리뷰갯수: 177</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 일주서로 968-5 (지번) 색달동 2124-3 </span><br>                <br><a href='https://place.map.kakao.com/11313995' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_29044d2388ccf803953f9833980ecd26.setContent(html_6acca27905479c3324f4f6222f4176b2);
+        
+
+        marker_c6733052bc1a79b2a1fca681ef4b290f.bindPopup(popup_29044d2388ccf803953f9833980ecd26)
+        ;
+
+        
+    
+    
+            marker_c6733052bc1a79b2a1fca681ef4b290f.bindTooltip(
+                `<div>
+                     목포고을 / 2.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c2baa9b801d396b09fba7f39d6beed7 = L.marker(
+                [33.2521747, 126.5098287],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_f8fd39dac12b59a2afda7555e380e769 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1c2baa9b801d396b09fba7f39d6beed7.setIcon(icon_f8fd39dac12b59a2afda7555e380e769);
+        
+    
+        var popup_ff3edf3927a3dc140de95d745f05bfe0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_076e47ea7f8a5596675800356f4c3fac = $(`<div id="html_076e47ea7f8a5596675800356f4c3fac" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>청춘괴기</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.8 | <small>리뷰갯수: 207</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 김정문화로41번길 24-5 1층 (지번) 법환동 736-5 </span><br>                <br><a href='https://place.map.kakao.com/234365372' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_ff3edf3927a3dc140de95d745f05bfe0.setContent(html_076e47ea7f8a5596675800356f4c3fac);
+        
+
+        marker_1c2baa9b801d396b09fba7f39d6beed7.bindPopup(popup_ff3edf3927a3dc140de95d745f05bfe0)
+        ;
+
+        
+    
+    
+            marker_1c2baa9b801d396b09fba7f39d6beed7.bindTooltip(
+                `<div>
+                     청춘괴기 / 4.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c212675806b9ccba312a7eb737948031 = L.marker(
+                [33.2496757, 126.5675722],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_2e76f952f0fb9e0ffa028d17f6c50ae9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c212675806b9ccba312a7eb737948031.setIcon(icon_2e76f952f0fb9e0ffa028d17f6c50ae9);
+        
+    
+        var popup_1c3b7ada311ac4f74f55bfb6f7ca77a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9333dee4f12eae1b1a6bff0f02659004 = $(`<div id="html_9333dee4f12eae1b1a6bff0f02659004" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>나원회포차</strong>&nbsp;&nbsp;<small>회</small><br>                평점: 4.8 | <small>리뷰갯수: 188</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 동문동로 4 (지번) 서귀동 254-23 </span><br>                <br><a href='https://place.map.kakao.com/1314424272' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_1c3b7ada311ac4f74f55bfb6f7ca77a6.setContent(html_9333dee4f12eae1b1a6bff0f02659004);
+        
+
+        marker_c212675806b9ccba312a7eb737948031.bindPopup(popup_1c3b7ada311ac4f74f55bfb6f7ca77a6)
+        ;
+
+        
+    
+    
+            marker_c212675806b9ccba312a7eb737948031.bindTooltip(
+                `<div>
+                     나원회포차 / 4.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d1b06ca852b5f6016b17ff1870d64a0 = L.marker(
+                [33.2470831, 126.5601903],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_707bf1048d10e3fd9f45599ad955a59c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8d1b06ca852b5f6016b17ff1870d64a0.setIcon(icon_707bf1048d10e3fd9f45599ad955a59c);
+        
+    
+        var popup_7e4ff916da84cc664a46db5adda24580 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c76dcc424ce6650392d7537c1d4d8a3 = $(`<div id="html_9c76dcc424ce6650392d7537c1d4d8a3" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>맨도롱 해장국</strong>&nbsp;&nbsp;<small>해장국</small><br>                평점: 3.8 | <small>리뷰갯수: 49</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 태평로353번길 11 (지번) 서귀동 313-5 </span><br>                <br><a href='https://place.map.kakao.com/17843839' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_7e4ff916da84cc664a46db5adda24580.setContent(html_9c76dcc424ce6650392d7537c1d4d8a3);
+        
+
+        marker_8d1b06ca852b5f6016b17ff1870d64a0.bindPopup(popup_7e4ff916da84cc664a46db5adda24580)
+        ;
+
+        
+    
+    
+            marker_8d1b06ca852b5f6016b17ff1870d64a0.bindTooltip(
+                `<div>
+                     맨도롱 해장국 / 3.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03513766e4191204c524ba845d6dd7e6 = L.marker(
+                [33.2466881, 126.56768],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_fd5b80858149e5b75f52c7cc65f21a6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_03513766e4191204c524ba845d6dd7e6.setIcon(icon_fd5b80858149e5b75f52c7cc65f21a6a);
+        
+    
+        var popup_fe02d36353b40a19c3912f9a314bc7d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a6ed5b0dce76cacb1087c6ce8d9c0f7 = $(`<div id="html_3a6ed5b0dce76cacb1087c6ce8d9c0f7" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>센트로</strong>&nbsp;&nbsp;<small>양식</small><br>                평점: 4.5 | <small>리뷰갯수: 93</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 태평로 449 1층 (지번) 서귀동 172-4 </span><br>                <br><a href='https://place.map.kakao.com/347012105' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_fe02d36353b40a19c3912f9a314bc7d5.setContent(html_3a6ed5b0dce76cacb1087c6ce8d9c0f7);
+        
+
+        marker_03513766e4191204c524ba845d6dd7e6.bindPopup(popup_fe02d36353b40a19c3912f9a314bc7d5)
+        ;
+
+        
+    
+    
+            marker_03513766e4191204c524ba845d6dd7e6.bindTooltip(
+                `<div>
+                     센트로 / 4.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_69a2dae5f445b903b51b5d1cd8df4c65 = L.marker(
+                [33.2474435, 126.5116938],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_1ebe74548ade29819b60d12e1e9f9e3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_69a2dae5f445b903b51b5d1cd8df4c65.setIcon(icon_1ebe74548ade29819b60d12e1e9f9e3d);
+        
+    
+        var popup_566c7c62a874ca168436363c0e048492 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1a3377400a2728018d5868106448996 = $(`<div id="html_d1a3377400a2728018d5868106448996" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>앙끄레국수</strong>&nbsp;&nbsp;<small>국수</small><br>                평점: 3.8 | <small>리뷰갯수: 111</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 법환상로2번길 97-18 (지번) 법환동 876-1 </span><br>                <br><a href='https://place.map.kakao.com/27214543' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_566c7c62a874ca168436363c0e048492.setContent(html_d1a3377400a2728018d5868106448996);
+        
+
+        marker_69a2dae5f445b903b51b5d1cd8df4c65.bindPopup(popup_566c7c62a874ca168436363c0e048492)
+        ;
+
+        
+    
+    
+            marker_69a2dae5f445b903b51b5d1cd8df4c65.bindTooltip(
+                `<div>
+                     앙끄레국수 / 3.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ec59cc3720716d9125356867474d1bd = L.marker(
+                [33.2504227, 126.5629266],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_c7309a75b9f31e3a0b67ab62789cea98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0ec59cc3720716d9125356867474d1bd.setIcon(icon_c7309a75b9f31e3a0b67ab62789cea98);
+        
+    
+        var popup_ffc7e384e20482a7ed63a035ad283fb6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df344511ac86f883376016af4c6b787d = $(`<div id="html_df344511ac86f883376016af4c6b787d" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>마농치킨 2호점</strong>&nbsp;&nbsp;<small>치킨</small><br>                평점: 3.3 | <small>리뷰갯수: 40</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 중앙로62번길 13 1층 (지번) 서귀동 278-10 </span><br>                <br><a href='https://place.map.kakao.com/2089542578' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_ffc7e384e20482a7ed63a035ad283fb6.setContent(html_df344511ac86f883376016af4c6b787d);
+        
+
+        marker_0ec59cc3720716d9125356867474d1bd.bindPopup(popup_ffc7e384e20482a7ed63a035ad283fb6)
+        ;
+
+        
+    
+    
+            marker_0ec59cc3720716d9125356867474d1bd.bindTooltip(
+                `<div>
+                     마농치킨 2호점 / 3.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0df562fdc959b32e94c6a01b51cc733c = L.marker(
+                [33.2480275, 126.5289509],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_68b2707f9ed828a2909cc65458240e4f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_0df562fdc959b32e94c6a01b51cc733c.setIcon(icon_68b2707f9ed828a2909cc65458240e4f);
+        
+    
+        var popup_dc6085d98f44a5811af6207bd109c366 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_308bdb1f8c444d1363769cd9622ece45 = $(`<div id="html_308bdb1f8c444d1363769cd9622ece45" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>서귀피안</strong>&nbsp;&nbsp;<small>카페</small><br>                평점: 3.5 | <small>리뷰갯수: 121</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 서호호근로46번길 68 (지번) 서호동 153-8 </span><br>                <br><a href='https://place.map.kakao.com/834666065' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_dc6085d98f44a5811af6207bd109c366.setContent(html_308bdb1f8c444d1363769cd9622ece45);
+        
+
+        marker_0df562fdc959b32e94c6a01b51cc733c.bindPopup(popup_dc6085d98f44a5811af6207bd109c366)
+        ;
+
+        
+    
+    
+            marker_0df562fdc959b32e94c6a01b51cc733c.bindTooltip(
+                `<div>
+                     서귀피안 / 3.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21acdd8556afe50caebf6cdb8161749f = L.marker(
+                [33.2628964, 126.3899545],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_6b51ba32fee4df0ee99c2063a9670e94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_21acdd8556afe50caebf6cdb8161749f.setIcon(icon_6b51ba32fee4df0ee99c2063a9670e94);
+        
+    
+        var popup_3c571353abed0c16e1fce5f0203123a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f33da9bab9f841609edcd822e201ebf0 = $(`<div id="html_f33da9bab9f841609edcd822e201ebf0" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>중문그때그집</strong>&nbsp;&nbsp;<small>육류,고기</small><br>                평점: 4.8 | <small>리뷰갯수: 712</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 상예로 181-28 (지번) 상예동 1714-1 </span><br>                <br><a href='https://place.map.kakao.com/552369116' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_3c571353abed0c16e1fce5f0203123a0.setContent(html_f33da9bab9f841609edcd822e201ebf0);
+        
+
+        marker_21acdd8556afe50caebf6cdb8161749f.bindPopup(popup_3c571353abed0c16e1fce5f0203123a0)
+        ;
+
+        
+    
+    
+            marker_21acdd8556afe50caebf6cdb8161749f.bindTooltip(
+                `<div>
+                     중문그때그집 / 4.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c55d8e38926c8b0e4054198d4d7dad50 = L.marker(
+                [33.2522074, 126.5029716],
+                {}
+            ).addTo(map_0828ced9a4025f0ff4d6082c7dbb0990);
+        
+    
+            var icon_05af0abc6348d58783376d4f755b0dfe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "white", "markerColor": "darkred", "prefix": "fa"}
+            );
+            marker_c55d8e38926c8b0e4054198d4d7dad50.setIcon(icon_05af0abc6348d58783376d4f755b0dfe);
+        
+    
+        var popup_c3664d163677ae2d7076f30a65b6ea3c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e0ee229f0272f48f77aa7f43753b90e = $(`<div id="html_4e0ee229f0272f48f77aa7f43753b90e" style="width: 100.0%; height: 100.0%;"><div style='width:300px;'><strong>봉주르마담</strong>&nbsp;&nbsp;<small>제과,베이커리</small><br>                평점: 4.0 | <small>리뷰갯수: 81</small><br>                <br><span style='font-size:'3px''> 제주특별자치도 서귀포시 대청로 33 오름빌딩1차 1층 103호 (지번) 강정동 208-4 </span><br>                <br><a href='https://place.map.kakao.com/1627461903' target='_blank'>카카오맵에서 보기</a>&nbsp;|&nbsp;<a href='' target='_blank'>담기</a></div></div>`)[0];
+            popup_c3664d163677ae2d7076f30a65b6ea3c.setContent(html_4e0ee229f0272f48f77aa7f43753b90e);
+        
+
+        marker_c55d8e38926c8b0e4054198d4d7dad50.bindPopup(popup_c3664d163677ae2d7076f30a65b6ea3c)
+        ;
+
+        
+    
+    
+            marker_c55d8e38926c8b0e4054198d4d7dad50.bindTooltip(
+                `<div>
+                     봉주르마담 / 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

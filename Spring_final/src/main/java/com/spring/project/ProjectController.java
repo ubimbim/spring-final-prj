@@ -1,21 +1,28 @@
 package com.spring.project;
 
-import java.io.IOException;
+import java.io.IOException; 
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.spring.model.Activity.ActivityDAO;
+import com.spring.model.Activity.ActivityDTO;
 import com.spring.model.Member.MemberDAO;
 import com.spring.model.Member.MemberDTO;
 import com.spring.model.Member.MemberService;
+import com.spring.model.Place.PageDTO;
+import com.spring.model.Place.PlaceDAO;
+import com.spring.model.Place.PlaceDTO;
 
 @Controller
 public class ProjectController {
@@ -29,8 +36,26 @@ public class ProjectController {
 	@Autowired
 	private HttpSession session;
 	
+	@Autowired
+	private ActivityDAO adao;
+	
+	@Autowired
+	private PlaceDAO pdao;
+	
+	private final int rowsize = 8;      
+	private int totalRecord = 0; 
+	private int page = 1;
+	PageDTO dto = new PageDTO(page, rowsize, totalRecord);
+	
 	@RequestMapping("main.do")
-	public String main() {
+	public String main(Model model) {
+		
+		List<ActivityDTO> aList = this.adao.getActivityList(dto);
+		List<PlaceDTO> pList = this.pdao.getPlaceList(dto);
+		
+		model.addAttribute("aList", aList); 
+		model.addAttribute("pList", pList);
+		
 		return "main";
 	}
 	

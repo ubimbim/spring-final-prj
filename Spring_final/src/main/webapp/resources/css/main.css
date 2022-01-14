@@ -7,20 +7,19 @@ body {
 }
 
 #back_color {
-	background-color: #fff;
-	padding-bottom: 50px;
+	padding: 30px 0;
 }
 
 #itemSlide {
 	display: flex;
-	width: 960px;
+	width: 1030px;
 	overflow: hidden;
 	padding: 10px;
 }
 
 .item {
 	width: 250px;
-	padding: 10;
+	padding: 10px;
 	margin: 10px;
 	border: solid 1px LIGHTGRAY;
 	border-radius: 10px;
@@ -29,10 +28,6 @@ body {
 
 .item img {
 	width: 200px;
-}
-
-.item span {
-	margin-left: 10px;
 }
 
 #acc_nextBtn {
@@ -93,17 +88,17 @@ body {
 
 
 .slide {
-	margin-left: -960px;
+	margin-left: -1050px;
 }
 
 #recomm_acc {
-	margin-top: 100px;
-	margin-left: 450px;
+	margin-top: 50px;
+	margin-left: 400px;
 	padding-top: 20px;
 }
 #recomm_act, #recomm_resto, #recomm_plan {
 	margin-top: 50px;
-	margin-left: 450px;
+	margin-left: 400px;
 	padding-top: 20px;
 }
 
@@ -190,7 +185,7 @@ body {
 	padding: 20px 50px;
 }
 
-#modal1 {
+#modal1, #modal1_1 {
 	 width: 400px;
 	 height: 200px;
      position: absolute;
@@ -225,7 +220,7 @@ body {
 	padding: 10px 30px;
 }
 
-#modal1 input, #modal2 input {
+#modal1 input, #modal1_1 input, #modal2 input {
 	background-color: #fff;
 	border-radius: 5px;
 }

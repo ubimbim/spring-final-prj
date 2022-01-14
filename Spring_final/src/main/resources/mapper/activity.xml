@@ -243,5 +243,15 @@
 		select u_name from (select t.u_name from trv_user t, trv_s_review sr where t.u_id = sr.u_id)
 	</select>
 	
+	<!-- 메인 추천리스트 -->
+	<select id="acti_main_all" parameterType="com.spring.model.Activity.PageDTO"
+			resultType="com.spring.model.Activity.ActivityDTO">
+		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by a_no desc) rnum from Trv_Activity b)	
+			   		where rnum >= #{startNo} and rnum <= #{endNo} order by a_grade desc
+		]]>
+	</select>
 	
 </mapper>

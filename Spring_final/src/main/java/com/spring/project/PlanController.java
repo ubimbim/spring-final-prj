@@ -59,7 +59,7 @@ public class PlanController {
 		model.addAttribute("size", EPlistSize);
 		
 		return "plan/plan_detail";
-		
+
 	}
 
 	@RequestMapping("prod_cart.do")

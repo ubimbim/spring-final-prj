@@ -43,7 +43,14 @@
       <![CDATA[ select * from (select b.*, row_number() over(order by p_no desc) rnum from Trv_Place b where p_category like '%' || #{category} || '%' ) where rnum >= #{startNo} and rnum <= #{endNo} ]]>
     </select>    
     
-    
-    
+    <!-- 메인페이지 추천리스트 -->
+    <select id = "pl_main_all" parameterType = "com.spring.model.Place.PageDTO" resultType = "com.spring.model.Place.PlaceDTO">
+ 		<![CDATA[
+			select * from
+				(select b.*, row_number() 
+			   		over(order by p_no desc) rnum from Trv_Place b)	
+			   		where rnum >= #{startNo} and rnum <= #{endNo} order by p_grade desc
+		]]>
+	</select>
     
 </mapper>	
