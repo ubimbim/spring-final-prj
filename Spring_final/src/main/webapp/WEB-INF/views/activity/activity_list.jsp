@@ -288,9 +288,6 @@ $(function (){
 														</span>
 													</div>
 													<span class="main-css-11wj8nz"> <!-- <input class="main-btn-11wj8nz" type="image" src="./resources/img/add.png"> -->
-														<input type="button" class = "main-btn-11wj8nz" 
-															onclick="location.href='activity_review.do?a_no=${fn:split(i.getA_no(), '#')[0] }'" 
-															value="리뷰">&nbsp;&nbsp;&nbsp;
 														<input class="main-btn-11wj8nz" type="button" value="담기">
 													</span>
 												</div>
@@ -320,16 +317,20 @@ $(function (){
 										<p>
 											<img class="main-css-thumbnail-modal" alt="loading" loading="lazy"src="${pageContext.request.contextPath}/resources/img/${i.getA_img() }">
 										</p>
-									<div>
-										<p>
-										${i.getA_price() } 원
-										</p>
+									<div class="modal-price-cont">
+										가격: ${i.getA_price() } 원
+										<%-- ${i.getA_seller()}
+										${i.getA_location() }
+										${i.getA_grade() }
+										${i.getA_category() } --%>
+										
 									</div>	
 										<p>
 											<img class="main-css-content" alt="loading" loading="lazy" src="${pageContext.request.contextPath}/resources/img/${i.getA_img_cont() }">
 										</p>
 										</div>
 										<div class="modal-footer">
+										    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 											<button class="main-btn-12wj8nz">내일정에 담기</button>
 											</div>
 	 									</div>
