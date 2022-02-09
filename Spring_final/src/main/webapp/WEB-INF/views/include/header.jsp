@@ -13,7 +13,7 @@
   <img src = "./resources/images/main_1.png" id="mainImage">	
 	
   <div id="header">
-	<a href="<%=request.getContextPath()%>/main.do"><img src="./resources/images/logo.svg" width="200px" id="logo"/></a>
+	<a href="<%=request.getContextPath()%>/main.do"><img src="./resources/images/homelogo.png" width="300px" id="logo"/></a>
 	
 	<input type="text" placeholder="검색어를 입력하세요." id="searchInput"> 
 
